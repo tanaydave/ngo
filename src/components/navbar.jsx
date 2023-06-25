@@ -2,7 +2,7 @@ import React from "react";
 
 const navbar = () => {
   return (
-    <div className="border-4 pb-4">
+    <div className=" pb-4">
       <div className="flex justify-around items-center pt-6 text-lg">
         <img src="#" className="">
         </img>
@@ -17,8 +17,8 @@ const navbar = () => {
         </ul>
 
         </div>
-        <div className="pr-2 border-2  hover:bg-white text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500" >
-          <button className=" py-2 px-5 font-medium  ">Donate Now</button>
+        <div className="pr-2 border-2 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500" >
+          <button className=" py-2 px-5 font-medium text-xl  ">Donate Now</button>
         </div>
       </div>
 
