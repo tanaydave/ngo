@@ -6,7 +6,7 @@ import{IoMdMail} from "react-icons/io"
 import { FaTwitter } from "react-icons/fa";
 import {BiLogoLinkedin} from "react-icons/bi"
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className=" bg-slate-900 text-slate-200 font-Poppins pb-4">
       <div className="ml-60 pb-12 flex justify-between">
@@ -73,4 +73,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

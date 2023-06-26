@@ -1,9 +1,19 @@
 import React from "react";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import home from "../assets/home.jpg";
 import misvis from "../assets/misvis.jpg";
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 const Home = () => {
+   
+  const slides = [
+    "https://i.ibb.co/ncrXc2V/1.png",
+    "https://i.ibb.co/B3s7v4h/2.png",
+    "https://i.ibb.co/XXR8kzF/3.png",
+    "https://i.ibb.co/yg7BSdM/4.png",
+  ]
+
+
   return (
     <div className=" font-Poppins">
       <div className="sticky top-0 bg-white z-50">
@@ -21,7 +31,7 @@ const Home = () => {
         <div className=" text-white absolute flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold">
           <div className="text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
           <div className="text-white pt-4 flex justify-center gap-8">
-            <button className=" text-orange-500 bg-white border-2 border-orange-500 p-2 ">
+            <button className=" bg-orange-500 text-white border-2 border-orange-500 p-2 ">
               {" "}
               About our Organization
             </button>
@@ -82,9 +92,26 @@ const Home = () => {
       {/* about org finished  */}
 
       {/* carousel for projects started  */}
-      <div>
+      <div className="flex flex-col  items-center justify-center">
         Ongoing Projects 
+        <div className=" max-w-lg  overflow-hidden relative text-center">
+        <div className="flex ">{slides.map((s)=>{
+          return(
+            <img src={s}/>
+          )
+        })}</div>
+        <div className="absolute inset-0 flex items-center justify-between p-4">
+        <button className="p-1 rounded-full shadow bg-slate-400 text-gray-800 hover:bg-white">
+          <BiChevronLeft size= {40}></BiChevronLeft>
+        </button>
+        <button className="p-1 rounded-full shadow  bg-slate-400 text-gray-800 hover:bg-white">
+          <BiChevronRight size={40}></BiChevronRight>
+        </button>
+        </div>
+        </div>
+
       </div>
+      {/* usestate tobe used  */}
 
 
 
