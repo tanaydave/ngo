@@ -12,7 +12,7 @@ const footer = () => {
       <div className="ml-60 pb-12 flex justify-between">
         <img className="pt-6" src="#"></img>
         <div className="mt-6 mr-12    text-white  hover:text-orange-500 bg-orange-500">
-          <button className=" py-2 px-8 border-2 border-orange-500 font-medium bg-orange-500  hover:bg-white  ">
+          <button className=" py-2 px-8 border-2 border-orange-500 font-medium bg-orange-500  hover:bg-white transition-all delay-100 ease-in-out ">
             Donate Now
           </button>
         </div>
