@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import home from "../assets/home.jpg";
 import misvis from "../assets/misvis.jpg";
+import logo from "../assets/logo.png";
+
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const slides = [
@@ -19,6 +21,7 @@ const Home = () => {
   const next = () =>
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
 
+  const nums = [1, 1, 1, 1, 1, 1];
   return (
     <div className=" font-Poppins">
       <div className="sticky top-0 bg-white z-50">
@@ -97,7 +100,7 @@ const Home = () => {
       {/* about org finished  */}
 
       {/* carousel for projects started  */}
-      <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 ">
+      <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 font-Poppins ">
         Ongoing Projects
         <div className=" max-w-lg  overflow-hidden relative text-center pt-12 pb-8">
           <div
@@ -138,10 +141,20 @@ const Home = () => {
 
       {/* carousel for projects finished  */}
       {/* blogs section starts  */}
-      <div>
-        Our Blogs 
-        <div>
-          
+      <div className="flex flex-col items-center bg-slate-500 pb-8 font-Poppins">
+        <div className="text-6xl font-semibold p-6"> Our Blogs </div>
+        <div className="grid grid-cols-3 gap-x-40 gap-y-20">
+          {nums.map(() => (
+            <div className="  h-80 w-80 border-2 p-4">
+              {" "}
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Accusantium consequuntur mollitia ea! Iure, aspernatur eius. Rem
+              dolorum officia, iusto minima, unde explicabo enim sunt ullam
+              assumenda eaque voluptatibus sint? Rem ipsam tempora corrupti
+              provident sed, nesciunt quisquam natus. Enim, vitae.
+           </p>  
+           </div>
+          ))}
         </div>
       </div>
       {/* blogs section finished  */}

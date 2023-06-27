@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+
 
 const Navbar = () => {
   return (
     <div className=" pb-4  ">
       <div className="flex justify-around items-center pt-6 text-lg">
-        <img src="#" className="">
+        <img src={logo} className="h-24 w-60 bg-contain object-cover bg-center">
         </img>
         <div className=" pr-12 font-Poppins font-medium justify-evenly ml-6 text-gray-600">
           <ul className="flex list-none">
