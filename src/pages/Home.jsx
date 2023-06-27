@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import home from "../assets/home.jpg";
 import misvis from "../assets/misvis.jpg";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-const Home = () => {
-   
-  const slides = [
-    "https://i.ibb.co/ncrXc2V/1.png",
-    "https://i.ibb.co/B3s7v4h/2.png",
-    "https://i.ibb.co/XXR8kzF/3.png",
-    "https://i.ibb.co/yg7BSdM/4.png",
-  ]
 
+const slides = [
+  "https://i.ibb.co/ncrXc2V/1.png",
+  "https://i.ibb.co/B3s7v4h/2.png",
+  "https://i.ibb.co/XXR8kzF/3.png",
+  "https://i.ibb.co/yg7BSdM/4.png",
+];
+
+const Home = () => {
+  const [curr, setCurr] = useState(0);
+  const prev = () =>
+    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
+  const next = () =>
+    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
 
   return (
     <div className=" font-Poppins">
@@ -29,7 +34,9 @@ const Home = () => {
         }}
       >
         <div className=" text-white absolute flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold">
-          <div className="text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+          <div className="text-2xl">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
           <div className="text-white pt-4 flex justify-center gap-8">
             <button className=" bg-orange-500 text-white border-2 border-orange-500 p-2 ">
               {" "}
@@ -43,12 +50,11 @@ const Home = () => {
       </div>
       {/* hero finished */}
 
-   {/* about org started  */}
-      
-      <div className=" pt-16"> 
-      {/* mission started */}
+      {/* about org started  */}
+
+      <div className=" pt-16">
+        {/* mission started */}
         <div className="flex justify-evenly pt-12">
-          
           <div className=" text-base text-orange-400 font-semibold flex flex-col ">
             <div> About us</div>
             <div className=" text-6xl font-semibold  text-black pt-4">
@@ -60,15 +66,15 @@ const Home = () => {
               deleniti aliquid. Atque!
             </p>
           </div>
-         
+
           <img
             src={misvis}
             className=" h-60 w-auto rounded-3xl ring-2 ring-gray-400"
           ></img>
         </div>
-           {/* mission finished */}
+        {/* mission finished */}
 
-           {/* vision started  */}
+        {/* vision started  */}
         <div className="flex justify-evenly pt-16">
           <img
             src={misvis}
@@ -86,38 +92,59 @@ const Home = () => {
             </p>
           </div>
         </div>
-           {/* vision finished */}
-
-      </div> 
+        {/* vision finished */}
+      </div>
       {/* about org finished  */}
 
       {/* carousel for projects started  */}
-      <div className="flex flex-col  items-center justify-center">
-        Ongoing Projects 
-        <div className=" max-w-lg  overflow-hidden relative text-center">
-        <div className="flex ">{slides.map((s)=>{
-          return(
-            <img src={s}/>
-          )
-        })}</div>
-        <div className="absolute inset-0 flex items-center justify-between p-4">
-        <button className="p-1 rounded-full shadow bg-slate-400 text-gray-800 hover:bg-white">
-          <BiChevronLeft size= {40}></BiChevronLeft>
-        </button>
-        <button className="p-1 rounded-full shadow  bg-slate-400 text-gray-800 hover:bg-white">
-          <BiChevronRight size={40}></BiChevronRight>
-        </button>
+      <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 ">
+        Ongoing Projects
+        <div className=" max-w-lg  overflow-hidden relative text-center pt-12 pb-8">
+          <div
+            className="flex gap-0 transition-transform ease-out duration-500 "
+            style={{ transform: `translateX(-${curr * 100}%)` }}
+          >
+            {slides.map((s) => {
+              return <img className=" w-fit" src={s} />;
+            })}
+          </div>
+          <div className="absolute inset-0 flex items-center justify-between p-4  ">
+            <button
+              onClick={prev}
+              className="p-1 rounded-full shadow bg-slate-400 text-gray-800 hover:bg-white"
+            >
+              <BiChevronLeft size={40}></BiChevronLeft>
+            </button>
+            <button
+              onClick={next}
+              className="p-1 rounded-full shadow  bg-slate-400 text-gray-800 hover:bg-white"
+            >
+              <BiChevronRight size={40}></BiChevronRight>
+            </button>
+          </div>
+          <div className="absolute bottom-12 left-0 right-0">
+            <div className="flex items-center justify-center gap-2">
+              {slides.map((_, id) => (
+                <div
+                  className={`transition-all w-3 h-3  bg-white rounded-full ${
+                    curr === id ? "p-2" : " bg-opacity-50"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-        </div>
-
       </div>
-      {/* usestate tobe used  */}
-
-
-
-
 
       {/* carousel for projects finished  */}
+      {/* blogs section starts  */}
+      <div>
+        Our Blogs 
+        <div>
+          
+        </div>
+      </div>
+      {/* blogs section finished  */}
 
       <Footer />
     </div>

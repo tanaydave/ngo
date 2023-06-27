@@ -9,10 +9,6 @@ import Blogs from './pages/BlogsOur';
 import About from './pages/AboutUs'
 
 
-
-
-
-
 function App() {
   return (
     <div className="App ">
