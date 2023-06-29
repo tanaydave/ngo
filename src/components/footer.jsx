@@ -5,14 +5,17 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import{IoMdMail} from "react-icons/io"
 import { FaTwitter } from "react-icons/fa";
 import {BiLogoLinkedin} from "react-icons/bi"
+import logo from "../assets/logo.png";
+
+
 
 const Footer = () => {
   return (
-    <div className=" bg-slate-900 text-slate-200 font-Poppins pb-4">
-      <div className="ml-60 pb-12 flex justify-between">
-        <img className="pt-6" src="#"></img>
-        <div className="mt-6 mr-12    text-white  hover:text-orange-500 bg-orange-500">
-          <button className=" py-2 px-8 border-2 border-orange-500 font-medium bg-orange-500  hover:bg-white transition-all delay-100 ease-in-out ">
+    <div className=" bg-neutral-900 text-slate-200 font-Poppins pb-4">
+      <div className="ml-60 pb-12  pt-12 flex justify-between">
+        <img className=" h-32 w-60"  src={logo}></img>
+        <div className="mt-6 mr-12   ">
+          <button className=" py-2 px-8 border-2 text-white  hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-white transition-all delay-100 ease-in-out ">
             Donate Now
           </button>
         </div>

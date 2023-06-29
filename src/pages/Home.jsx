@@ -15,6 +15,7 @@ const slides = [
 ];
 
 const Home = () => {
+  // used in carousel 
   const [curr, setCurr] = useState(0);
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
@@ -43,7 +44,7 @@ const Home = () => {
           <div className="text-white pt-4 flex justify-center gap-8">
             <button className=" bg-orange-500 text-white border-2 border-orange-500 p-2 ">
               {" "}
-              About our Organization
+              Become a Volunteer
             </button>
             <button className="border-2 p-2 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in">
               Contribute for a cause
@@ -108,7 +109,7 @@ const Home = () => {
             style={{ transform: `translateX(-${curr * 100}%)` }}
           >
             {slides.map((s) => {
-              return <img className=" w-fit" src={s} />;
+              return <img className=" w-fit h-5/6"  src={s} />;
             })}
           </div>
           <div className="absolute inset-0 flex items-center justify-between p-4  ">
@@ -143,9 +144,10 @@ const Home = () => {
       {/* blogs section starts  */}
       <div className="flex flex-col items-center bg-slate-500 pb-8 font-Poppins">
         <div className="text-6xl font-semibold p-6"> Our Blogs </div>
-        <div className="grid grid-cols-3 gap-x-40 gap-y-20">
+        <div className="grid grid-cols-3 gap-x-40 gap-y-20  ">
           {nums.map(() => (
-            <div className="  h-80 w-80 border-2 p-4">
+            <div className="  h-80 w-80 border-2 p-4 flex flex-col overflow-y-scroll no-scrollbar ">
+              <img src={misvis} className="object-contain pb-2"></img>
               {" "}
              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Accusantium consequuntur mollitia ea! Iure, aspernatur eius. Rem
@@ -153,6 +155,7 @@ const Home = () => {
               assumenda eaque voluptatibus sint? Rem ipsam tempora corrupti
               provident sed, nesciunt quisquam natus. Enim, vitae.
            </p>  
+           <div className="flex pt-3">read more <BiChevronRight size={30}></BiChevronRight></div>
            </div>
           ))}
         </div>
