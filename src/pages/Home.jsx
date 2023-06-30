@@ -26,23 +26,33 @@ const Home = () => {
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
   const next = () =>
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+    const [transparent,setTransparent]= useState('bg-transparent');
+    const addBg = ()=>{
+     if(window.scrollY >=10){
+       setTransparent('bg-white')
+     }
+     else{
+       setTransparent('bg-transparent')
+     }
+    }
+    window.addEventListener('scroll',addBg)
 
   const nums = [1, 1, 1, 1, 1, 1];
   return (
     <div   className=" font-Poppins">
-      <div className=" sticky top-0 bg-white z-50">
-        <Navbar />
-      </div>
+      
       {/* navbar finished */}
 
       {/* hero started */}
       <div
-        className="p-0 h-screen w-screen  bg-cover object-cover bg-center "
+        className="p-0 h-screen   bg-cover object-cover bg-center "
         style={{
           backgroundImage: `url(${misvis})`,
         }}
       >
-        
+        <div className=" sticky top-0 transition-all ease-in z-50">
+        <Navbar className={transparent}/>
+      </div>
         <div className=" text-white absolute flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold">
           <div className="text-2xl">
           It is not how much we give but how much love we put into giving
@@ -66,7 +76,7 @@ const Home = () => {
 
       <div className=" pt-16 mb-16  ">
         {/* who we are started */}
-        <div className="py-8 bg-orange-500  text-white"> 
+        <div className="py-8 bg-orange-500 mx-6  text-white"> 
         <div className="flex flex-col items-center">
           <div className="  text-6xl py-8 underline underline-offset-8 ">Who We Are</div>
           <div className=" leading-9 pt-2 text-lg mx-20">The founder of Orinova, Dr. Sourabh Kumar is an experienced individuals who has faced the hardships of the society and has become a figure of respect. However, it wasn’t easy for him to reach this stage. He grew up in a place where even finding employment was a big challenge in its own. However, this didn’t stop him from reaching his goal. Over the years, Dr Sourabh engaged in networking with the people around him, his superiors and his team. 

@@ -6,9 +6,9 @@ const services = () => {
   return (
     <div>
       <Navbar />
-      <div>
-        <div>Environment Protection</div>
-        <p>
+      <div className=" py-4 mx-4">
+        <div className="text-2xl py-4 text-orange-500 font-semibold">Environment Protection</div>
+        <p className="leading-8">
           Our goal is to protect the environment and lessen the dangers to the
           variety of life on earth. Food, climate, freshwater, wildlife,
           forests, and oceans are all areas where it operates. By repairing

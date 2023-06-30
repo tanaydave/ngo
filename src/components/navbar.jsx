@@ -6,13 +6,13 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 
 
-const Navbar = () => {
+const Navbar = ({className=''}) => {
 
  
 
   const [open,setOpen]= useState(false)
   return (
-    <div className= "pb-4 "  >
+    <div className={ `pb-4 ${className}` } >
       <div className="flex justify-around items-center pt-6 text-lg">
         <img src={logo} className="h-24 w-60 bg-contain object-cover bg-center" >
         </img>
