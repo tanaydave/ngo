@@ -7,6 +7,7 @@ import Services from './pages/ServicesProvided';
 import Events from './pages/EventsOur';
 import Blogs from './pages/BlogsOur';
 import About from './pages/AboutUs'
+import Donations from './pages/Donations';
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           <Route path="/ngo/events" element= {<Events />} />
           <Route path="/ngo/blogs" element= {<Blogs />} />
           <Route path="/ngo/about" element= {<About />} />
+          <Route path="/ngo/donations" element= {<Donations />} />
+
 
 
 

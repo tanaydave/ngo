@@ -15,6 +15,11 @@ const slides = [
 ];
 
 const Home = () => {
+
+
+
+
+
   // used in carousel 
   const [curr, setCurr] = useState(0);
   const prev = () =>
@@ -24,22 +29,23 @@ const Home = () => {
 
   const nums = [1, 1, 1, 1, 1, 1];
   return (
-    <div className=" font-Poppins">
-      <div className="sticky top-0 bg-white z-50">
+    <div   className=" font-Poppins">
+      <div className=" sticky top-0 bg-white z-50">
         <Navbar />
       </div>
       {/* navbar finished */}
 
       {/* hero started */}
       <div
-        className="p-0 h-screen  bg-cover object-cover bg-center "
+        className="p-0 h-screen w-screen  bg-cover object-cover bg-center "
         style={{
           backgroundImage: `url(${misvis})`,
         }}
       >
+        
         <div className=" text-white absolute flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold">
           <div className="text-2xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          It is not how much we give but how much love we put into giving
           </div>
           <div className="text-white pt-4 flex justify-center gap-8">
             <button className=" bg-orange-500 text-white border-2 border-orange-500 p-2 ">
@@ -56,9 +62,27 @@ const Home = () => {
 
       {/* about org started  */}
 
-      <div className=" pt-16">
+
+
+      <div className=" pt-16 mb-16  ">
+        {/* who we are started */}
+        <div className="py-8 bg-orange-500  text-white"> 
+        <div className="flex flex-col items-center">
+          <div className="  text-6xl py-8 underline underline-offset-8 ">Who We Are</div>
+          <div className=" leading-9 pt-2 text-lg mx-20">The founder of Orinova, Dr. Sourabh Kumar is an experienced individuals who has faced the hardships of the society and has become a figure of respect. However, it wasn’t easy for him to reach this stage. He grew up in a place where even finding employment was a big challenge in its own. However, this didn’t stop him from reaching his goal. Over the years, Dr Sourabh engaged in networking with the people around him, his superiors and his team. 
+His work brought him in contact with the people of our country who were suffering from poverty and hunger. He witnessed first-hand the increasing damage to our environment when he travelled for work. Determined to once and for all take charge to help his country develop and grow, he came to create Orinova.  
+</div></div>
+<div className="flex flex-col items-center py-8">
+        <div className="  text-6xl py-8 underline underline-offset-8 ">Our Team</div>
+        <div className=" leading-9 pt-2 text-lg mx-20">We in Orinova, believe that in order to create a better world, communities must take the reins of change. We are aware that our biggest asset is the strength of our staff. We place a high importance on work-life balance and create chances for everyone to develop professionally. 
+At Orinova, diversity and inclusion are top priorities, and a multi-year programme is now under way to achieve racial justice and equity both locally and worldwide.
+</div>
+      </div>
+        </div> 
+
+        {/* who we are finished  */}
         {/* mission started */}
-        <div className="flex justify-evenly pt-12">
+        {/* <div className="flex justify-evenly pt-12">
           <div className=" text-base text-orange-400 font-semibold flex flex-col ">
             <div> About us</div>
             <div className=" text-6xl font-semibold  text-black pt-4">
@@ -75,11 +99,11 @@ const Home = () => {
             src={misvis}
             className=" h-60 w-auto rounded-3xl ring-2 ring-gray-400"
           ></img>
-        </div>
+        </div> */}
         {/* mission finished */}
 
         {/* vision started  */}
-        <div className="flex justify-evenly pt-16">
+        {/* <div className="flex justify-evenly pt-16">
           <img
             src={misvis}
             className="h-60 w-auto rounded-3xl ring-2 ring-gray-400"
@@ -95,13 +119,16 @@ const Home = () => {
               quasi.
             </p>
           </div>
-        </div>
+        </div> */}
         {/* vision finished */}
       </div>
       {/* about org finished  */}
 
+
+      
+
       {/* carousel for projects started  */}
-      <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 font-Poppins ">
+      {/* <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 font-Poppins ">
         Ongoing Projects
         <div className=" max-w-lg  overflow-hidden relative text-center pt-12 pb-8">
           <div
@@ -138,11 +165,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* carousel for projects finished  */}
       {/* blogs section starts  */}
-      <div className="flex flex-col items-center bg-slate-500 pb-8 font-Poppins">
+      {/* <div className="flex flex-col items-center bg-slate-500 pb-8 font-Poppins">
         <div className="text-6xl font-semibold p-6"> Our Blogs </div>
         <div className="grid grid-cols-3 gap-x-40 gap-y-20  ">
           {nums.map(() => (
@@ -159,8 +186,9 @@ const Home = () => {
            </div>
           ))}
         </div>
-      </div>
+      </div> */}
       {/* blogs section finished  */}
+      
 
       <Footer />
     </div>
