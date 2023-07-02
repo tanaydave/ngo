@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import home from "../assets/home.jpg";
 import misvis from "../assets/misvis.jpg";
 import logo from "../assets/logo.png";
+import team from "../assets/team.jpg";
 
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
@@ -15,32 +16,25 @@ const slides = [
 ];
 
 const Home = () => {
-
-
-
-
-
-  // used in carousel 
+  // used in carousel
   const [curr, setCurr] = useState(0);
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
   const next = () =>
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
-    const [transparent,setTransparent]= useState('bg-transparent');
-    const addBg = ()=>{
-     if(window.scrollY >=10){
-       setTransparent('bg-white')
-     }
-     else{
-       setTransparent('bg-transparent')
-     }
+  const [transparent, setTransparent] = useState("bg-transparent");
+  const addBg = () => {
+    if (window.scrollY >= 10) {
+      setTransparent("bg-white");
+    } else {
+      setTransparent("bg-transparent");
     }
-    window.addEventListener('scroll',addBg)
+  };
+  window.addEventListener("scroll", addBg);
 
   const nums = [1, 1, 1, 1, 1, 1];
   return (
-    <div   className=" font-Poppins">
-      
+    <div className=" font-Poppins">
       {/* navbar finished */}
 
       {/* hero started */}
@@ -51,11 +45,11 @@ const Home = () => {
         }}
       >
         <div className=" sticky top-0 transition-all ease-in z-50">
-        <Navbar className={transparent}/>
-      </div>
+          <Navbar className={transparent} />
+        </div>
         <div className=" text-white absolute flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold">
           <div className="text-2xl">
-          It is not how much we give but how much love we put into giving
+            It is not how much we give but how much love we put into giving
           </div>
           <div className="text-white pt-4 flex justify-center gap-8">
             <button className=" bg-orange-500 text-white border-2 border-orange-500 p-2 ">
@@ -72,23 +66,48 @@ const Home = () => {
 
       {/* about org started  */}
 
-
-
       <div className=" pt-16 mb-16  ">
         {/* who we are started */}
-        <div className="py-8 bg-orange-500 mx-6  text-white"> 
-        <div className="flex flex-col items-center">
-          <div className="  text-6xl py-8 underline underline-offset-8 ">Who We Are</div>
-          <div className=" leading-9 pt-2 text-lg mx-20">The founder of Orinova, Dr. Sourabh Kumar is an experienced individuals who has faced the hardships of the society and has become a figure of respect. However, it wasn’t easy for him to reach this stage. He grew up in a place where even finding employment was a big challenge in its own. However, this didn’t stop him from reaching his goal. Over the years, Dr Sourabh engaged in networking with the people around him, his superiors and his team. 
-His work brought him in contact with the people of our country who were suffering from poverty and hunger. He witnessed first-hand the increasing damage to our environment when he travelled for work. Determined to once and for all take charge to help his country develop and grow, he came to create Orinova.  
-</div></div>
-<div className="flex flex-col items-center py-8">
-        <div className="  text-6xl py-8 underline underline-offset-8 ">Our Team</div>
-        <div className=" leading-9 pt-2 text-lg mx-20">We in Orinova, believe that in order to create a better world, communities must take the reins of change. We are aware that our biggest asset is the strength of our staff. We place a high importance on work-life balance and create chances for everyone to develop professionally. 
-At Orinova, diversity and inclusion are top priorities, and a multi-year programme is now under way to achieve racial justice and equity both locally and worldwide.
-</div>
-      </div>
-        </div> 
+        <div className="py-8 bg-orange-500 mx-6  text-white">
+          <div className="flex flex-col items-center">
+            <div className="  text-6xl py-8 underline underline-offset-8 ">
+              Who We Are
+            </div>
+            <div className=" leading-9 pt-2 text-lg mx-20">
+              The founder of Orinova, Dr. Sourabh Kumar is an experienced
+              individuals who has faced the hardships of the society and has
+              become a figure of respect. However, it wasn’t easy for him to
+              reach this stage. He grew up in a place where even finding
+              employment was a big challenge in its own. However, this didn’t
+              stop him from reaching his goal. Over the years, Dr Sourabh
+              engaged in networking with the people around him, his superiors
+              and his team. His work brought him in contact with the people of
+              our country who were suffering from poverty and hunger. He
+              witnessed first-hand the increasing damage to our environment when
+              he travelled for work. Determined to once and for all take charge
+              to help his country develop and grow, he came to create Orinova.
+            </div>
+          </div>
+          <div className="flex flex-col items-center py-8  text-slate-800">
+          <div className="  text-6xl py-8 underline underline-offset-8 pl-12">
+            Our Team
+          </div>
+          <div className=" leading-9 pt-2 text-lg px-12 flex justify-center gap-40">
+            <p className=" max-w-2xl font-semibold">
+              We in Orinova, believe that in order to create a better world,
+              communities must take the reins of change. We are aware that our
+              biggest asset is the strength of our staff. We place a high
+              importance on work-life balance and create chances for everyone to
+              develop professionally. At Orinova, diversity and inclusion are
+              top priorities, and a multi-year programme is now under way to
+              achieve racial justice and equity both locally and worldwide.
+            </p>
+            <img src={team} className="h-72"></img>
+          </div>
+
+          </div>
+        </div>
+        
 
         {/* who we are finished  */}
         {/* mission started */}
@@ -133,9 +152,6 @@ At Orinova, diversity and inclusion are top priorities, and a multi-year program
         {/* vision finished */}
       </div>
       {/* about org finished  */}
-
-
-      
 
       {/* carousel for projects started  */}
       {/* <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 font-Poppins ">
@@ -198,7 +214,6 @@ At Orinova, diversity and inclusion are top priorities, and a multi-year program
         </div>
       </div> */}
       {/* blogs section finished  */}
-      
 
       <Footer />
     </div>

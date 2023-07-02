@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter as Router , Routes , Route , Link} from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact'
-import Services from './pages/ServicesProvided';
+import Goals from './pages/Goals';
 import Events from './pages/EventsOur';
 import Blogs from './pages/BlogsOur';
 import About from './pages/AboutUs'
@@ -18,7 +18,7 @@ function App() {
       
         <Routes>
           <Route path="/ngo/" element= {<Home />} />
-          <Route path="/ngo/services" element= {<Services />} />
+          <Route path="/ngo/goals" element= {<Goals />} />
           <Route path="/ngo/contact" element= {<Contact />} />
           <Route path="/ngo/events" element= {<Events />} />
           <Route path="/ngo/blogs" element= {<Blogs />} />
