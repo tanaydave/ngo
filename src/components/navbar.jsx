@@ -21,14 +21,14 @@ const Navbar = ({className=''}) => {
         <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer" ><Link to="/ngo">Home</Link></li>
         <li  className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer" ><Link to="/ngo/about">About</Link></li>
         <li className="pr-6 pl-3 transition-all ease-in " onMouseEnter={()=>setOpen((prev) => (!prev)) } onMouseLeave={()=>setOpen((prev) => (!prev)) } >
-          <Link     className=" flex justify-center items-center hover:text-orange-500 hover:transition-all ease-in-out cursor-pointer">
-           <p> Services</p>
-            { !open?
-            (<IoMdArrowDropdown className="pb-1 " size={30}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={30}></IoMdArrowDropup>)
+          <Link   to="/ngo/goals"  className=" flex justify-center items-center hover:text-orange-500 hover:transition-all ease-in-out cursor-pointer">
+           <p> goals</p>
+            {/* { !open?
+            (<IoMdArrowDropdown className="pb-1 " size={30}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={30}></IoMdArrowDropup>) */}
 
-}
+
             </Link>
-           { open &&
+           {/* { open &&
           <div className=" z-50 bg-white absolute mx-2 transition-all ease-in-out delay-500" >
             <ul className="">
               <li className="hover:text-orange-500 transition-all ease-in-out pt-1 px-2"> <Link to="/ngo/services">service</Link></li>
@@ -37,7 +37,7 @@ const Navbar = ({className=''}) => {
               <li className="hover:text-orange-500 transition-all ease-in-out  pt-1 px-2"><Link to="/ngo/services">service</Link></li>
 
             </ul>
-          </div>}
+          </div>} */}
 
 
 

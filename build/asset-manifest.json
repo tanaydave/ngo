@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/ngo/static/css/main.dcf526ab.css",
-    "main.js": "/ngo/static/js/main.9df74f3d.js",
+    "main.css": "/ngo/static/css/main.377df8ba.css",
+    "main.js": "/ngo/static/js/main.1d725c75.js",
     "static/media/home.jpg": "/ngo/static/media/home.f3bfd94d6ccdc1858bac.jpg",
     "static/media/misvis.jpg": "/ngo/static/media/misvis.90cfb2b9575d011e3d43.jpg",
+    "static/media/team.jpg": "/ngo/static/media/team.542979e3374be5094d3a.jpg",
+    "static/media/mission.jpg": "/ngo/static/media/mission.396abc501132c8dedd41.jpg",
     "static/media/logo.png": "/ngo/static/media/logo.5f79ab7f3217747dd1a3.png",
+    "static/media/vision.jpg": "/ngo/static/media/vision.b3b1f58e2132c1d15ba6.jpg",
     "index.html": "/ngo/index.html",
-    "main.dcf526ab.css.map": "/ngo/static/css/main.dcf526ab.css.map",
-    "main.9df74f3d.js.map": "/ngo/static/js/main.9df74f3d.js.map"
+    "main.377df8ba.css.map": "/ngo/static/css/main.377df8ba.css.map",
+    "main.1d725c75.js.map": "/ngo/static/js/main.1d725c75.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcf526ab.css",
-    "static/js/main.9df74f3d.js"
+    "static/css/main.377df8ba.css",
+    "static/js/main.1d725c75.js"
   ]
 }
