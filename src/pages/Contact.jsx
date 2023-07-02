@@ -30,14 +30,14 @@ const Contact = () => {
       <div className="pb-2 mx-4">
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-4 py-4">
-            <div>
+            <div className="w-full">
               <input
                 type="fname"
                 name="first_name"
                 id="first_name"
                 autoComplete="off"
                 placeholder="First Name"
-                className="border-2 h-12 "
+                className="border-2 h-12 w-full "
                 value={values.first_name}
                 onChange={handleChange}
               />
