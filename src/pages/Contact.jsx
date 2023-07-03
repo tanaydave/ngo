@@ -100,7 +100,7 @@ const Contact = () => {
             </div>
             <div className="border-2">
               <input
-                type="number"
+                type="text"
                 name="phone"
                 id="phone"
                 autoComplete="off"
