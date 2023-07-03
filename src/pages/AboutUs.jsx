@@ -20,7 +20,7 @@ const About = () => {
     }
     window.addEventListener('scroll',addBg)
   return (
-    <div className=" font-poppins">
+    <div className=" font-Poppins">
       <div className=" sticky top-0 transition-all ease-in z-50">
         <Navbar className={transparent}/>
       </div>

@@ -22,7 +22,7 @@ const Navbar = ({className=''}) => {
         <li  className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer" ><Link to="/ngo/about">About</Link></li>
         <li className="pr-6 pl-3 transition-all ease-in " onMouseEnter={()=>setOpen((prev) => (!prev)) } onMouseLeave={()=>setOpen((prev) => (!prev)) } >
           <Link   to="/ngo/goals"  className=" flex justify-center items-center hover:text-orange-500 hover:transition-all ease-in-out cursor-pointer">
-           <p> goals</p>
+           <p> Goals</p>
             {/* { !open?
             (<IoMdArrowDropdown className="pb-1 " size={30}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={30}></IoMdArrowDropup>) */}
 

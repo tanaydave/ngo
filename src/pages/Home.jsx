@@ -25,7 +25,7 @@ const Home = () => {
   const [transparent, setTransparent] = useState("bg-transparent");
   const addBg = () => {
     if (window.scrollY >= 10) {
-      setTransparent("bg-white");
+      setTransparent("bg-slate-200");
     } else {
       setTransparent("bg-transparent");
     }

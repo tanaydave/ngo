@@ -7,7 +7,7 @@ const Services = () => {
   const [transparent,setTransparent]= useState('bg-transparent');
     const addBg = ()=>{
      if(window.scrollY >=10){
-       setTransparent('bg-white')
+       setTransparent('bg-slate-200')
      }
      else{
        setTransparent('bg-transparent')
@@ -16,7 +16,7 @@ const Services = () => {
     window.addEventListener('scroll',addBg)
   
   return (
-    <div className="py-6">
+    <div className="py-6 font-Poppins">
       <div className=" sticky top-0 transition-all ease-in z-50">
         <Navbar className={transparent}/>
       </div>
