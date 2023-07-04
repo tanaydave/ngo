@@ -12,15 +12,15 @@ import logo from "../assets/logo.png";
 const Footer = () => {
   return (
     <div className=" bg-neutral-900 text-slate-200 font-Poppins pb-4">
-      <div className="ml-60 pb-12  pt-12 flex justify-between">
+      <div className="mx-40 pb-12  pt-12 flex justify-between">
         <img className=" h-32 w-60"  src={logo}></img>
         <div className="mt-6 mr-12   ">
-          <button className=" py-2 px-8 border-2 text-white  hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-white transition-all delay-100 ease-in-out ">
+          <button className=" py-2 px-8 border-2 text-white rounded-lg hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
             Donate Now
           </button>
         </div>
       </div>
-      <div className=" grid ml-60 gap-4 grid-cols-4 justify-items-center list-none">
+      <div className=" grid mx-40 gap-4 grid-cols-4 justify-items-center list-none">
         <li>
           <div className="text-orange-500 text-xl font-medium  ">About</div>
           <p>

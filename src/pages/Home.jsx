@@ -5,7 +5,8 @@ import home from "../assets/home.jpg";
 import misvis from "../assets/misvis.jpg";
 import logo from "../assets/logo.png";
 import team from "../assets/team.jpg";
-
+import {delay, motion as m, AnimatePresence  } from "framer-motion"
+ 
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const slides = [
@@ -16,6 +17,7 @@ const slides = [
 ];
 
 const Home = () => {
+  
   // used in carousel
   const [curr, setCurr] = useState(0);
   const prev = () =>
@@ -33,8 +35,9 @@ const Home = () => {
   window.addEventListener("scroll", addBg);
 
   const nums = [1, 1, 1, 1, 1, 1];
+  
   return (
-    <div className=" font-Poppins">
+    <m.div key={1} className=" font-Poppins">
       {/* navbar finished */}
 
       {/* hero started */}
@@ -44,35 +47,43 @@ const Home = () => {
           backgroundImage: `url(${misvis})`,
         }}
       >
-        <div className=" sticky top-0 transition-all ease-in z-50">
+        <m.div initial={{opacity:0}}
+  whileInView={{opacity:1 }} 
+  
+   transition={{duration:1,ease:"easeInOut"}} className=" sticky top-0 transition-all ease-in z-50">
           <Navbar className={transparent} />
-        </div>
-        <div className=" text-white absolute flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold">
-          <div className="text-2xl">
+        </m.div>
+        <m.div initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 ,delay:0.5 }} className=" text-white absolute shadow-black drop-shadow-2xl flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold">
+          <m.div   className="text-xl  ">
             It is not how much we give but how much love we put into giving
-          </div>
+          </m.div>
           <div className="text-white pt-4 flex justify-center gap-8">
-            <button className=" bg-orange-500 text-white border-2 border-orange-500 p-2 ">
+            <button className=" bg-orange-500 ring-1 ring-amber-700 text-white border-2 rounded-lg border-orange-500 p-2 ">
               {" "}
               Become a Volunteer
             </button>
-            <button className="border-2 p-2 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in">
+            <button className="border-2 p-2 rounded-lg ring-1 ring-amber-700 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in">
               Contribute for a cause
             </button>
           </div>
-        </div>
+        </m.div>
       </div>
       {/* hero finished */}
 
       {/* about org started  */}
 
-      <div className=" pt-16 mb-16  ">
+      <m.div  className=" pt-16 mb-16  ">
         {/* who we are started */}
-        <div className="py-8 bg-orange-500 mx-6  text-white">
-          <div className="flex flex-col items-center">
-            <div className="  text-6xl py-8 underline underline-offset-8 ">
-              Who We Are
-            </div>
+        <m.div    className="py-8 bg-orange-500 mx-6  text-white">
+          <m.div initial={{opacity:0}}
+  whileInView={{opacity:1 }} 
+  
+   transition={{ delay:0.5,duration:1,ease:"easeInOut"}} className="flex flex-col items-center">
+            <m.div  className="  text-6xl py-8 underline underline-offset-8 ">
+              Who We Are 
+            </m.div>
             <div className=" leading-9 pt-2 text-lg mx-20">
               The founder of Orinova, Dr. Sourabh Kumar is an experienced
               individuals who has faced the hardships of the society and has
@@ -87,8 +98,11 @@ const Home = () => {
               he travelled for work. Determined to once and for all take charge
               to help his country develop and grow, he came to create Orinova.
             </div>
-          </div>
-          <div className="flex flex-col items-center py-8  text-slate-800">
+          </m.div>
+          <m.div initial={{opacity:0}}
+  whileInView={{opacity:1 }} 
+  
+   transition={{ delay:0.5,duration:1,ease:"easeInOut"}} className="flex flex-col items-center py-8  text-slate-800">
           <div className="  text-6xl py-8 underline underline-offset-8 pl-12">
             Our Team
           </div>
@@ -105,8 +119,8 @@ const Home = () => {
             <img src={team} className="h-72"></img>
           </div>
 
-          </div>
-        </div>
+          </m.div>
+        </m.div>
         
 
         {/* who we are finished  */}
@@ -150,7 +164,7 @@ const Home = () => {
           </div>
         </div> */}
         {/* vision finished */}
-      </div>
+      </m.div>
       {/* about org finished  */}
 
       {/* carousel for projects started  */}
@@ -216,8 +230,9 @@ const Home = () => {
       {/* blogs section finished  */}
 
       <Footer />
-    </div>
-  );
+    </m.div>
+   
+  ); 
 };
 
 export default Home;
