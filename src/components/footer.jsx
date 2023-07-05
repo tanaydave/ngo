@@ -5,44 +5,66 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import{IoMdMail} from "react-icons/io"
 import { FaTwitter } from "react-icons/fa";
 import {BiLogoLinkedin} from "react-icons/bi"
-import logo from "../assets/logo.png";
+import ngo from "../assets/ngo.png";
+import {Link} from "react-router-dom"
 
 
 
 const Footer = () => {
   return (
-    <div className=" bg-neutral-900 text-slate-200 font-Poppins pb-4">
-      <div className="mx-40 pb-12  pt-12 flex justify-between">
-        <img className=" h-32 w-60"  src={logo}></img>
-        <div className="mt-6 mr-12   ">
+    <div className=" bg-neutral-200 text-slate-200 font-Poppins pb-12">
+      <div className="mx-40    flex justify-between">
+        <img className="h-60  "  src={ngo}></img>
+        <div className="mt-24 mr-12   ">
           <button className=" py-2 px-8 border-2 text-white rounded-lg hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
             Donate Now
           </button>
         </div>
       </div>
-      <div className=" grid mx-40 gap-4 grid-cols-4 justify-items-center list-none">
+      <div className=" grid mx-40 gap-4 grid-cols-4  justify-items-center list-none text-slate-950">
         <li>
-          <div className="text-orange-500 text-xl font-medium  ">About</div>
+          <div className="text-orange-500 text-2xl font-medium  ">About</div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
             minus eius explicabo debitis sapiente! Aliquid eveniet aliquam
             recusandae nostrum eligendi corrupti, quasi veritatis obcaecati esse
             suscipit eum ad, fugit ullam.
           </p>
+          <div className="flex text-2xl gap-6 pt-6 ">
+              <ImFacebook className="hover:text-orange-500"></ImFacebook>
+              <FaTwitter className="hover:text-orange-500"></FaTwitter>
+              <AiFillInstagram className="hover:text-orange-500"></AiFillInstagram>
+              <BiLogoLinkedin className="hover:text-orange-500"></BiLogoLinkedin>
+            </div>
         </li>
         <li>
           <div className="list-disc">
-            <div className="text-orange-500 text-xl font-medium ">Services</div>
-            <li className="pt-2">service 1</li>
-            <li className="pt-2">service 2</li>
-            <li className="pt-2">service 3</li>
-            <li className="pt-2">service 4</li>
-            <li className="pt-2">service 5</li>
+            <div className="text-orange-500 text-2xl font-medium ">Quick Links</div>
+            <ul>
+            <li className="pt-2"><Link> Mission and Vision</Link></li>
+            <li className="pt-2"><Link> Latest News</Link></li>
+            <li className="pt-2"><Link> Contact Us</Link></li>
+            <li className="pt-2"><Link>Blogs</Link> </li>
+            <li className="pt-2"><Link>Goals</Link> </li>
+            </ul>
           </div>
         </li>
 
         <li>
-          <div className="text-orange-500 text-xl font-medium">Contact Us</div>
+          <div>
+            <div className="text-orange-500 text-2xl font-medium">Get Involved</div>
+            <ul>
+              <li className="pt-4 hover:text-[#09b6cb] transition ease-in-out delay-100">Donate Now</li>
+              <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100">Become a Volunteer</li>
+              <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100">Become a Partner</li>
+            </ul>
+           
+          </div>
+        </li>
+
+
+        <li>
+          <div className="text-orange-500 text-2xl font-medium">Contact Us</div>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, fuga
             reiciendis? Optio perferendis totam omnis ullam molestiae adipisci
@@ -60,17 +82,7 @@ const Footer = () => {
 
           </div>
         </li>
-        <li>
-          <div>
-            <div className="text-orange-500 text-lg font-medium"> Follow Us at</div>
-            <div className="flex text-2xl gap-6 pt-6 ">
-              <ImFacebook className="hover:text-orange-500"></ImFacebook>
-              <FaTwitter className="hover:text-orange-500"></FaTwitter>
-              <AiFillInstagram className="hover:text-orange-500"></AiFillInstagram>
-              <BiLogoLinkedin className="hover:text-orange-500"></BiLogoLinkedin>
-            </div>
-          </div>
-        </li>
+       
       </div>
     </div>
   );

@@ -24,20 +24,20 @@ const Home = () => {
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
   const next = () =>
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
-  const [transparent, setTransparent] = useState("bg-transparent");
-  const addBg = () => {
-    if (window.scrollY >= 10) {
-      setTransparent("bg-slate-200");
-    } else {
-      setTransparent("bg-transparent");
-    }
-  };
-  window.addEventListener("scroll", addBg);
+  // const [transparent, setTransparent] = useState("bg-transparent");
+  // const addBg = () => {
+  //   if (window.scrollY >= 10) {
+  //     setTransparent("bg-slate-200");
+  //   } else {
+  //     setTransparent("bg-transparent");
+  //   }
+  // };
+  // window.addEventListener("scroll", addBg);
 
   const nums = [1, 1, 1, 1, 1, 1];
   
   return (
-    <m.div key={1} className=" font-Poppins">
+    <m.div  className=" font-Poppins">
       {/* navbar finished */}
 
       {/* hero started */}
@@ -51,7 +51,7 @@ const Home = () => {
   whileInView={{opacity:1 }} 
   
    transition={{duration:1,ease:"easeInOut"}} className=" sticky top-0 transition-all ease-in z-50">
-          <Navbar className={transparent} />
+          <Navbar  />
         </m.div>
         <m.div initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}

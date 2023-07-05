@@ -5,20 +5,21 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { TbGridDots } from "react-icons/tb";
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {motion as m} from "framer-motion"
+import ngo from "../assets/ngo.png"
 
 
 const Navbar = ({ className = "" }) => {
   const [open, setOpen] = useState(false);
   
   return (
-    <div  className={`pb-4 ${className} `}>
+    <div  className={`pb-4 bg-white border-b-[#09b6cb] border-b-4`}>
       <div className="flex  justify-around items-center pt-6 text-lg  ">
         <img
-          src={logo}
+          src={ngo}
           className=" h-16 w-40 md:h-24 md:w-60 bg-contain object-cover bg-center"
         ></img>
         <div className=" pr-12 font-Poppins font-medium justify-evenly ml-6 text-black  ">
-          <ul className="md:flex hidden list-none">
+          <ul className="md:flex hidden list-none text-xl">
             <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
               <Link to="/ngo">Home</Link>
             </li>
@@ -55,6 +56,16 @@ const Navbar = ({ className = "" }) => {
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
               <Link to="/ngo/contact">Contact</Link>
             </li>
+            <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+              <Link to="/ngo/contact">NewsRoom</Link>
+              
+            </li>
+            <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+              <Link to="/ngo/contact">Gallery</Link>
+            </li>
+            <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+              <Link to="/ngo/contact">Blogs</Link>
+            </li>
           </ul>
         </div>
 
@@ -62,13 +73,13 @@ const Navbar = ({ className = "" }) => {
 
         
 
-        <div className=" md:text-center md:pr-2 md:border-2 md:py-2 md:rounded-lg md:border-orange-500 md:hover:bg-transparent md:text-white  md:hover:border-orange-500 md:hover:text-orange-500 md:bg-orange-500 md:transition md:delay-100 md:ease-in">
+        {/* <div className=" md:text-center md:pr-2 md:border-2 md:py-2 md:rounded-lg md:border-orange-500 md:hover:bg-transparent md:text-white  md:hover:border-orange-500 md:hover:text-orange-500 md:bg-orange-500 md:transition md:delay-100 md:ease-in">
           <button className=" text-center">
             <Link to="/ngo/donations" className="  md:py-4 md:px-5 md:font-medium  ">
               Donate Now
             </Link>
           </button>
-        </div>
+        </div> */}
         <div className=" md:hidden" onClick={()=>{
           setOpen(!open)
         }}> <TbGridDots className="" size={40}/></div>

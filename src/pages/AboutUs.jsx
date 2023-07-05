@@ -10,23 +10,23 @@ import {motion as m} from "framer-motion"
 
 
 const About = () => {
-  const [transparent,setTransparent]= useState('bg-transparent');
-    const addBg = ()=>{
-     if(window.scrollY >=10){
-       setTransparent('bg-slate-200')
-     }
-     else{
-       setTransparent('bg-transparent')
-     }
-    }
-    window.addEventListener('scroll',addBg)
+  // const [transparent,setTransparent]= useState('bg-transparent');
+    // const addBg = ()=>{
+    //  if(window.scrollY >=10){
+    //    setTransparent('bg-slate-200')
+    //  }
+    //  else{
+    //    setTransparent('bg-transparent')
+    //  }
+    // }
+    // window.addEventListener('scroll',addBg)
   return (
     <div className=" font-Poppins">
       <m.div  initial={{opacity:0}}
   whileInView={{opacity:1 }} 
   
    transition={{duration:1,ease:"easeInOut"}} className=" sticky top-0 transition-all ease-in z-50">
-        <Navbar className={transparent}/>
+        <Navbar />
       </m.div>
       <m.div  initial={{opacity:0 ,x:"200%"}}
   whileInView={{opacity:1 }} animate={{x:0}} 
