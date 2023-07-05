@@ -5,8 +5,8 @@ import home from "../assets/home.jpg";
 import misvis from "../assets/misvis.jpg";
 import logo from "../assets/logo.png";
 import team from "../assets/team.jpg";
-import {delay, motion as m, AnimatePresence  } from "framer-motion"
- 
+import { delay, motion as m, AnimatePresence } from "framer-motion";
+
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const slides = [
@@ -17,7 +17,6 @@ const slides = [
 ];
 
 const Home = () => {
-  
   // used in carousel
   const [curr, setCurr] = useState(0);
   const prev = () =>
@@ -34,29 +33,34 @@ const Home = () => {
   // };
   // window.addEventListener("scroll", addBg);
 
-  const nums = [1, 1, 1, 1, 1, 1];
-  
+  const nums = [1, 1, 1];
+
   return (
-    <m.div  className=" font-Poppins">
+    <m.div className=" font-Poppins pb-12">
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className=" sticky top-0 transition-all ease-in z-50"
+      >
+        <Navbar />
+      </m.div>
       {/* navbar finished */}
 
       {/* hero started */}
       <div
-        className="p-0 h-screen   bg-cover object-cover bg-center "
+        className="p-0 h-[80vh]   bg-cover object-cover bg-center "
         style={{
           backgroundImage: `url(${misvis})`,
         }}
       >
-        <m.div initial={{opacity:0}}
-  whileInView={{opacity:1 }} 
-  
-   transition={{duration:1,ease:"easeInOut"}} className=" sticky top-0 transition-all ease-in z-50">
-          <Navbar  />
-        </m.div>
-        <m.div initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.5 ,delay:0.5 }} className=" text-white absolute shadow-black drop-shadow-2xl flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold">
-          <m.div   className="text-xl  ">
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className=" text-white absolute shadow-black drop-shadow-2xl flex flex-col transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2 font-semibold"
+        >
+          <m.div className="text-xl  ">
             It is not how much we give but how much love we put into giving
           </m.div>
           <div className="text-white pt-4 flex justify-center gap-8">
@@ -72,21 +76,30 @@ const Home = () => {
       </div>
       {/* hero finished */}
 
-      {/* about org started  */}
-
-      <m.div  className=" pt-16 mb-16  ">
+      {/* who we are started  */}
+      <m.div className=" py-16 mb-16 bg-slate-200 ">
         {/* who we are started */}
-        <m.div    className="py-8 bg-orange-500 mx-6  text-white">
-          <m.div initial={{opacity:0}}
-  whileInView={{opacity:1 }} 
-  
-   transition={{ delay:0.5,duration:1,ease:"easeInOut"}} className="flex flex-col items-center">
-            <m.div  className="  text-6xl py-8 underline underline-offset-8 ">
-              Who We Are 
-            </m.div>
-            <div className=" leading-9 pt-2 text-lg mx-20">
+        <m.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+          className=" font-semibold text-3xl w-[90vw] border-b-2 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]"
+        >
+          Who We Are
+        </m.div>
+        <m.div className="my-8 py-8 w-[90vw] bg-orange-500 mx-16  text-white">
+          <m.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+            className="flex flex-col items-center  "
+          >
+            {/* <m.div className=" bg-white text-6xl py-8 ml-16 underline underline-offset-8 text-[#09b6cb]">
+              Who We Are
+            </m.div> */}
+            <div className=" leading-9 pt-2 text-xl mx-20">
               The founder of Orinova, Dr. Sourabh Kumar is an experienced
-              individuals who has faced the hardships of the society and has
+              individual who has faced the hardships of the society and has
               become a figure of respect. However, it wasn’t easy for him to
               reach this stage. He grew up in a place where even finding
               employment was a big challenge in its own. However, this didn’t
@@ -99,73 +112,71 @@ const Home = () => {
               to help his country develop and grow, he came to create Orinova.
             </div>
           </m.div>
-          <m.div initial={{opacity:0}}
-  whileInView={{opacity:1 }} 
-  
-   transition={{ delay:0.5,duration:1,ease:"easeInOut"}} className="flex flex-col items-center py-8  text-slate-800">
-          <div className="  text-6xl py-8 underline underline-offset-8 pl-12">
-            Our Team
-          </div>
-          <div className=" leading-9 pt-2 text-lg px-12 flex justify-center gap-40">
-            <p className=" max-w-2xl font-semibold">
-              We in Orinova, believe that in order to create a better world,
-              communities must take the reins of change. We are aware that our
-              biggest asset is the strength of our staff. We place a high
-              importance on work-life balance and create chances for everyone to
-              develop professionally. At Orinova, diversity and inclusion are
-              top priorities, and a multi-year programme is now under way to
-              achieve racial justice and equity both locally and worldwide.
-            </p>
-            <img src={team} className="h-72"></img>
-          </div>
-
-          </m.div>
         </m.div>
-        
-
-        {/* who we are finished  */}
-        {/* mission started */}
-        {/* <div className="flex justify-evenly pt-12">
-          <div className=" text-base text-orange-400 font-semibold flex flex-col ">
-            <div> About us</div>
-            <div className=" text-6xl font-semibold  text-black pt-4">
-              Our Mission
-            </div>
-            <p className=" w-80 pt-4 text-black text-base font-normal">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              similique nostrum, eaque asperiores nisi sunt iusto excepturi
-              deleniti aliquid. Atque!
-            </p>
-          </div>
-
-          <img
-            src={misvis}
-            className=" h-60 w-auto rounded-3xl ring-2 ring-gray-400"
-          ></img>
-        </div> */}
-        {/* mission finished */}
-
-        {/* vision started  */}
-        {/* <div className="flex justify-evenly pt-16">
-          <img
-            src={misvis}
-            className="h-60 w-auto rounded-3xl ring-2 ring-gray-400"
-          ></img>
-          <div className=" text-base text-orange-400 font-semibold flex flex-col">
-            <div>What we Do</div>
-            <div className=" text-6xl font-semibold text-black pt-4">
-              Our Vision{" "}
-            </div>
-            <p className=" w-80 pt-4 text-black text-base font-normal ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
-              voluptatum sint eaque in aliquid assumenda ab sequi magni atque
-              quasi.
-            </p>
-          </div>
-        </div> */}
-        {/* vision finished */}
       </m.div>
-      {/* about org finished  */}
+      {/* who we are finished  */}
+
+      {/* news started */}
+
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+        className="flex flex-col items-center pb-12   "
+      >
+        <div className="flex flex-col  pb-8 font-Poppins w-full bg-stone-900">
+          <div className=" pt-12 text-3xl text-orange-500 font-semibold py-6 border-b-2 w-[90vw] border-b-orange-500 pb-1 ml-16">
+            {" "}
+            Daily News{" "}
+          </div>
+          <div className="grid grid-cols-3 gap-x-24 pt-16  ">
+            {nums.map(() => (
+              <div className="  h-[60vh] w-[25vw] border-2 hover:border-0 rounded-lg p-4 flex flex-col hover:scale-110 transition   mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] o">
+                <img src={misvis} className="object-contain pb-2"></img>{" "}
+                <p className="pt-2 ">Mumbai,Maharashtra</p>
+                <p className="pt-2">headline</p>
+                <p className="h-[6.8rem] pt-2 overflow-hidden  ">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium consequuntur mollitia ea! Iure, aspernatur eius.
+                  Rem dolorum officia, iusto minima, unde explicabo enim sunt
+                  ullam assumenda eaque voluptatibus sint? Rem ipsam tempora
+                  corrupti provident sed, nesciunt quisquam natus. Enim, vitae.
+                </p>
+                <span>....</span>
+                <div className="flex pt-3">
+                  read more <BiChevronRight size={30}></BiChevronRight>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </m.div>
+      {/* news finished */}
+
+      {/* blog started  */}
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="py-8"
+      >
+        <div className=" font-semibold text-3xl w-[90vw] border-b-2 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]">
+          Latest Blog
+        </div>
+
+        <div className="flex  justify-center w-[80vw]">
+          <div> <img src="" alt="" /></div>
+          <div className="flex flex-col">
+            <p>date</p>
+            <p>title</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga itaque, doloremque deleniti quisquam dicta ad sequi nulla, autem reprehenderit harum omnis vero, odit eveniet id nostrum natus recusandae eaque aliquam magnam dolorum. Ea nesciunt voluptate accusamus beatae quas quia culpa nisi consequuntur eum. Inventore molestiae commodi, porro reiciendis laboriosam necessitatibus?</p>
+
+          </div>
+
+        </div>
+      </m.div>
+
+      {/* blog finished */}
 
       {/* carousel for projects started  */}
       {/* <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 font-Poppins ">
@@ -208,31 +219,10 @@ const Home = () => {
       </div> */}
 
       {/* carousel for projects finished  */}
-      {/* blogs section starts  */}
-      {/* <div className="flex flex-col items-center bg-slate-500 pb-8 font-Poppins">
-        <div className="text-6xl font-semibold p-6"> Our Blogs </div>
-        <div className="grid grid-cols-3 gap-x-40 gap-y-20  ">
-          {nums.map(() => (
-            <div className="  h-80 w-80 border-2 p-4 flex flex-col overflow-y-scroll no-scrollbar ">
-              <img src={misvis} className="object-contain pb-2"></img>
-              {" "}
-             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Accusantium consequuntur mollitia ea! Iure, aspernatur eius. Rem
-              dolorum officia, iusto minima, unde explicabo enim sunt ullam
-              assumenda eaque voluptatibus sint? Rem ipsam tempora corrupti
-              provident sed, nesciunt quisquam natus. Enim, vitae.
-           </p>  
-           <div className="flex pt-3">read more <BiChevronRight size={30}></BiChevronRight></div>
-           </div>
-          ))}
-        </div>
-      </div> */}
-      {/* blogs section finished  */}
 
       <Footer />
     </m.div>
-   
-  ); 
+  );
 };
 
 export default Home;

@@ -31,21 +31,21 @@ const Footer = () => {
             suscipit eum ad, fugit ullam.
           </p>
           <div className="flex text-2xl gap-6 pt-6 ">
-              <ImFacebook className="hover:text-orange-500"></ImFacebook>
-              <FaTwitter className="hover:text-orange-500"></FaTwitter>
-              <AiFillInstagram className="hover:text-orange-500"></AiFillInstagram>
-              <BiLogoLinkedin className="hover:text-orange-500"></BiLogoLinkedin>
+              <ImFacebook className="hover:text-[#09b6cb] transition ease-in-out delay-100"></ImFacebook>
+              <FaTwitter className="hover:text-[#09b6cb] transition ease-in-out delay-100"></FaTwitter>
+              <AiFillInstagram className="hover:text-[#09b6cb] transition ease-in-out delay-100"></AiFillInstagram>
+              <BiLogoLinkedin className="hover:text-[#09b6cb] transition ease-in-out delay-100"></BiLogoLinkedin>
             </div>
         </li>
         <li>
           <div className="list-disc">
             <div className="text-orange-500 text-2xl font-medium ">Quick Links</div>
             <ul>
-            <li className="pt-2"><Link> Mission and Vision</Link></li>
-            <li className="pt-2"><Link> Latest News</Link></li>
-            <li className="pt-2"><Link> Contact Us</Link></li>
-            <li className="pt-2"><Link>Blogs</Link> </li>
-            <li className="pt-2"><Link>Goals</Link> </li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link> Mission and Vision</Link></li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link> Latest News</Link></li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link> Contact Us</Link></li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link>Blogs</Link> </li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link>Goals</Link> </li>
             </ul>
           </div>
         </li>
