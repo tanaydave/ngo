@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import home from "../assets/home.jpg";
@@ -6,8 +6,14 @@ import misvis from "../assets/misvis.jpg";
 import logo from "../assets/logo.png";
 import team from "../assets/team.jpg";
 import { delay, motion as m, AnimatePresence } from "framer-motion";
-
+import Counter from "../components/Counter"
+import { useInView } from "framer-motion"
+import { useRef } from "react";
+import{ PiTargetLight} from "react-icons/pi"
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { RiEmotionHappyLine } from "react-icons/ri";
+import {BsPeople} from "react-icons/bs"
+
 
 const slides = [
   "https://i.ibb.co/ncrXc2V/1.png",
@@ -34,6 +40,49 @@ const Home = () => {
   // window.addEventListener("scroll", addBg);
 
   const nums = [1, 1, 1];
+
+  // counter function
+  const [count, setCount] = useState(0);
+  const counterRef = useRef(null);
+  const counting =( limit)=>{
+     {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const interval = setInterval(() => {
+                setCount((prevCount) => {
+                  if (prevCount >= limit) {
+                    clearInterval(interval);
+                    return prevCount;
+                  }
+                  return prevCount + 1;
+                });
+              }, 100);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+  
+      if (counterRef.current) {
+        observer.observe(counterRef.current);
+      }
+  
+      return () => {
+        if (counterRef.current) {
+          observer.unobserve(counterRef.current);
+        }
+      };
+    }
+
+  }
+  
+  
+  
+
+  useEffect( counting, [count]);
+  
 
   return (
     <m.div className=" font-Poppins pb-12">
@@ -83,7 +132,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-          className=" font-semibold text-3xl w-[90vw] border-b-2 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]"
+          className=" font-semibold text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]"
         >
           Who We Are
         </m.div>
@@ -116,7 +165,7 @@ const Home = () => {
       </m.div>
       {/* who we are finished  */}
 
-      {/* news started */}
+      {/* events started */}
 
       <m.div
         initial={{ opacity: 0 }}
@@ -125,25 +174,31 @@ const Home = () => {
         className="flex flex-col items-center pb-12   "
       >
         <div className="flex flex-col  pb-8 font-Poppins w-full bg-stone-900">
-          <div className=" pt-12 text-3xl text-orange-500 font-semibold py-6 border-b-2 w-[90vw] border-b-orange-500 pb-1 ml-16">
+          <div className=" pt-12 text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-16">
             {" "}
-            Daily News{" "}
+            Upcoming Events{" "}
           </div>
-          <div className="grid grid-cols-3 gap-x-24 pt-16  ">
+          <div className="grid grid-cols-3 gap-x-24 pt-16 px-16 mr-8  ">
             {nums.map(() => (
-              <div className="  h-[60vh] w-[25vw] border-2 hover:border-0 rounded-lg p-4 flex flex-col hover:scale-110 transition   mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] o">
-                <img src={misvis} className="object-contain pb-2"></img>{" "}
-                <p className="pt-2 ">Mumbai,Maharashtra</p>
-                <p className="pt-2">headline</p>
-                <p className="h-[6.8rem] pt-2 overflow-hidden  ">
+              <div className="  h-[60vh] w-[25vw] border-2 hover:border-0 rounded-lg overflow-hidden flex flex-col hover:scale-110 transition   mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] ">
+                <div className="relative top-[14rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
+                  <p>18</p> JUL
+                </div>
+                <img
+                  src={misvis}
+                  className="object-contain relative bottom-[3.6rem] "
+                ></img>{" "}
+                <p className=" pl-2 ">Mumbai,Maharashtra</p>
+                <p className="pt-2 pl-2">headline</p>
+                <p className="h-[7rem] pt-2 pl-2 overflow-hidden  ">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Accusantium consequuntur mollitia ea! Iure, aspernatur eius.
                   Rem dolorum officia, iusto minima, unde explicabo enim sunt
                   ullam assumenda eaque voluptatibus sint? Rem ipsam tempora
                   corrupti provident sed, nesciunt quisquam natus. Enim, vitae.
                 </p>
-                <span>....</span>
-                <div className="flex pt-3">
+                <span className="pl-2">....</span>
+                <div className="flex pt-3 pl-2">
                   read more <BiChevronRight size={30}></BiChevronRight>
                 </div>
               </div>
@@ -151,32 +206,112 @@ const Home = () => {
           </div>
         </div>
       </m.div>
-      {/* news finished */}
+      {/* events finished */}
 
       {/* blog started  */}
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="py-8"
+        className="pb-16 pt-8 "
       >
-        <div className=" font-semibold text-3xl w-[90vw] border-b-2 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]">
+        <div className=" font-semibold text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]">
           Latest Blog
         </div>
 
-        <div className="flex  justify-center w-[80vw]">
-          <div> <img src="" alt="" /></div>
-          <div className="flex flex-col">
-            <p>date</p>
-            <p>title</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga itaque, doloremque deleniti quisquam dicta ad sequi nulla, autem reprehenderit harum omnis vero, odit eveniet id nostrum natus recusandae eaque aliquam magnam dolorum. Ea nesciunt voluptate accusamus beatae quas quia culpa nisi consequuntur eum. Inventore molestiae commodi, porro reiciendis laboriosam necessitatibus?</p>
-
+        <div className="grid grid-cols-5 gap-8 justify-center w-[80vw] mx-20   rounded-lg  mt-12">
+          <div className=" col-span-2 overflow-hidden w-[33vw] h-[40vh] mt-12 rounded-lg m-3 flex items-center ">
+            {" "}
+            <img
+              src={misvis}
+              alt=""
+              className="h-[40vh]  transition duration-[2s] rounded-lg  ease-in-out  hover:scale-110 overflow-hidden"
+            />
           </div>
-
+          <div className=" col-span-2 ">
+            <div className="flex flex-col pt-8 gap-6 border-l-4 border-l-orange-500 h-[45vh]  pl-8 ml-6 mt-[2rem] ]">
+              <p className=" text-3xl">title</p>
+              <p className="">date</p>
+              <p className="">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptates a nisi magni iusto delectus? Minima quis eos itaque,
+                sint, suscipit velit nihil provident, vel nobis explicabo fuga
+                veniam deserunt ex voluptate eveniet harum soluta dolor.
+                Consequatur quo dolorem deserunt quasi alias. Ex alias,
+                dignissimos optio corrupti accusantium molestias dicta rerum.
+                Praesentium harum reprehenderit placeat fuga quidem alias vero
+                repudiandae iusto.
+              </p>
+              <p>
+                <button className="bg-orange-500 rounded-md p-2">
+                  read more
+                </button>
+              </p>
+            </div>
+          </div>
+          <div className="pt-2 flex flex-col items-start justify-center gap-6">
+            {nums.map(() => {
+              return (
+                <div className="grid grid-cols-3 gap-2 border-4 rounded-lg w-[25rem] duration-500 hover:scale-105 bg-slate-200">
+                  <div className="col-span-1">
+                    <img src={misvis} alt="" className="pt-3 h-32" />
+                  </div>
+                  <div className="col-span-2 flex gap-2 flex-col text-sm">
+                    <div>date</div>
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Blanditiis nostrum officiis nisi corrupti, accusamus sit
+                      laboriosam illum quo alias sunt!
+                    </div>
+                    <div>
+                      <button className="text-orange-500">read more</button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </m.div>
 
       {/* blog finished */}
+
+      {/* counters started */}
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="bg-black text-white"
+        
+      >
+        <div className="text-center text-4xl py-4">Our Impact</div>
+        <div ref={counterRef} className="flex justify-around pb-12 text-2xl">
+          <div className="flex flex-col items-center gap-4">
+            <div><RiEmotionHappyLine size={60}/></div>
+            <div>Happy Donators</div>
+            <div onClick={counting(5000)}><Counter  value={count} limit={3000}/></div>
+          </div>
+          <div className="flex flex-col gap-4 items-center">
+            <div><PiTargetLight size={60}/></div>
+            <div>Successful Missions</div>
+            <div><Counter value={count} limit={100}/></div>
+          </div>
+          <div className="flex flex-col gap-4 items-center">
+            <div><BsPeople size={60}/></div>
+            <div>Volunteers</div>
+            <div><Counter value={count} limit={1500}/></div>
+          </div>
+          <div className="flex flex-col gap-4 items-center ">
+            <div></div>
+            <div>States Reached</div>
+            <div ><Counter value={count} limit={20}/></div>
+          </div>
+        </div>
+
+      </m.div>
+      {/* counters finished */}
+      {/* carousel code  */}
+      <div>
 
       {/* carousel for projects started  */}
       {/* <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 font-Poppins ">
@@ -216,9 +351,23 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div> */}</div>
 
       {/* carousel for projects finished  */}
+
+      {/*  started  */}
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="pb-16 pt-8 "
+      >
+        <div className=" pt-12 text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-16">
+          {" "}
+          Gallery{" "}
+        </div>
+      </m.div>
+      {/*  finished */}
 
       <Footer />
     </m.div>
