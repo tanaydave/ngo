@@ -13,6 +13,11 @@ import{ PiTargetLight} from "react-icons/pi"
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { RiEmotionHappyLine } from "react-icons/ri";
 import {BsPeople} from "react-icons/bs"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Slider from 'react-slick';
+
 
 
 const slides = [
@@ -82,6 +87,19 @@ const Home = () => {
   
 
   useEffect( counting, [count]);
+  const images =[1,1,1,1,1,1]
+  const carImgs= [misvis,misvis,misvis,misvis]
+  
+  
+  // carousel function 
+  const renderSlides = () =>
+  [misvis, misvis, misvis, misvis, misvis, misvis, misvis, misvis].map(num => (
+    <div className="text-center relative  ">
+      <img src={num} alt="" className="h-[80vh] w-full object-cover"  />
+      <div className="absolute text-black transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2"> hello</div>
+    </div>
+  ));
+
   
 
   return (
@@ -97,7 +115,7 @@ const Home = () => {
       {/* navbar finished */}
 
       {/* hero started */}
-      <div
+      {/* <div
         className="p-0 h-[80vh]   bg-cover object-cover bg-center "
         style={{
           backgroundImage: `url(${misvis})`,
@@ -122,8 +140,30 @@ const Home = () => {
             </button>
           </div>
         </m.div>
-      </div>
+      </div> */}
+      {/* carousel  */}
+
+      <div className="  ">
+      <Slider
+        dots={true}
+        autoplay={true}
+        slidesToShow={1}
+        slidesToScroll={1}
+        autoplaySpeed={3000}
+        
+        
+      >
+        {renderSlides()}
+        
+      </Slider>
+    </div>
+
+      
       {/* hero finished */}
+
+      {/* get involved started  */}
+      {/* get involved finished   */}
+
 
       {/* who we are started  */}
       <m.div className=" py-16 mb-16 bg-slate-200 ">
@@ -243,7 +283,7 @@ const Home = () => {
                 repudiandae iusto.
               </p>
               <p>
-                <button className="bg-orange-500 rounded-md p-2">
+                <button className="bg-orange-500 rounded-md p-2 hover:bg-transparent hover:text-orange-500 transition-all hover:font-medium border-2 border-orange-500">
                   read more
                 </button>
               </p>
@@ -254,7 +294,7 @@ const Home = () => {
               return (
                 <div className="grid grid-cols-3 gap-2 border-4 rounded-lg w-[25rem] duration-500 hover:scale-105 bg-slate-200">
                   <div className="col-span-1">
-                    <img src={misvis} alt="" className="pt-3 h-32" />
+                    <img src={misvis} alt="" className="pt-3 pl-3 h-32" />
                   </div>
                   <div className="col-span-2 flex gap-2 flex-col text-sm">
                     <div>date</div>
@@ -355,8 +395,9 @@ const Home = () => {
 
       {/* carousel for projects finished  */}
 
-      {/*  started  */}
+      {/*  Gallery started  */}
       <m.div
+
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
@@ -366,8 +407,27 @@ const Home = () => {
           {" "}
           Gallery{" "}
         </div>
+
+        <div className="grid grid-cols-3 grid-rows-2 gap-2 py-4 mx-12 justify-between relative">
+          {images.map(()=>{
+            return(
+              <div className=" relative">
+                <img src={misvis} alt="" />
+                <m.div  className=" absolute flex flex-col items-center justify-end h-full gap-3  duration-500 transition w-full top-[0.1rem] bg-black text-orange-500 opacity-0 hover:opacity-80 "> 
+                <div className="font-semibold text-center">event details Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div><button className="border-2 duration-100 ease-in rounded-lg border-orange-500 mb-4 p-2 bg-orange-500 hover:bg-transparent hover:text-orange  text-white"> View all photos</button></div>
+                </m.div>
+              </div>
+            )
+          }
+            
+              
+            )
+          }
+          
+        </div>
       </m.div>
-      {/*  finished */}
+      {/*  Galleryfinished */}
 
       <Footer />
     </m.div>
