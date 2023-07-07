@@ -15,6 +15,11 @@ import { RiEmotionHappyLine } from "react-icons/ri";
 import {BsPeople} from "react-icons/bs"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import carousel1 from "../assets/carousel1.jpg"
+import volunteer from "../assets/volunteer.jpg"
+import partner from "../assets/partner.jpg"
+
+
 
 import Slider from 'react-slick';
 
@@ -88,16 +93,46 @@ const Home = () => {
 
   useEffect( counting, [count]);
   const images =[1,1,1,1,1,1]
-  const carImgs= [misvis,misvis,misvis,misvis]
+  const carImgs= [
+    {
+      id: 1,
+      tagline: 'It is not how much we give but how much love we put into giving' ,
+      button: 'Donate Now',
+      img:carousel1
+      
+  
+    },  
+    {
+      id: 2,
+      tagline: 'It is not how much we give but how much love we put into giving' ,
+      button: 'Become a Volunteer',
+      img:volunteer,
+      
+  
+    },  {
+      id: 3,
+      tagline: 'It is not how much we give but how much love we put into giving' ,
+      button: 'Become a Partner',
+      img:partner,
+      
+  
+    }
+  ]
+  
+
+  
   
   
   // carousel function 
   const renderSlides = () =>
-  [misvis, misvis, misvis, misvis, misvis, misvis, misvis, misvis].map(num => (
-    <div className="text-center relative  ">
-      <img src={num} alt="" className="h-[80vh] w-full object-cover"  />
-      <div className="absolute text-black transform -translate-x-2/4 -translate-y-2/4 top-1/2 left-1/2"> hello</div>
-    </div>
+  carImgs.map(image => (
+    < m.div className="text-center relative left-0 " >
+      <img src={image.img} alt="" className="h-[80vh] w-[100vw] object-cover "  />
+      <div className="absolute flex flex-col items-center gap-4 text-black transform -translate-x-2/4 -translate-y-2/4 top-[60vh] left-1/2">
+      <div className="text-3xl text-white font-semibold drop-shadow-2xl shadow-black">{image.tagline}</div>
+      <button className=" font-semibold border-2 py-2 px-4 rounded-lg ring-1 ring-amber-700 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in text-xl">{image.button}</button>
+        </div>
+    </m.div>
   ));
 
   
@@ -143,13 +178,15 @@ const Home = () => {
       </div> */}
       {/* carousel  */}
 
-      <div className="  ">
+      <div className=" w-[98.9vw] ">
       <Slider
         dots={true}
         autoplay={true}
         slidesToShow={1}
         slidesToScroll={1}
         autoplaySpeed={3000}
+        infinite={true}
+        arrows={false}
         
         
       >
@@ -210,7 +247,7 @@ const Home = () => {
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+        transition={{  duration: 1, ease: "easeInOut" }}
         className="flex flex-col items-center pb-12   "
       >
         <div className="flex flex-col  pb-8 font-Poppins w-full bg-stone-900">
@@ -228,8 +265,8 @@ const Home = () => {
                   src={misvis}
                   className="object-contain relative bottom-[3.6rem] "
                 ></img>{" "}
-                <p className=" pl-2 ">Mumbai,Maharashtra</p>
-                <p className="pt-2 pl-2">headline</p>
+                <p className=" pl-2  ">Mumbai,Maharashtra</p>
+                <p className="pt-2 pl-2 text-lg">headline</p>
                 <p className="h-[7rem] pt-2 pl-2 overflow-hidden  ">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Accusantium consequuntur mollitia ea! Iure, aspernatur eius.
@@ -253,14 +290,15 @@ const Home = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="pb-16 pt-8 "
+        className="pb-16 pt-8  "
+
       >
         <div className=" font-semibold text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]">
           Latest Blog
         </div>
 
-        <div className="grid grid-cols-5 gap-8 justify-center w-[80vw] mx-20   rounded-lg  mt-12">
-          <div className=" col-span-2 overflow-hidden w-[33vw] h-[40vh] mt-12 rounded-lg m-3 flex items-center ">
+        <div className="grid grid-cols-5 gap-2 justify-center w-[80vw]  mx-10  rounded-lg  mt-12">
+          <div className=" col-span-2 overflow-hidden  h-[40vh] mt-12 rounded-lg  flex items-center ">
             {" "}
             <img
               src={misvis}
@@ -269,10 +307,10 @@ const Home = () => {
             />
           </div>
           <div className=" col-span-2 ">
-            <div className="flex flex-col pt-8 gap-6 border-l-4 border-l-orange-500 h-[45vh]  pl-8 ml-6 mt-[2rem] ]">
+            <div className="flex flex-col pt-8 gap-6 border-l-4 border-l-orange-500 h-[45vh]  pl-8  mt-[2rem] ]">
               <p className=" text-3xl">title</p>
               <p className="">date</p>
-              <p className="">
+              <p className=" ">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Voluptates a nisi magni iusto delectus? Minima quis eos itaque,
                 sint, suscipit velit nihil provident, vel nobis explicabo fuga
@@ -289,7 +327,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="pt-2 flex flex-col items-start justify-center gap-6">
+          <div className="pt-2 flex flex-col items-start justify-center gap-6 ">
             {nums.map(() => {
               return (
                 <div className="grid grid-cols-3 gap-2 border-4 rounded-lg w-[25rem] duration-500 hover:scale-105 bg-slate-200">
@@ -350,50 +388,7 @@ const Home = () => {
 
       </m.div>
       {/* counters finished */}
-      {/* carousel code  */}
-      <div>
-
-      {/* carousel for projects started  */}
-      {/* <div className="flex flex-col  items-center justify-center  text-6xl font-bold pt-20 font-Poppins ">
-        Ongoing Projects
-        <div className=" max-w-lg  overflow-hidden relative text-center pt-12 pb-8">
-          <div
-            className="flex gap-0 transition-transform ease-out duration-500 "
-            style={{ transform: `translateX(-${curr * 100}%)` }}
-          >
-            {slides.map((s) => {
-              return <img className=" w-fit h-5/6"  src={s} />;
-            })}
-          </div>
-          <div className="absolute inset-0 flex items-center justify-between p-4  ">
-            <button
-              onClick={prev}
-              className="p-1 rounded-full shadow bg-slate-400 text-gray-800 hover:bg-white"
-            >
-              <BiChevronLeft size={40}></BiChevronLeft>
-            </button>
-            <button
-              onClick={next}
-              className="p-1 rounded-full shadow  bg-slate-400 text-gray-800 hover:bg-white"
-            >
-              <BiChevronRight size={40}></BiChevronRight>
-            </button>
-          </div>
-          <div className="absolute bottom-12 left-0 right-0">
-            <div className="flex items-center justify-center gap-2">
-              {slides.map((_, id) => (
-                <div
-                  className={`transition-all w-3 h-3  bg-white rounded-full ${
-                    curr === id ? "p-2" : " bg-opacity-50"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div> */}</div>
-
-      {/* carousel for projects finished  */}
+      
 
       {/*  Gallery started  */}
       <m.div
