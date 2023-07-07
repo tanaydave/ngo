@@ -1,21 +1,28 @@
 {
   "files": {
-    "main.css": "/ngo/static/css/main.94c4be79.css",
-    "main.js": "/ngo/static/js/main.070fb315.js",
+    "main.css": "/ngo/static/css/main.5fc36fa2.css",
+    "main.js": "/ngo/static/js/main.5376251b.js",
+    "static/media/partner.jpg": "/ngo/static/media/partner.27e52b8a56712d540b14.jpg",
     "static/media/home.jpg": "/ngo/static/media/home.f3bfd94d6ccdc1858bac.jpg",
     "static/media/misvis.jpg": "/ngo/static/media/misvis.90cfb2b9575d011e3d43.jpg",
+    "static/media/carousel1.jpg": "/ngo/static/media/carousel1.8052cd0de96b32f39dc7.jpg",
+    "static/media/volunteer.jpg": "/ngo/static/media/volunteer.6ede5b84b55388c803f8.jpg",
     "static/media/team.jpg": "/ngo/static/media/team.542979e3374be5094d3a.jpg",
     "static/media/ngo.png": "/ngo/static/media/ngo.b031f442af5e69bb90c0.png",
     "static/media/mission.jpg": "/ngo/static/media/mission.396abc501132c8dedd41.jpg",
     "static/media/logo.png": "/ngo/static/media/logo.5f79ab7f3217747dd1a3.png",
     "static/media/vision.jpg": "/ngo/static/media/vision.b3b1f58e2132c1d15ba6.jpg",
     "static/media/contact.jpg": "/ngo/static/media/contact.ed744ecd19f21b442412.jpg",
+    "static/media/slick.svg": "/ngo/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ngo/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ngo/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/ngo/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ngo/index.html",
-    "main.94c4be79.css.map": "/ngo/static/css/main.94c4be79.css.map",
-    "main.070fb315.js.map": "/ngo/static/js/main.070fb315.js.map"
+    "main.5fc36fa2.css.map": "/ngo/static/css/main.5fc36fa2.css.map",
+    "main.5376251b.js.map": "/ngo/static/js/main.5376251b.js.map"
   },
   "entrypoints": [
-    "static/css/main.94c4be79.css",
-    "static/js/main.070fb315.js"
+    "static/css/main.5fc36fa2.css",
+    "static/js/main.5376251b.js"
   ]
 }
