@@ -64,7 +64,7 @@ const Navbar = ({ className = "" }) => {
               <Link to="/ngo/contact">Gallery</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/contact">Blogs</Link>
+              <Link to="/ngo/blogs">Blogs</Link>
             </li>
           </ul>
         </div>
