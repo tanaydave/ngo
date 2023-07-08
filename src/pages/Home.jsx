@@ -18,6 +18,7 @@ import "slick-carousel/slick/slick-theme.css";
 import carousel1 from "../assets/carousel1.jpg"
 import volunteer from "../assets/volunteer.jpg"
 import partner from "../assets/partner.jpg"
+import {Link} from "react-router-dom"
 
 
 
@@ -322,7 +323,7 @@ const Home = () => {
               </p>
               <p>
                 <button className="bg-orange-500 rounded-md p-2 hover:bg-transparent hover:text-orange-500 transition-all hover:font-medium border-2 border-orange-500">
-                  read more
+                 <Link to="/ngo/blogs"> read more</Link>
                 </button>
               </p>
             </div>

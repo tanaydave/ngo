@@ -41,7 +41,7 @@ const posts =[
 ]
 
   return (
-    <m.div  className=" h-fit  bg-zinc-200">
+    <m.div  className=" h-fit  bg-zinc-200 font-Poppins">
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
