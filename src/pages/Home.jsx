@@ -93,7 +93,7 @@ const Home = () => {
   
 
   useEffect( counting, [count]);
-  const images =[1,1,1,1,1,1]
+  const images =[1,1,1,1]
   const carImgs= [
     {
       id: 1,
@@ -185,7 +185,7 @@ const Home = () => {
         autoplay={true}
         slidesToShow={1}
         slidesToScroll={1}
-        autoplaySpeed={3000}
+        autoplaySpeed={2000}
         infinite={true}
         arrows={false}
         
@@ -209,7 +209,7 @@ const Home = () => {
         <m.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+          transition={{  duration: 0.5, ease: "easeInOut" }}
           className=" font-semibold text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]"
         >
           Who We Are
@@ -218,7 +218,7 @@ const Home = () => {
           <m.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+            transition={{  duration: 1, ease: "easeInOut" }}
             className="flex flex-col items-center  "
           >
             {/* <m.div className=" bg-white text-6xl py-8 ml-16 underline underline-offset-8 text-[#09b6cb]">
@@ -248,7 +248,7 @@ const Home = () => {
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{  duration: 1, ease: "easeInOut" }}
+        transition={{  duration: 0.5, ease: "easeInOut" }}
         className="flex flex-col items-center pb-12   "
       >
         <div className="flex flex-col  pb-8 font-Poppins w-full bg-stone-900">
@@ -290,7 +290,7 @@ const Home = () => {
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         className="pb-16 pt-8  "
 
       >
@@ -359,7 +359,7 @@ const Home = () => {
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         className="bg-black text-white"
         
       >
@@ -396,7 +396,7 @@ const Home = () => {
 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         className="pb-16 pt-8 "
       >
         <div className=" pt-12 text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-16">
@@ -411,7 +411,7 @@ const Home = () => {
                 <img src={misvis} alt="" />
                 <m.div  className=" absolute flex flex-col items-center justify-end h-full gap-3  duration-500 transition w-full top-[0.1rem] bg-black text-orange-500 opacity-0 hover:opacity-80 "> 
                 <div className="font-semibold text-center">event details Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div><button className="border-2 duration-100 ease-in rounded-lg border-orange-500 mb-4 p-2 bg-orange-500 hover:bg-transparent hover:text-orange  text-white"> View all photos</button></div>
+                <div><button className="border-2 duration-100 ease-in rounded-lg border-orange-500 mb-4 p-2 bg-orange-500 hover:bg-transparent hover:text-orange  text-white"> <Link to="/ngo/gallery">Gallery</Link> </button></div>
                 </m.div>
               </div>
             )
