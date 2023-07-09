@@ -8,6 +8,9 @@ import Events from './pages/EventsOur';
 import Blogs from './pages/BlogsOur';
 import About from './pages/AboutUs'
 import Donations from './pages/Donations';
+import News from "./pages/News"
+import Gallery from "./pages/Gallery"
+
 
 
 function App() {
@@ -24,6 +27,10 @@ function App() {
           <Route path="/ngo/blogs" element= {<Blogs />} />
           <Route path="/ngo/about" element= {<About />} />
           <Route path="/ngo/donations" element= {<Donations />} />
+          <Route path="/ngo/news" element= {<News />} />
+          <Route path="/ngo/gallery" element= {<Gallery />} />
+
+
 
 
 

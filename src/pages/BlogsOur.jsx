@@ -2,7 +2,7 @@ import React from 'react'
 import {motion as m} from "framer-motion"
 import Navbar from '../components/navbar'
 import misvis from "../assets/misvis.jpg"
-
+import Footer from "../components/footer"
 const Blogs = () => {
 
 const posts =[
@@ -83,6 +83,7 @@ const posts =[
 
         </div>
       </m.div>
+      <Footer/>
       
     </m.div>
   )

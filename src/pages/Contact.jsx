@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import contact from "../assets/contact.jpg"
+import {motion as m} from "framer-motion"
+
 
 import { useFormik } from "formik";
 import ContactSchema from "../schemas/contactSchema";
@@ -27,7 +29,14 @@ const Contact = () => {
   // console.log(errors);
   return (
     <div className=" font-Poppins">
-      <Navbar />
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className=" sticky top-0 transition-all ease-in z-50"
+      >
+        <Navbar />
+      </m.div>
       <div 
       style={{
           backgroundImage: `url(${contact})`

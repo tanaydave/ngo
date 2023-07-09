@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from "../components/navbar"
 import {motion as m} from "framer-motion"
 import misvis from "../assets/misvis.jpg"
-
+import Footer from "../components/footer"
 
 const Events = () => {
   const nums =[1,1,1,1]
@@ -45,6 +45,7 @@ const Events = () => {
           </div>
 
       </div>)})}
+      <Footer/>
       
     </div>
   )

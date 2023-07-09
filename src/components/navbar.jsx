@@ -57,11 +57,11 @@ const Navbar = ({ className = "" }) => {
               <Link to="/ngo/contact">Contact</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/contact">NewsRoom</Link>
+              <Link to="/ngo/news">NewsRoom</Link>
               
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/contact">Gallery</Link>
+              <Link to="/ngo/gallery">Gallery</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
               <Link to="/ngo/blogs">Blogs</Link>

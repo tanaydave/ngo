@@ -259,16 +259,16 @@ const Home = () => {
           <div className="grid grid-cols-3 gap-x-24 pt-16 px-16 mr-8  ">
             {nums.map(() => (
               <div className="  h-[60vh] w-[25vw] border-2 hover:border-0 rounded-lg overflow-hidden flex flex-col hover:scale-110 transition   mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] ">
-                <div className="relative top-[14rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
+                <div className="relative top-[14.1rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
                   <p>18</p> JUL
                 </div>
                 <img
                   src={misvis}
                   className="object-contain relative bottom-[3.6rem] "
                 ></img>{" "}
-                <p className=" pl-2  ">Mumbai,Maharashtra</p>
-                <p className="pt-2 pl-2 text-lg">headline</p>
-                <p className="h-[7rem] pt-2 pl-2 overflow-hidden  ">
+                <p className=" pl-4   ">Mumbai,Maharashtra</p>
+                <p className="pt-4 pl-4 text-lg">headline</p>
+                <p className="h-[7rem] pt-4 pl-4 overflow-hidden  ">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Accusantium consequuntur mollitia ea! Iure, aspernatur eius.
                   Rem dolorum officia, iusto minima, unde explicabo enim sunt
