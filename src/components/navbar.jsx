@@ -6,6 +6,7 @@ import { TbGridDots } from "react-icons/tb";
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {motion as m} from "framer-motion"
 import ngo from "../assets/ngo.png"
+import {AiOutlineMenu} from "react-icons/ai"
 
 
 const Navbar = ({ className = "" }) => {
@@ -82,7 +83,7 @@ const Navbar = ({ className = "" }) => {
         </div> */}
         <div className=" md:hidden" onClick={()=>{
           setOpen(!open)
-        }}> <TbGridDots className="" size={40}/></div>
+        }}> <AiOutlineMenu className="" size={40}/></div>
         
       </div>
       {/* navbar for sm screens  */}

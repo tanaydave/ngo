@@ -6,23 +6,24 @@ import {motion as m } from "framer-motion"
 import misvis from "../assets/misvis.jpg"
 
 const Causes = () => {
-  const [transparent,setTransparent]= useState('bg-transparent');
-    const addBg = ()=>{
-     if(window.scrollY >=10){
-       setTransparent('bg-slate-200')
-     }
-     else{
-       setTransparent('bg-transparent')
-     }
-    }
-    window.addEventListener('scroll',addBg)
+  // const [transparent,setTransparent]= useState('bg-transparent');
+  //   const addBg = ()=>{
+  //    if(window.scrollY >=10){
+  //      setTransparent('bg-slate-200')
+
+  //    }
+  //    else{
+  //      setTransparent('bg-transparent')
+  //    }
+  //   }
+  //   window.addEventListener('scroll',addBg)
   
   return (
     < m.div initial={{opacity:0}} 
     whileInView={{ opacity:1 }}
 transition={{ ease: "easeIn", duration: 1 }} className="py-6 font-Poppins">
       <div className=" sticky top-0 transition-all ease-in z-50">
-        <Navbar className={transparent}/>
+        <Navbar />
       </div>
       <m.div
       initial={{opacity:0}} 

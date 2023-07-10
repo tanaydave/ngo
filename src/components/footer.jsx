@@ -12,16 +12,16 @@ import {Link} from "react-router-dom"
 
 const Footer = () => {
   return (
-    <div className=" bg-neutral-200 text-slate-200 font-Poppins pb-12">
-      <div className="mx-40    flex justify-between">
-        <img className="h-60  "  src={ngo}></img>
-        <div className="mt-24 mr-12   ">
-          <button className=" py-2 px-8 border-2 text-white rounded-lg hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
+    <div className=" bg-neutral-200   text-slate-200 font-Poppins pb-12">
+      <div className="md:mx-40 mx-8   flex  justify-between">
+        <img className=" md:h-60 h-40  "  src={ngo}></img>
+        <div className="md:mt-24 md:mr-12 mt-16   ">
+          <button className=" md:py-2 md:px-8 px-4 py-2 border-2 text-white rounded-lg hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
             Donate Now
           </button>
         </div>
       </div>
-      <div className=" grid mx-40 gap-4 grid-cols-4  justify-items-center list-none text-slate-950">
+      <div className=" grid md:mx-40 gap-4 md:grid-cols-4 justify-center items-center list-none text-slate-950">
         <li>
           <div className="text-orange-500 text-2xl font-medium  ">About</div>
           <p>
@@ -30,7 +30,7 @@ const Footer = () => {
             recusandae nostrum eligendi corrupti, quasi veritatis obcaecati esse
             suscipit eum ad, fugit ullam.
           </p>
-          <div className="flex text-2xl gap-6 pt-6 ">
+          <div className="flex text-2xl gap-6 pt-6 md:pb-0 mb-8 ">
               <ImFacebook className="hover:text-[#09b6cb] transition ease-in-out delay-100"></ImFacebook>
               <FaTwitter className="hover:text-[#09b6cb] transition ease-in-out delay-100"></FaTwitter>
               <AiFillInstagram className="hover:text-[#09b6cb] transition ease-in-out delay-100"></AiFillInstagram>
@@ -72,12 +72,12 @@ const Footer = () => {
           </p>
           <div className="flex pt-6">
             <BsFillTelephoneFill className="text-xl"></BsFillTelephoneFill>
-            <div className="ml-2">+000000000</div>
+            <div className="pl-2">+000000000</div>
           </div>
           <div className="flex pt-6">
             <IoMdMail  className="text-xl"></IoMdMail>
            
-            <div className="ml-2"> ngo@gmail.com</div>
+            <div className="pl-2"> ngo@gmail.com</div>
 
 
           </div>

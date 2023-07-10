@@ -210,11 +210,11 @@ const Home = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{  duration: 0.5, ease: "easeInOut" }}
-          className=" font-semibold text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]"
+          className=" text-2xl font-semibold md:text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 md:ml-16 ml-6 text-[#09b6cb]"
         >
           Who We Are
         </m.div>
-        <m.div className="my-8 py-8 w-[90vw] bg-orange-500 mx-16  text-white">
+        <m.div className="my-8 py-8 md:w-[90vw] w-[90vw] ml-4 pl-4 bg-orange-500 md:mx-16  text-white">
           <m.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -224,7 +224,7 @@ const Home = () => {
             {/* <m.div className=" bg-white text-6xl py-8 ml-16 underline underline-offset-8 text-[#09b6cb]">
               Who We Are
             </m.div> */}
-            <div className=" leading-9 pt-2 text-xl mx-20">
+            <div className=" md:leading-9 pt-2 sm:text-base sm:pl-6 md:text-xl md:mx-20">
               The founder of Orinova, Dr. Sourabh Kumar is an experienced
               individual who has faced the hardships of the society and has
               become a figure of respect. However, it wasn’t easy for him to
@@ -249,26 +249,27 @@ const Home = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{  duration: 0.5, ease: "easeInOut" }}
-        className="flex flex-col items-center pb-12   "
+        className="flex flex-col items-center pb-12  w-full"
       >
-        <div className="flex flex-col  pb-8 font-Poppins w-full bg-stone-900">
-          <div className=" pt-12 text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-16">
+        <div className="flex flex-col  pb-8 font-Poppins w-full     bg-stone-900">
+          <div className=" pt-12 text-2xl md:text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-6 md:ml-16">
             {" "}
             Upcoming Events{" "}
           </div>
-          <div className="grid grid-cols-3 gap-x-24 pt-16 px-16 mr-8  ">
+          <div className="md:grid md:grid-cols-3 w-full px-2 flex flex-col  gap-y-4 md:gap-x-24 pt-16 md:px-16 md:mr-8  ">
             {nums.map(() => (
-              <div className="  h-[60vh] w-[25vw] border-2 hover:border-0 rounded-lg overflow-hidden flex flex-col hover:scale-110 transition   mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] ">
-                <div className="relative top-[14.1rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
+              <div className=" h-52 w-full md:h-[60vh]  md:w-[25vw] border-2 hover:border-0 rounded-lg overflow-hidden flex md:flex-col hover:scale-110 transition   md:mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] ">
+                <div className="relative top-0 md:top-[14.1rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
                   <p>18</p> JUL
                 </div>
                 <img
                   src={misvis}
-                  className="object-contain relative bottom-[3.6rem] "
+                  className=" md:h-60 w-40 mr-2 rounded-2xl h-40  pt-4 relative md:bottom-[5rem] "
                 ></img>{" "}
+                <div>
                 <p className=" pl-4   ">Mumbai,Maharashtra</p>
                 <p className="pt-4 pl-4 text-lg">headline</p>
-                <p className="h-[7rem] pt-4 pl-4 overflow-hidden  ">
+                <p className=" h-[5rem] md:h-[7rem] pt-4 pl-4 overflow-hidden  ">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Accusantium consequuntur mollitia ea! Iure, aspernatur eius.
                   Rem dolorum officia, iusto minima, unde explicabo enim sunt
@@ -278,6 +279,7 @@ const Home = () => {
                 <span className="pl-2">....</span>
                 <div className="flex pt-3 pl-2">
                   read more <BiChevronRight size={30}></BiChevronRight>
+                </div>
                 </div>
               </div>
             ))}
@@ -294,11 +296,11 @@ const Home = () => {
         className="pb-16 pt-8  "
 
       >
-        <div className=" font-semibold text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 ml-16  text-[#09b6cb]">
+        <div className=" font-semibold text-2xl md:text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 md:ml-16 ml-6  text-[#09b6cb]">
           Latest Blog
         </div>
 
-        <div className="grid grid-cols-5 gap-2 justify-center w-[80vw]  mx-10  rounded-lg  mt-12">
+        <div className="md:grid md:grid-cols-5 md:gap-2 md:justify-center md:w-[80vw]  md:mx-10  md:rounded-lg  md:mt-12">
           <div className=" col-span-2 overflow-hidden  h-[40vh] mt-12 rounded-lg  flex items-center ">
             {" "}
             <img
@@ -308,7 +310,7 @@ const Home = () => {
             />
           </div>
           <div className=" col-span-2 ">
-            <div className="flex flex-col pt-8 gap-6 border-l-4 border-l-orange-500 h-[45vh]  pl-8  mt-[2rem] ]">
+            <div className="flex flex-col pt-8 gap-6 border-l-4 border-l-orange-500  md:h-[45vh]  pl-8  mt-[2rem] ]">
               <p className=" text-3xl">title</p>
               <p className="">date</p>
               <p className=" ">
@@ -328,7 +330,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="pt-2 flex flex-col items-start justify-center gap-6 ">
+          <div className=" hidden md:pt-2 md:flex md:flex-col md:items-start md:justify-center md:gap-6 ">
             {nums.map(() => {
               return (
                 <div className="grid grid-cols-3 gap-2 border-4 rounded-lg w-[25rem] duration-500 hover:scale-105 bg-slate-200">
@@ -343,12 +345,15 @@ const Home = () => {
                       laboriosam illum quo alias sunt!
                     </div>
                     <div>
-                      <button className="text-orange-500">read more</button>
+                      <button className="text-orange-500 ">read more</button>
                     </div>
                   </div>
                 </div>
               );
             })}
+          </div>
+          <div className=" text-center pt-8">
+            <button className=" border-2 border-orange-500 text-orange-500 p-4 rounded-2xl"><Link to ='blogs' >View all Blogs</Link></button>
           </div>
         </div>
       </m.div>
@@ -363,26 +368,26 @@ const Home = () => {
         className="bg-black text-white"
         
       >
-        <div className="text-center text-4xl py-4">Our Impact</div>
-        <div ref={counterRef} className="flex justify-around pb-12 text-2xl">
+        <div className="text-center text-3xl md:text-4xl py-4">Our Impact</div>
+        <div ref={counterRef} className="flex justify-around pb-12 text:lg md:text-2xl">
           <div className="flex flex-col items-center gap-4">
             <div><RiEmotionHappyLine size={60}/></div>
-            <div>Happy Donators</div>
+            <div className="pl-2 text-center">Happy Donators</div>
             <div onClick={counting(5000)}><Counter  value={count} limit={3000}/></div>
           </div>
           <div className="flex flex-col gap-4 items-center">
             <div><PiTargetLight size={60}/></div>
-            <div>Successful Missions</div>
+            <div className="pl-2 text-center">Successful Missions</div>
             <div><Counter value={count} limit={100}/></div>
           </div>
           <div className="flex flex-col gap-4 items-center">
             <div><BsPeople size={60}/></div>
-            <div>Volunteers</div>
+            <div className="pl-2 text-center">Volunteers</div>
             <div><Counter value={count} limit={1500}/></div>
           </div>
           <div className="flex flex-col gap-4 items-center ">
             <div></div>
-            <div>States Reached</div>
+            <div className="pl-2 text-center">States Reached</div>
             <div ><Counter value={count} limit={20}/></div>
           </div>
         </div>
@@ -399,19 +404,19 @@ const Home = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="pb-16 pt-8 "
       >
-        <div className=" pt-12 text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-16">
+        <div className=" pt-12 text-2xl md:text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-6 md:ml-16">
           {" "}
           Gallery{" "}
         </div>
 
-        <div className="grid grid-cols-3 grid-rows-2 gap-2 py-4 mx-12 justify-between relative">
+        <div className="grid grid-cols-2 md:grid-cols-3  gap-2 py-4 md:mx-12 justify-between relative">
           {images.map(()=>{
             return(
               <div className=" relative">
-                <img src={misvis} alt="" />
-                <m.div  className=" absolute flex flex-col items-center justify-end h-full gap-3  duration-500 transition w-full top-[0.1rem] bg-black text-orange-500 opacity-0 hover:opacity-80 "> 
-                <div className="font-semibold text-center">event details Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div><button className="border-2 duration-100 ease-in rounded-lg border-orange-500 mb-4 p-2 bg-orange-500 hover:bg-transparent hover:text-orange  text-white"> <Link to="/ngo/gallery">Gallery</Link> </button></div>
+                <img src={misvis} alt="" className=" h-40" />
+                <m.div  className=" absolute flex flex-col items-center justify-end  top-0 md:h-full gap-3  duration-500 transition  md:w-full md:-[0.1rem]  bg-black text-orange-500 opacity-0 hover:opacity-80 "> 
+                <div className="font-semibold text-center text-xs pt-2 h-20">event details Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div><button className="border-2 duration-100 ease-in rounded-lg border-orange-500 mb-4 p-1 mt-4 md:p-2 bg-orange-500 hover:bg-transparent hover:text-orange  text-white"> <Link to="/ngo/gallery">Gallery</Link> </button></div>
                 </m.div>
               </div>
             )
