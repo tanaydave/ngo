@@ -21,7 +21,8 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className=" grid md:mx-40 gap-4 md:grid-cols-4 justify-center items-center list-none text-slate-950">
+      <div className=" grid md:mx-40 gap-12 md:grid-cols-4 justify-center  list-none text-slate-950">
+        
         <li>
           <div className="text-orange-500 text-2xl font-medium  ">About</div>
           <p>
@@ -38,7 +39,7 @@ const Footer = () => {
             </div>
         </li>
         <li>
-          <div className="list-disc">
+          <div className="list-disc md:pl-12">
             <div className="text-orange-500 text-2xl font-medium ">Quick Links</div>
             <ul>
             <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link> Mission and Vision</Link></li>

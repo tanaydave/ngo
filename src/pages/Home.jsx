@@ -249,7 +249,7 @@ const Home = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{  duration: 0.5, ease: "easeInOut" }}
-        className="flex flex-col items-center pb-12  w-full"
+        className="flex flex-col items-center pb-12   w-full"
       >
         <div className="flex flex-col  pb-8 font-Poppins w-full     bg-stone-900">
           <div className=" pt-12 text-2xl md:text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-6 md:ml-16">
@@ -259,12 +259,12 @@ const Home = () => {
           <div className="md:grid md:grid-cols-3 w-full px-2 flex flex-col  gap-y-4 md:gap-x-24 pt-16 md:px-16 md:mr-8  ">
             {nums.map(() => (
               <div className=" h-52 w-full md:h-[60vh]  md:w-[25vw] border-2 hover:border-0 rounded-lg overflow-hidden flex md:flex-col hover:scale-110 transition   md:mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] ">
-                <div className="relative top-0 md:top-[14.1rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
+                <div className="relative top-0 md:top-[13rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
                   <p>18</p> JUL
                 </div>
                 <img
                   src={misvis}
-                  className=" md:h-60 w-40 mr-2 rounded-2xl h-40  pt-4 relative md:bottom-[5rem] "
+                  className=" md:h-64 md:w-full w-40 mr-2 rounded-2xl h-40  pt-4 relative md:bottom-[5rem] "
                 ></img>{" "}
                 <div>
                 <p className=" pl-4   ">Mumbai,Maharashtra</p>
@@ -309,7 +309,7 @@ const Home = () => {
               className="h-[40vh]  transition duration-[2s] rounded-lg  ease-in-out  hover:scale-110 overflow-hidden"
             />
           </div>
-          <div className=" col-span-2 ">
+          <div className=" md:col-span-2 pl-4 md:pl-0">
             <div className="flex flex-col pt-8 gap-6 border-l-4 border-l-orange-500  md:h-[45vh]  pl-8  mt-[2rem] ]">
               <p className=" text-3xl">title</p>
               <p className="">date</p>
@@ -352,7 +352,7 @@ const Home = () => {
               );
             })}
           </div>
-          <div className=" text-center pt-8">
+          <div className=" text-center pt-8 md:hidden">
             <button className=" border-2 border-orange-500 text-orange-500 p-4 rounded-2xl"><Link to ='blogs' >View all Blogs</Link></button>
           </div>
         </div>
@@ -413,7 +413,7 @@ const Home = () => {
           {images.map(()=>{
             return(
               <div className=" relative">
-                <img src={misvis} alt="" className=" h-40" />
+                <img src={misvis} alt="" className=" md:h-auto md:w-full h-40" />
                 <m.div  className=" absolute flex flex-col items-center justify-end  top-0 md:h-full gap-3  duration-500 transition  md:w-full md:-[0.1rem]  bg-black text-orange-500 opacity-0 hover:opacity-80 "> 
                 <div className="font-semibold text-center text-xs pt-2 h-20">event details Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 <div><button className="border-2 duration-100 ease-in rounded-lg border-orange-500 mb-4 p-1 mt-4 md:p-2 bg-orange-500 hover:bg-transparent hover:text-orange  text-white"> <Link to="/ngo/gallery">Gallery</Link> </button></div>
