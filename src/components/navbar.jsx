@@ -15,10 +15,10 @@ const Navbar = ({ className = "" }) => {
   return (
     <div  className={`pb-4 bg-white border-b-[#09b6cb] border-b-4`}>
       <div className="flex  justify-around items-center pt-6 text-lg  ">
-        <img
+        <Link to="/ngo"><img
           src={ngo}
           className=" h-16 w-40 md:h-24 md:w-60 bg-contain object-cover bg-center"
-        ></img>
+        ></img></Link>
         <div className=" pr-12 font-Poppins font-medium justify-evenly ml-6 text-black  ">
           <ul className="md:flex hidden list-none text-xl">
             <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
@@ -91,7 +91,7 @@ const Navbar = ({ className = "" }) => {
 
 
       <div className={ open ?` bg-white w-full h-[60vh]  ease-in-out duration-500 z-50 absolute top-0 left-0`:'left-[-100%] fixed trans'}>
-          <div className="flex justify-center pt-12">
+          <div className="flex justify-center pt-4 ">
           <ul className=" list-none">
         <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
               <Link to="/ngo">Home</Link>
@@ -107,6 +107,16 @@ const Navbar = ({ className = "" }) => {
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
               <Link to="/ngo/contact">Contact</Link>
+            </li>
+            <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+              <Link to="/ngo/blogs">Blogs</Link>
+            </li>
+            <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+              <Link to="/ngo/news">NewsRoom</Link>
+              
+            </li>
+            <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+              <Link to="/ngo/gallery">Gallery</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
           <button className=" text-center">

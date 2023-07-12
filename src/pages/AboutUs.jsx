@@ -32,7 +32,7 @@ const About = () => {
   whileInView={{opacity:1 }} animate={{x:0}} 
   
    transition={{duration:1.5,ease:"easeInOut"}} className="flex flex-col h-[100vh] pb-48 items-start justify-center">
-        <div className="text-8xl  font-bold after:absolute after:content-[''] after:items-center after:w-96 after:h-2 after:top-44 pb-24 after:left-80 after:bg-orange-500   pl-60">Our Mission</div>
+        <div className="text-8xl  font-bold after:absolute after:content-[''] after:items-center after:w-96 after:h-2 after:top-40 pb-12 after:left-80 after:bg-orange-500   pl-60">Our Mission</div>
         <div className="flex  items-center w-5/6 pb-8 text-xl px-20 gap-44 leading-relaxed">
           <p>
             Orinova, is an influential NGO that aims to build a just and
@@ -58,7 +58,7 @@ const About = () => {
   whileInView={{opacity:1 }} animate={{x:0}} 
   
    transition={{ duration:1.5,ease:"easeInOut"}} className="flex flex-col  items-end justify-center pb-32 h-[40vh]">
-        <div className="text-8xl font-bold after:absolute after:content-[''] after:items-center after:mb-8 after:w-80 after:h-2 after:bottom-[23.5rem] after:right-64 after:mr-2 pr-48 after:bg-orange-500 pb-20  pl-60">Our Vision</div>
+        <div className="text-8xl font-bold after:absolute after:content-[''] after:items-center after:mb-8 after:w-80 after:h-2 after:bottom-[24.5rem] after:right-64 after:mr-2 pr-48 after:bg-orange-500 pb-[5.3rem]  pl-60">Our Vision</div>
         <div className="flex  items-center w-5/6  text-xl pr-20 leading-relaxed gap-32 ">
         <img src={vision}></img>
           <p>
