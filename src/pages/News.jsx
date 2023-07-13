@@ -21,33 +21,40 @@ const News = () => {
         <Navbar />
       </m.div>
       <div>
-        <div className="text-6xl text-center py-20 font-semibold text-[#09b6cb]">
+        <div className="text-6xl text-center py-4 md:py-20 font-semibold text-[#09b6cb]">
           News and Press Release{" "}
         </div>
       </div>
-      <div className=" py-12 flex mx-24 gap-6">
+      <div className=" py-12 flex flex-col   md:flex-row mx-16  md:mx-24 gap-2 md:gap-6">
         <div>
           {" "}
           <input
             type="text"
             placeholder="Search"
-            className="rounded-lg p-5 w-[27rem] border-2"
+            className="rounded-lg md:p-5 p-3 w-full  md:w-[27rem] border-2"
           />
         </div>
         <div>
-          <div className="rounded-lg p-5 w-[27rem] border-2"> All Topics</div>
+          <div className=" hidden md:block rounded-lg p-5 w-[27rem] border-2"> All Topics</div>
         </div>
         <div>
-          <div className="rounded-lg p-5 w-[10rem] border-2">All Time</div>{" "}
+          <div className="hidden md:block rounded-lg p-5 w-[10rem] border-2">All Time</div>{" "}
         </div>
         <div>
-          <div className="rounded-lg p-5 w-[18rem] border-2">
+          <div className=" hidden md:block rounded-lg p-5 w-[18rem] border-2">
             {" "}
             News and Press Release
           </div>
         </div>
+        <div>
+          <div className="  rounded-lg p-3 md:hidden w-full border-2">
+            {" "}
+            Filters
+          </div>
+        </div>
+        
       </div>
-      <div className="flex flex-col gap-8 items-center py-12">
+      <div className="flex flex-col gap-8 items-center py-4 md:py-12">
         {posts.map(() => {
           return (
             <div className="flex flex-col gap-6 items-start  w-[80vw] p-4 rounded-lg shadow-xl border-t-2 ">
