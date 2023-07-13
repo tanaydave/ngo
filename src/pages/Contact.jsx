@@ -43,8 +43,8 @@ const Contact = () => {
         }} className=" bg-no-repeat  bg-contain bg-center object-contain h-72">
        
         </div>
-      <div className="flex justify-center gap-20 ">
-        <div className="flex flex-col items-start ">
+      <div className="flex md:flex-row flex-col justify-center gap-20 ">
+        <div className="flex flex-col items-center md:items-start ">
           <div className="text-4xl font-semibold py-3">Our Information</div>
           <div>
             <p className="py-3 font-medium">Email & Website</p>
@@ -56,19 +56,19 @@ const Contact = () => {
            <p>1111111111</p>
            <p>1111111111</p>
           </div>
-          <div>
+          <div className="flex flex-col md:items-start items-center">
             <p className="font-medium py-3">Address</p>
-            <p className=" max-w-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum labore nam eligendi?</p>
+            <p className="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
           </div>
 
         </div>
         <div className=" ">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.9495415482415!2d72.82508847510648!3d18.933627456426834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1788eef87f3%3A0xa3d31bfcbb3c22fd!2sChurchgate%20station!5e0!3m2!1sen!2sin!4v1688360163784!5m2!1sen!2sin"  height="400" width="550" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="border-0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.9495415482415!2d72.82508847510648!3d18.933627456426834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1788eef87f3%3A0xa3d31bfcbb3c22fd!2sChurchgate%20station!5e0!3m2!1sen!2sin!4v1688360163784!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="border-0 h-60 w-80 md:mx-0 mx-12 md:h-[400px] md:w-[550px]"></iframe>
 
         </div>
 
       </div>
-      <div className="py-20 mx-20">
+      <div className="py-20 mx-4 md:mx-20">
         <div className=" text-center text-6xl pb-12 font-semibold font-Poppins">Get In Touch </div>
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-6 p-4">

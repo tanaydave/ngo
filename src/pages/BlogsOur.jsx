@@ -41,7 +41,7 @@ const posts =[
 ]
 
   return (
-    <m.div  className=" h-fit  bg-zinc-200 font-Poppins">
+    <m.div  className=" h-fit  bg-[#f5f3ee] font-Poppins">
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -50,16 +50,17 @@ const posts =[
       >
         <Navbar />
       </m.div>
+      <div className='md:hidden pt-8 text-center rounded-lg'><input type="text" placeholder='search...' className='p-3 w-80 rounded-lg' /></div>
 
-      <m.div  className="grid grid-cols-3 pt-16 ">
-        <div className=" flex flex-col gap-8  col-span-2 pl-40">
+      <m.div  className="md:grid md:grid-cols-3 pt-16 ">
+        <div className=" flex flex-col items-center gap-8 md:mx-0 md:col-span-2 md:pl-40">
           {/* map here  */}
-          {posts.map(post => (<div className="bg-white h-fit w-[53vw] flex flex-col items-start gap-8 pb-8 ">
-            <img src={post.img} alt="" className="h-[30rem] w-full " />
-            <div className='text-6xl font-semibold mx-16'>{post.headline}</div>
-            <div className='mx-16 text-lg'>{post.date}</div>
-            <div className='mx-16 text-lg'>{post.content}</div>
-            <div className='mx-16 text-lg'><button>Read More</button></div>
+          {posts.map(post => (<div className="bg-white shadow-lg my-2 h-fit md:w-[53vw] flex flex-col items-start gap-8 pb-8 ">
+            <img src={post.img} alt="" className="md:h-[30rem] md:w-full  w-full" />
+            <div className='md:text-6xl font-semibold md:mx-16'>{post.headline}</div>
+            <div className='md:mx-16 md:text-lg'>{post.date}</div>
+            <div className='md:mx-16 md:text-lg'>{post.content}</div>
+            <div className='md:mx-16 md:text-lg'><button>Read More</button></div>
              
              </div>))}
 
@@ -68,10 +69,10 @@ const posts =[
 
 
         </div>
-        <div className=" col-span-1 flex flex-col gap-8">
+        <div className=" hidden md:flex col-span-1  flex-col gap-8">
           <div><input type="text" placeholder='search...' className='p-3 w-80' /></div>
           <div className='text-3xl font-medium'>Recent Posts</div>
-          <div className='flex flex-col gap-2 text-lg'>
+          <div className='flex flex-col gap-2 md:text-lg'>
 
           <div><a href="">Lorem ipsum dolor sit amet consectetur.</a></div>
           <div><a href="">Lorem ipsum dolor sit amet consectetur.</a></div>
@@ -82,6 +83,7 @@ const posts =[
 
 
         </div>
+        
       </m.div>
       <Footer/>
       
