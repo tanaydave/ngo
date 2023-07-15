@@ -258,7 +258,7 @@ const Home = () => {
           </div>
           <div className="md:grid md:grid-cols-3 w-full px-2 flex flex-col  gap-y-4 md:gap-x-24 pt-16 md:px-16 md:mr-8  ">
             {nums.map(() => (
-              <div className=" h-52 w-full md:h-[60vh]  md:w-[25vw] border-2 hover:border-0 rounded-lg overflow-hidden flex md:flex-col hover:scale-110 transition   md:mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] ">
+              <div className=" h-52 w-full md:h-[65vh]  md:w-[25vw] border-2 hover:border-0 rounded-lg overflow-hidden flex md:flex-col hover:scale-110 transition   md:mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] ">
                 <div className="relative top-0 md:top-[13rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
                   <p>18</p> JUL
                 </div>
@@ -268,7 +268,7 @@ const Home = () => {
                 ></img>{" "}
                 <div>
                 <p className=" pl-4   ">Mumbai,Maharashtra</p>
-                <p className="pt-4 pl-4 text-lg">headline</p>
+                <p className="pt-4 pl-4 text-lg ">headline</p>
                 <p className=" h-[5rem] md:h-[7rem] pt-4 pl-4 overflow-hidden  ">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Accusantium consequuntur mollitia ea! Iure, aspernatur eius.
