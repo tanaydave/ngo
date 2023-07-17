@@ -20,15 +20,16 @@ function App() {
       <Router>
       
         <Routes>
-          <Route path="/ngo" element= {<Home />} />
-          <Route path="/ngo/causes" element= {<Causes />} />
-          <Route path="/ngo/contact" element= {<Contact />} />
-          <Route path="/ngo/events" element= {<Events />} />
-          <Route path="/ngo/blogs" element= {<Blogs />} />
-          <Route path="/ngo/about" element= {<About />} />
-          <Route path="/ngo/donations" element= {<Donations />} />
-          <Route path="/ngo/news" element= {<News />} />
-          <Route path="/ngo/gallery" element= {<Gallery />} />
+          
+          <Route path="/" element= {<Home />} />
+          <Route path="/causes" element= {<Causes />} />
+          <Route path="/contact" element= {<Contact />} />
+          <Route path="/events" element= {<Events />} />
+          <Route path="/blogs" element= {<Blogs />} />
+          <Route path="/about" element= {<About />} />
+          <Route path="/donations" element= {<Donations />} />
+          <Route path="/news" element= {<News />} />
+          <Route path="/gallery" element= {<Gallery />} />
 
 
 

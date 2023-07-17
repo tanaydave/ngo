@@ -15,17 +15,17 @@ const Navbar = ({ className = "" }) => {
   return (
     <div  className={`pb-4 bg-white border-b-[#09b6cb] border-b-4`}>
       <div className="flex  justify-around items-center pt-6 text-lg  ">
-        <Link to="/ngo"><img
+        <Link to="/"><img
           src={ngo}
           className=" h-16 w-40 md:h-24 md:w-60 bg-contain object-cover bg-center"
         ></img></Link>
         <div className=" pr-12 font-Poppins font-medium justify-evenly ml-6 text-black  ">
           <ul className="md:flex hidden list-none text-xl">
             <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/about">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li
               className="pr-6 pl-3 transition-all ease-in "
@@ -33,7 +33,7 @@ const Navbar = ({ className = "" }) => {
               // onMouseLeave={() => setOpen((prev) => !prev)}
             >
               <Link
-                to="/ngo/causes"
+                to="/causes"
                 className=" flex justify-center items-center hover:text-orange-500 hover:transition-all ease-in-out cursor-pointer"
               >
                 <p>Causes</p>
@@ -52,20 +52,20 @@ const Navbar = ({ className = "" }) => {
           </div>} */}
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/events">Events</Link>
+              <Link to="/events">Events</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/news">NewsRoom</Link>
+              <Link to="/news">NewsRoom</Link>
               
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/gallery">Gallery</Link>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/blogs">Blogs</Link>
+              <Link to="/blogs">Blogs</Link>
             </li>
           </ul>
         </div>
@@ -94,33 +94,33 @@ const Navbar = ({ className = "" }) => {
           <div className="flex justify-center pt-4 ">
           <ul className=" list-none">
         <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/about">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/causes">Causes</Link>
+              <Link to="/causes">Causes</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/events">Events</Link>
+              <Link to="/events">Events</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/blogs">Blogs</Link>
+              <Link to="/blogs">Blogs</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/news">NewsRoom</Link>
+              <Link to="/news">NewsRoom</Link>
               
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/ngo/gallery">Gallery</Link>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
           <button className=" text-center">
-            <Link to="/ngo/donations" className="  md:py-4 md:px-5 md:font-medium  ">
+            <Link to="/donations" className="  md:py-4 md:px-5 md:font-medium  ">
               Donate Now
             </Link>
           </button>
