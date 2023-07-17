@@ -18,7 +18,9 @@ const Events = () => {
       </m.div>
       <div className="flex items-center justify-center text-white bg-orange-500 h-60 mt-4 text-8xl ">Events</div>
       
-      {nums.map(()=>{return(<div className='shadow-xl border-t-2  mb-4 mt-4 md:m-0 flex md:flex-row flex-col justify-center  mx-4 md:mx-24 gap-6 md:gap-20 py-12 '>
+      {nums.map(()=>{return(<m.div initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }} className='shadow-xl border-t-2  mb-4 mt-4 md:m-0 flex md:flex-row flex-col justify-center  mx-4 md:mx-24 gap-6 md:gap-20 py-12 '>
         
 
        
@@ -45,7 +47,7 @@ const Events = () => {
           </div>
           </div>
 
-      </div>)})}
+      </m.div>)})}
       <Footer />
       
     </div>
