@@ -1,15 +1,18 @@
 
-import './App.css';
+import './App.css'
 import {BrowserRouter as Router , Routes , Route , Link} from 'react-router-dom';
-import Home from './pages/Home';
-import Contact from './pages/Contact'
-import Causes from './pages/Causes';
-import Events from './pages/EventsOur';
-import Blogs from './pages/BlogsOur';
-import About from './pages/AboutUs'
-import Donations from './pages/Donations';
-import News from "./pages/News"
-import Gallery from "./pages/Gallery"
+import {lazy,Suspense} from "react"
+import Loading from './components/Loading';
+
+const Home = lazy(()=>import ('./pages/Home'))
+const Contact = lazy(()=>import( './pages/Contact'))
+const Causes = lazy(()=>import( './pages/Causes'));
+const Events = lazy(()=>import( './pages/EventsOur'));
+const Blogs = lazy(()=>import( './pages/BlogsOur'));
+const About = lazy(()=>import( './pages/AboutUs'));
+const Donations = lazy(()=>import( './pages/Donations'));
+const News = lazy(()=>import( "./pages/News"));
+const Gallery = lazy(()=>import( "./pages/Gallery"));
 
 
 
@@ -18,7 +21,7 @@ function App() {
     <div className="App ">
       {/* <Home /> */}
       <Router>
-      
+        <Suspense fallback={<Loading/>} >
         <Routes>
           
           <Route path="/" element= {<Home />} />
@@ -30,13 +33,9 @@ function App() {
           <Route path="/donations" element= {<Donations />} />
           <Route path="/news" element= {<News />} />
           <Route path="/gallery" element= {<Gallery />} />
-
-
-
-
-
-
         </Routes>
+        </Suspense>
+
       </Router>
        
     </div>

@@ -23,7 +23,7 @@ const Causes = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ ease: "easeIn", duration: 1 }}
-      className="py-6 font-Poppins"
+      className="pb-6 font-Poppins"
     >
       <div className=" sticky top-0 transition-all ease-in z-50">
         <Navbar />
