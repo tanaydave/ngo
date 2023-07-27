@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { TbGridDots } from "react-icons/tb";
@@ -7,25 +7,30 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 import {motion as m} from "framer-motion"
 import ngo from "../assets/ngo.png"
 import {AiOutlineMenu} from "react-icons/ai"
+const navs= ['Home','About','Causes','Events','Contact','NewsRoom','Gallery','Blogs']
+
 
 
 const Navbar = ({ className = "" }) => {
   const [open, setOpen] = useState(false);
+  const pathname = useLocation();
+  const path = pathname.pathname
+  console.log(path)
   
   return (
-    <div  className={`pb-4 bg-white border-b-[#09b6cb] border-b-4`}>
+    <div  className=" bg-white border-b-[#09b6cb] border-b-4 ">
       <div className="flex  justify-around items-center pt-6 text-lg  ">
-        <Link to="/"><img
+        <Link  to="/"><img
           src={ngo}
           className=" h-16 w-40 md:h-24 md:w-60 bg-contain object-cover bg-center"
         ></img></Link>
-        <div className=" pr-12 font-Poppins font-medium justify-evenly ml-6 text-black  ">
+        <div className=" pr-12 font-Titillium font-medium justify-evenly ml-6 text-black  ">
           <ul className="md:flex hidden list-none text-xl">
             <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/">Home</Link>
+              <Link className={(path=== '/')? "change":""} to="/">Home</Link>
             </li>
             <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/about">About</Link>
+              <Link className={(path=== '/About')? "change":""} to="/About">About</Link>
             </li>
             <li
               className="pr-6 pl-3 transition-all ease-in "
@@ -33,10 +38,10 @@ const Navbar = ({ className = "" }) => {
               // onMouseLeave={() => setOpen((prev) => !prev)}
             >
               <Link
-                to="/causes"
+                to="/Causes"
                 className=" flex justify-center items-center hover:text-orange-500 hover:transition-all ease-in-out cursor-pointer"
               >
-                <p>Causes</p>
+                <p className={(path=== '/Causes')? "change":""}>Causes</p>
                 {/* { !open?
             (<IoMdArrowDropdown className="pb-1 " size={30}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={30}></IoMdArrowDropup>) */}
               </Link>
@@ -52,22 +57,37 @@ const Navbar = ({ className = "" }) => {
           </div>} */}
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/events">Events</Link>
+              <Link className={(path=== '/Events')? "change":""} to="/Events">Events</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/contact">Contact</Link>
+              <Link className={(path=== '/Contact')? "change":""} to="/Contact">Contact</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/news">NewsRoom</Link>
+              <Link className={(path=== '/NewsRoom')? "change":""} to="/NewsRoom">NewsRoom</Link>
               
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/gallery">Gallery</Link>
+              <Link className={(path=== '/Gallery')? "change":""} to="/Gallery">Gallery</Link>
             </li>
             <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/blogs">Blogs</Link>
+              <Link className={(path=== '/Blogs')? "change":""} to="/Blogs">Blogs</Link>
             </li>
           </ul>
+          {/* <ul className="md:flex hidden list-none text-xl">
+            {
+              navs.map((nav)=>{
+                return(
+                  <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+              <Link to="/">Home</Link>
+            </li>
+                )
+              })
+            }
+
+
+          </ul> */}
+
+
         </div>
 
 
@@ -97,26 +117,26 @@ const Navbar = ({ className = "" }) => {
               <Link to="/">Home</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/about">About</Link>
+              <Link to="/About">About</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/causes">Causes</Link>
+              <Link to="/Causes">Causes</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/events">Events</Link>
+              <Link to="/Events">Events</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/contact">Contact</Link>
+              <Link to="/Contact">Contact</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/blogs">Blogs</Link>
+              <Link to="/Blogs">Blogs</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/news">NewsRoom</Link>
+              <Link to="/NewsRoom">NewsRoom</Link>
               
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
-              <Link to="/gallery">Gallery</Link>
+              <Link  to="/Gallery">Gallery</Link>
             </li>
             <li className="p-4  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
           <button className=" text-center">

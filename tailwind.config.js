@@ -6,6 +6,8 @@ module.exports = {
       Mukta: ["Mukta", "sans-serif"],
       Poppins: ["Poppins", "sans-serif"],
       Tilt: ['"Tilt Neon"', "cursive"],
+      Titillium:['"Titillium Web"', "sans-serif"],
+      Libre: ['"Libre Baskerville"', "serif"]
     },
   },
   plugins: [],

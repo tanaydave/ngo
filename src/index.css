@@ -4,3 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500&family=Poppins:wght@300;400;500;600;700&family=Tilt+Neon&display=swap");
 
+.change{
+    @apply text-orange-500;
+}

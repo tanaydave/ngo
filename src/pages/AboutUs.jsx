@@ -1,10 +1,12 @@
 import { React } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import { useState } from "react";
+import { useEffect} from "react";
 import mission from "../assets/mission.jpg";
 import vision from "../assets/vision.jpg";
 import { motion as m } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
   // const [transparent,setTransparent]= useState('bg-transparent');
@@ -17,6 +19,7 @@ const About = () => {
   //  }
   // }
   // window.addEventListener('scroll',addBg)
+  
   return (
     <div className=" font-Poppins">
       <m.div
@@ -53,11 +56,12 @@ const About = () => {
         </div>
       </m.div>
       <m.div
-        initial={{ opacity: 0, x: "-200%" }}
+        
+        className="flex flex-col  md:items-end justify-center pb-12 md:pb-32 md:h-[40vh]"
+        initial={{ opacity: 0, x: "200%" }}
         whileInView={{ opacity: 1 }}
         animate={{ x: 0 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="flex flex-col  md:items-end justify-center pb-12 md:pb-32 md:h-[40vh]"
       >
         <div className=" text-4xl pb-12 text-orange-500 md:text-black md:text-8xl font-bold md:after:absolute md:after:content-[''] md:after:items-center md:after:mb-8 md:after:w-80 md:after:h-2 md:after:bottom-[24.5rem] md:after:right-64 md:after:mr-2 md:pr-48 after:bg-orange-500 md:pb-[5.3rem]  md:pl-60">
           Our Vision

@@ -1,4 +1,4 @@
-import React, { useState ,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import home from "../assets/home.jpg";
@@ -6,25 +6,21 @@ import misvis from "../assets/misvis.jpg";
 import logo from "../assets/logo.png";
 import team from "../assets/team.jpg";
 import { delay, motion as m, AnimatePresence } from "framer-motion";
-import Counter from "../components/Counter"
-import { useInView } from "framer-motion"
+import Counter from "../components/Counter";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
-import{ PiTargetLight} from "react-icons/pi"
+import { PiTargetLight } from "react-icons/pi";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { RiEmotionHappyLine } from "react-icons/ri";
-import {BsPeople} from "react-icons/bs"
+import { BsPeople } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import carousel1 from "../assets/carousel1.jpg"
-import volunteer from "../assets/volunteer.jpg"
-import partner from "../assets/partner.jpg"
-import {Link} from "react-router-dom"
+import carousel1 from "../assets/carousel1.jpg";
+import volunteer from "../assets/volunteer.jpg";
+import partner from "../assets/partner.jpg";
+import { Link } from "react-router-dom";
 
-
-
-import Slider from 'react-slick';
-
-
+import Slider from "react-slick";
 
 const slides = [
   "https://i.ibb.co/ncrXc2V/1.png",
@@ -55,8 +51,8 @@ const Home = () => {
   // counter function
   const [count, setCount] = useState(0);
   const counterRef = useRef(null);
-  const counting =( limit)=>{
-     {
+  const counting = (limit) => {
+    {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -75,71 +71,67 @@ const Home = () => {
         },
         { threshold: 0.5 }
       );
-  
+
       if (counterRef.current) {
         observer.observe(counterRef.current);
       }
-  
+
       return () => {
         if (counterRef.current) {
           observer.unobserve(counterRef.current);
         }
       };
     }
+  };
 
-  }
-  
-  
-  
-
-  useEffect( counting, [count]);
-  const images =[1,1,1,1]
-  const carImgs= [
+  useEffect(counting, [count]);
+  const images = [1, 1, 1, 1];
+  const carImgs = [
     {
       id: 1,
-      tagline: 'It is not how much we give but how much love we put into giving' ,
-      button: 'Donate Now',
-      img:carousel1
-      
-  
-    },  
+      tagline:
+        "It is not how much we give but how much love we put into giving",
+      button: "Donate Now",
+      img: carousel1,
+    },
     {
       id: 2,
-      tagline: 'It is not how much we give but how much love we put into giving' ,
-      button: 'Become a Volunteer',
-      img:volunteer,
-      
-  
-    },  {
+      tagline:
+        "It is not how much we give but how much love we put into giving",
+      button: "Become a Volunteer",
+      img: volunteer,
+    },
+    {
       id: 3,
-      tagline: 'It is not how much we give but how much love we put into giving' ,
-      button: 'Become a Partner',
-      img:partner,
-      
-  
-    }
-  ]
-  
+      tagline:
+        "It is not how much we give but how much love we put into giving",
+      button: "Become a Partner",
+      img: partner,
+    },
+  ];
 
-  
-  
-  
-  // carousel function 
+  // carousel function
   const renderSlides = () =>
-  carImgs.map(image => (
-    < m.div className="text-center relative left-0 " >
-      <img src={image.img} alt="" className="h-[80vh] w-[100vw] object-cover "  />
-      <div className="absolute flex flex-col items-center gap-4 text-black transform -translate-x-2/4 -translate-y-2/4 top-[60vh] left-1/2">
-      <div className="text-3xl text-white font-semibold drop-shadow-2xl shadow-black">{image.tagline}</div>
-      <button className=" font-semibold border-2 py-2 px-4 rounded-lg ring-1 ring-amber-700 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in text-xl">{image.button}</button>
+    carImgs.map((image) => (
+      <m.div className="text-center relative left-0 ">
+        <img
+          src={image.img}
+          alt=""
+          className="h-[80vh] w-[100vw] object-cover "
+        />
+        <div className="absolute flex flex-col items-center gap-4 text-black transform -translate-x-2/4 -translate-y-2/4 top-[60vh] left-1/2">
+          <div className="text-3xl text-white font-semibold drop-shadow-2xl shadow-black">
+            {image.tagline}
+          </div>
+          <button className=" font-semibold border-2 py-2 px-4 rounded-lg ring-1 ring-amber-700 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in text-xl">
+            {image.button}
+          </button>
         </div>
-    </m.div>
-  ));
-
-  
+      </m.div>
+    ));
 
   return (
-    <m.div className=" font-Poppins pb-12">
+    <m.div className=" font-Titillium pb-12">
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -180,37 +172,35 @@ const Home = () => {
       {/* carousel  */}
 
       <div className=" w-[98.9vw] ">
-      <Slider
-        dots={true}
-        autoplay={true}
-        slidesToShow={1}
-        slidesToScroll={1}
-        autoplaySpeed={2000}
-        infinite={true}
-        arrows={false}
-        
-        
-      >
-        {renderSlides()}
-        
-      </Slider>
-    </div>
+        <Slider
+          dots={true}
+          autoplay={true}
+          slidesToShow={1}
+          slidesToScroll={1}
+          autoplaySpeed={2000}
+          infinite={true}
+          arrows={false}
+        >
+          {renderSlides()}
+        </Slider>
+      </div>
 
-      
       {/* hero finished */}
 
       {/* get involved started  */}
       {/* get involved finished   */}
 
-
       {/* who we are started  */}
-      <m.div className=" py-16 mb-16 bg-slate-200 ">
+      <m.div className=" py-12 mt-10 bg-slate-200 "
+      whileInView={{scale:1,opacity:1}}
+      transition={{duration:1,ease:"easeInOut"}}
+      initial={{scale:0,opacity:0}}>
         {/* who we are started */}
         <m.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{  duration: 0.5, ease: "easeInOut" }}
-          className=" text-2xl font-semibold md:text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 md:ml-16 ml-6 text-[#09b6cb]"
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className=" text-2xl font-medium font-Poppins md:pl-8 md:text-4xl w-[90vw]  pt-8 md:ml-16 ml-6 text-[#09b6cb]"
         >
           Who We Are
         </m.div>
@@ -218,7 +208,7 @@ const Home = () => {
           <m.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{  duration: 1, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             className="flex flex-col items-center  "
           >
             {/* <m.div className=" bg-white text-6xl py-8 ml-16 underline underline-offset-8 text-[#09b6cb]">
@@ -288,6 +278,146 @@ const Home = () => {
       </m.div> */}
       {/* events finished */}
 
+      {/* campaign started  */}
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="py-8 "
+      >
+        <div className="flex flex-col items-center">
+          <p className="md:text-4xl font-semibold md:py-6 font-Libre">Current Campaigns</p>
+          <div className="flex gap-2 justify-center px-12">
+            <div className="w-[20vw]   h-[53vh]   shadow-lg rounded-lg ">
+              <img src={misvis} alt="" className="rounded-lg h-[25vh] " />
+              <div className="flex flex-col px-4 gap-4 py-4">
+                <div className="text-xl font-semibold">
+                  Lorem ipsum dolor sit amet consectetur.
+                </div>
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  cum.
+                </div>
+                <div className="w-full bg-gray-200 rounded-full  dark:bg-gray-700 ">
+                  <div
+                    className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
+                    
+                  >
+                    {" "}
+                    50%
+                  </div>
+                </div>
+                <div className="flex justify-between px-1 pt-3 text-xs">
+                  <div className="text-orange-500">Raised: Rs 1000 </div>
+                  <div className="text-[#09b6cb]">Goal: Rs 2000</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-[20vw]   h-[53vh]   shadow-lg rounded-lg ">
+              <img src={misvis} alt="" className="rounded-lg h-[25vh] " />
+              <div className="flex flex-col px-4 gap-4 py-4">
+                <div className="text-xl font-semibold">
+                  Lorem ipsum dolor sit amet consectetur.
+                </div>
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  cum.
+                </div>
+                <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700 ">
+                  <div
+                    className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
+                    
+                  >
+                    {" "}
+                    50%
+                  </div>
+                </div>
+                <div className="flex justify-between px-1 pt-3 text-xs">
+                  <div className="text-orange-500">Raised: Rs 1000 </div>
+                  <div className="text-[#09b6cb]">Goal: Rs 2000</div>
+                </div>
+              </div>
+            </div>
+            <div className="w-[20vw]   h-[53vh]   shadow-lg rounded-lg ">
+              <img src={misvis} alt="" className="rounded-lg h-[25vh] " />
+              <div className="flex flex-col px-4 gap-4 py-4">
+                <div className="text-xl font-semibold">
+                  Lorem ipsum dolor sit amet consectetur.
+                </div>
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  cum.
+                </div>
+                <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700 ">
+                  <div
+                    className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
+                    
+                  >
+                    {" "}
+                    50%
+                  </div>
+                </div>
+                <div className="flex justify-between px-1 pt-3 text-xs">
+                  <div className="text-orange-500">Raised: Rs 1000 </div>
+                  <div className="text-[#09b6cb]">Goal: Rs 2000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </m.div>
+      {/* campaign finished  */}
+
+      {/* counters started */}
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="bg-black text-white h-[50vh]"
+      >
+        <div className="text-center text-3xl md:text-6xl py-12">Our Impact</div>
+        <div
+          ref={counterRef}
+          className="flex justify-around pb-12 text:lg md:text-2xl"
+        >
+          <div className="flex flex-col items-center gap-4">
+            <div>
+              <RiEmotionHappyLine size={60} />
+            </div>
+            <div className="pl-2 text-center">Happy Donators</div>
+            <div onClick={counting(5000)}>
+              <Counter value={count} limit={3000} />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 items-center">
+            <div>
+              <PiTargetLight size={60} />
+            </div>
+            <div className="pl-2 text-center">Successful Missions</div>
+            <div>
+              <Counter value={count} limit={100} />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 items-center">
+            <div>
+              <BsPeople size={60} />
+            </div>
+            <div className="pl-2 text-center">Volunteers</div>
+            <div>
+              <Counter value={count} limit={1500} />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 items-center ">
+            <div></div>
+            <div className="pl-2 text-center">States Reached</div>
+            <div>
+              <Counter value={count} limit={20} />
+            </div>
+          </div>
+        </div>
+      </m.div>
+      {/* counters finished */}
+
       {/* blog started  */}
       <m.div
         initial={{ opacity: 0 }}
@@ -296,11 +426,11 @@ const Home = () => {
         className="pb-16 pt-8  "
 
       >
-        <div className=" font-semibold text-2xl md:text-3xl w-[90vw] border-b-4 border-b-[#09b6cb] pt-8 md:ml-16 ml-6  text-[#09b6cb]">
+        <div className=" md:pl-8 font-medium text-2xl md:text-4xl font-Poppins w-[90vw]  pt-8 md:ml-16 ml-6  text-[#09b6cb]">
           Latest Blog
         </div>
 
-        <div className="md:grid md:grid-cols-5 md:gap-2 md:justify-center md:w-[80vw]  md:mx-10  md:rounded-lg  md:mt-12">
+        <div className="md:grid md:grid-cols-5 md:gap-2 md:justify-center md:w-[80vw]  md:mx-10  md:rounded-lg  md:mt-4">
           <div className=" col-span-2 overflow-hidden  h-[40vh] mt-12 rounded-lg  flex items-center ">
             {" "}
             <img
@@ -310,22 +440,15 @@ const Home = () => {
             />
           </div>
           <div className=" md:col-span-2 pl-4 md:pl-0">
-            <div className="flex flex-col pt-8 gap-6 border-l-4 border-l-orange-500  md:h-[45vh]  pl-8  mt-[2rem] ]">
+            <div className="flex flex-col pt-8 gap-6 border-r-4 border-r-orange-500  md:h-[50vh]  pl-4  mt-[2rem] ]">
               <p className=" text-3xl">title</p>
               <p className="">date</p>
               <p className=" ">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptates a nisi magni iusto delectus? Minima quis eos itaque,
-                sint, suscipit velit nihil provident, vel nobis explicabo fuga
-                veniam deserunt ex voluptate eveniet harum soluta dolor.
-                Consequatur quo dolorem deserunt quasi alias. Ex alias,
-                dignissimos optio corrupti accusantium molestias dicta rerum.
-                Praesentium harum reprehenderit placeat fuga quidem alias vero
-                repudiandae iusto.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consectetur delectus at voluptate? Repellat, odio pariatur. Minima aspernatur labore tempora quod ipsum laborum molestiae incidunt eius culpa, veniam debitis aperiam.
               </p>
               <p>
                 <button className="bg-orange-500 rounded-md p-2 hover:bg-transparent hover:text-orange-500 transition-all hover:font-medium border-2 border-orange-500">
-                 <Link to="/ngo/blogs"> read more</Link>
+                 <Link to="/Blogs"> read more</Link>
                 </button>
               </p>
             </div>
@@ -333,7 +456,7 @@ const Home = () => {
           <div className=" hidden md:pt-2 md:flex md:flex-col md:items-start md:justify-center md:gap-6 ">
             {nums.map(() => {
               return (
-                <div className="grid grid-cols-3 gap-2 border-4 rounded-lg w-[25rem] duration-500 hover:scale-105 bg-slate-200">
+                <div className="grid grid-cols-3 gap-2 border-4 rounded-lg w-[25rem] duration-500 hover:scale-[1.02] bg-slate-200">
                   <div className="col-span-1">
                     <img src={misvis} alt="" className="pt-3 pl-3 h-32" />
                   </div>
@@ -357,56 +480,28 @@ const Home = () => {
           </div>
         </div>
       </m.div>
+      {/* <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className=" "
+      >
+        new blog section
+      </m.div> */}
 
       {/* blog finished */}
 
-      {/* counters started */}
-      <m.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="bg-black text-white"
-        
-      >
-        <div className="text-center text-3xl md:text-4xl py-4">Our Impact</div>
-        <div ref={counterRef} className="flex justify-around pb-12 text:lg md:text-2xl">
-          <div className="flex flex-col items-center gap-4">
-            <div><RiEmotionHappyLine size={60}/></div>
-            <div className="pl-2 text-center">Happy Donators</div>
-            <div onClick={counting(5000)}><Counter  value={count} limit={3000}/></div>
-          </div>
-          <div className="flex flex-col gap-4 items-center">
-            <div><PiTargetLight size={60}/></div>
-            <div className="pl-2 text-center">Successful Missions</div>
-            <div><Counter value={count} limit={100}/></div>
-          </div>
-          <div className="flex flex-col gap-4 items-center">
-            <div><BsPeople size={60}/></div>
-            <div className="pl-2 text-center">Volunteers</div>
-            <div><Counter value={count} limit={1500}/></div>
-          </div>
-          <div className="flex flex-col gap-4 items-center ">
-            <div></div>
-            <div className="pl-2 text-center">States Reached</div>
-            <div ><Counter value={count} limit={20}/></div>
-          </div>
-        </div>
-
-      </m.div>
-      {/* counters finished */}
-      
-
       {/*  Gallery started  */}
-      <m.div
+      {/* <m.div
 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="pb-16 pt-8 "
+        className="pb-16 pt-8 px-12"
       >
-        <div className=" pt-12 text-2xl md:text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-6 md:ml-16">
+        <div className=" pt-12 md:pl-8  text-2xl md:text-4xl text-orange-500 font-semibold   w-[90vw] pb-1 ml-6 md:ml-16">
+         <p className=" font-medium font-Poppins">Gallery</p> {" "}
           {" "}
-          Gallery{" "}
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3  gap-2 py-4 md:mx-12 justify-between relative">
@@ -427,8 +522,69 @@ const Home = () => {
           }
           
         </div>
-      </m.div>
+      </m.div> */}
       {/*  Galleryfinished */}
+     
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className=" bg-[#faede7] font-Libre  mx-12 my-8 "
+      >
+        <div className="flex flex-col items-center pb-12">
+        <div className="py-12 text-4xl w-80 text-center font-Libre font-semibold"> What People Say About Us</div>
+        <div className="flex justify-center gap-4">
+          <div className="flex flex-col w-[18vw] bg-white transition-all border-2 hover:border-black rounded-xl p-4 gap-6">
+            <p className="text-sm pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, earum. Aspernatur mollitia suscipit, iste ad nihil maxime quod vitae expedita.</p>
+            <div className="flex justify-center gap-6 pb-4">
+              <img src={misvis} alt=""  className="rounded-full h-[4.5rem] w-[4.5rem]"/>
+              <div className="flex flex-col pt-2">
+                <div className="font-semibold">john doe</div>
+                <div className="text-sm">Donor</div>
+                </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-[18vw] bg-white transition-all border-2 hover:border-black rounded-xl p-4 gap-6">
+            <p className="text-sm pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, earum. Aspernatur mollitia suscipit, iste ad nihil maxime quod vitae expedita.</p>
+            <div className="flex justify-center gap-6 pb-4">
+              <img src={misvis} alt=""  className="rounded-full h-[4.5rem] w-[4.5rem]"/>
+              <div className="flex flex-col pt-2">
+                <div className="font-semibold">john doe</div>
+                <div className="text-sm">Donor</div>
+                </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-[18vw] bg-white transition-all border-2 hover:border-black rounded-xl p-4 gap-6">
+            <p className="text-sm pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, earum. Aspernatur mollitia suscipit, iste ad nihil maxime quod vitae expedita.</p>
+            <div className="flex justify-center gap-6 pb-4">
+              <img src={misvis} alt=""  className="rounded-full h-[4.5rem] w-[4.5rem]"/>
+              <div className="flex flex-col pt-2">
+                <div className="font-semibold">john doe</div>
+                <div className="text-sm">Donor</div>
+                </div>
+            </div>
+
+          </div>
+          <div className="flex flex-col w-[18vw] bg-white transition-all border-2 hover:border-black rounded-xl p-4 gap-6">
+            <p className="text-sm pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, earum. Aspernatur mollitia suscipit, iste ad nihil maxime quod vitae expedita.</p>
+            <div className="flex justify-center gap-6 pb-4">
+              <img src={misvis} alt=""  className="rounded-full h-[4.5rem] w-[4.5rem]"/>
+              <div className="flex flex-col pt-2">
+                <div className="font-semibold">john doe</div>
+                <div className="text-sm">Donor</div>
+                </div>
+            </div>
+
+          </div>
+
+          
+
+
+        </div>
+        <p className="py-8 text-2xl">Trusted By More Than 500 donors !</p>
+
+        </div>
+      </m.div>
 
       <Footer />
     </m.div>

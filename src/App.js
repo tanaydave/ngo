@@ -17,6 +17,7 @@ const Gallery = lazy(()=>import( "./pages/Gallery"));
 
 
 function App() {
+  
   return (
     <div className="App ">
       {/* <Home /> */}
@@ -25,19 +26,21 @@ function App() {
         <Routes>
           
           <Route path="/" element= {<Home />} />
-          <Route path="/causes" element= {<Causes />} />
-          <Route path="/contact" element= {<Contact />} />
-          <Route path="/events" element= {<Events />} />
-          <Route path="/blogs" element= {<Blogs />} />
-          <Route path="/about" element= {<About />} />
-          <Route path="/donations" element= {<Donations />} />
-          <Route path="/news" element= {<News />} />
-          <Route path="/gallery" element= {<Gallery />} />
+          <Route path="/Home" element= {<Home />} />
+
+          <Route path="/Causes" element= {<Causes />} />
+          <Route path="/Contact" element= {<Contact />} />
+          <Route path="/Events" element= {<Events />} />
+          <Route path="/Blogs" element= {<Blogs />} />
+          <Route path="/About" element= {<About />} />
+          <Route path="/Donations" element= {<Donations />} />
+          <Route path="/NewsRoom" element= {<News />} />
+          <Route path="/Gallery" element= {<Gallery />} />
         </Routes>
         </Suspense>
 
       </Router>
-       
+      
     </div>
   );
 }

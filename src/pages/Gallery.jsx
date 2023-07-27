@@ -21,12 +21,7 @@ const Gallery = () => {
         <Navbar />
       </m.div>
       <div>
-        <div
-          className="text-6xl bg-orange-500 text-white py-12 h-[20vh] flex justify-center items-center
-            "
-        >
-          Gallery
-        </div>
+      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mt-4 text-8xl ">Gallery</div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-4 md:mx-20 py-16">
             {images.map(()=>{
                 return(
