@@ -21,6 +21,7 @@ import partner from "../assets/partner.jpg";
 import { Link } from "react-router-dom";
 
 import Slider from "react-slick";
+import Campaigns from "../components/Campaigns";
 
 const slides = [
   "https://i.ibb.co/ncrXc2V/1.png",
@@ -31,11 +32,11 @@ const slides = [
 
 const Home = () => {
   // used in carousel
-  const [curr, setCurr] = useState(0);
-  const prev = () =>
-    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-  const next = () =>
-    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+  // const [curr, setCurr] = useState(0);
+  // const prev = () =>
+  //   setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
+  // const next = () =>
+  //   setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
   // const [transparent, setTransparent] = useState("bg-transparent");
   // const addBg = () => {
   //   if (window.scrollY >= 10) {
@@ -113,7 +114,7 @@ const Home = () => {
   // carousel function
   const renderSlides = () =>
     carImgs.map((image) => (
-      <m.div className="text-center relative left-0 bg-black ">
+      <m.div className="text-center relative left-0 overflow-hidden bg-black ">
         <div className=" opacity-50"><img
           src={image.img}
           alt=""
@@ -215,18 +216,7 @@ const Home = () => {
               Who We Are
             </m.div> */}
             <div className=" md:leading-9 pt-2 sm:text-base sm:pl-6 md:text-xl md:mx-20">
-              The founder of Orinova, Dr. Sourabh Kumar is an experienced
-              individual who has faced the hardships of the society and has
-              become a figure of respect. However, it wasn’t easy for him to
-              reach this stage. He grew up in a place where even finding
-              employment was a big challenge in its own. However, this didn’t
-              stop him from reaching his goal. Over the years, Dr Sourabh
-              engaged in networking with the people around him, his superiors
-              and his team. His work brought him in contact with the people of
-              our country who were suffering from poverty and hunger. He
-              witnessed first-hand the increasing damage to our environment when
-              he travelled for work. Determined to once and for all take charge
-              to help his country develop and grow, he came to create Orinova.
+            Founded with an unwavering commitment to catalyzing positive change, Orinova Foundation is a non-profit, non-governmental organisation that stands as a beacon of hope and progress. Our inception in [Year of Establishment] marked the dawn of a transformative journey aimed at uplifting marginalized communities and nurturing a sense of shared responsibility for the planet we call home.
             </div>
           </m.div>
         </m.div>
@@ -279,10 +269,13 @@ const Home = () => {
       {/* events finished */}
 
       {/* campaign started  */}
-      <m.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+      {/* <m.div
+      
+        initial={{ opacity: 1,scale:1,y:"-100%" }}
+        viewport={{once:true}}
+        whileInView={{ opacity: 1,scale:1,}}
+        animate={{y:0}}
+        transition={{ duration: 1, ease: "easeInOut" }}
         className="py-16 "
       >
         <div className="flex flex-col items-center">
@@ -386,7 +379,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </m.div>
+      </m.div> */}
+      <Campaigns/>
       {/* campaign finished  */}
 
       {/* counters started */}
@@ -440,7 +434,7 @@ const Home = () => {
       {/* counters finished */}
 
       {/* blog started  */}
-      <m.div
+      {/* <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -500,7 +494,7 @@ const Home = () => {
             <button className=" border-2 border-orange-500 text-orange-500 p-4 rounded-2xl"><Link to ='blogs' >View all Blogs</Link></button>
           </div>
         </div>
-      </m.div>
+      </m.div> */}
       {/* <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -546,7 +540,8 @@ const Home = () => {
       </m.div> */}
       {/*  Galleryfinished */}
      
-      <m.div
+     {/* testimonials  */}
+      {/* <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -605,6 +600,57 @@ const Home = () => {
         <p className="py-8 text-2xl">Trusted By More Than 500 donors !</p>
 
         </div>
+      </m.div> */}
+      {/* mission  */}
+      <m.div 
+      className="flex h-[65vh] items-center w-full overflow-hidden mt-8 gap-24 px-20 justify-center">
+        
+          <div className="flex flex-col gap-12">
+            <div className="text-6xl font-[Yeseva-One] font-extrabold">Our Mission.</div>
+            <div className="w-[31rem] font-Poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis reprehenderit asperiores nisi aliquam laudantium porro et, amet ratione quis sapiente dolorem adipisci unde ex laboriosam odit officia iusto aspernatur.</div>
+            <div><button className="py-5 px-8 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold">Read More</button></div>
+
+
+          </div>
+          <div className="flex gap-2">
+            <m.img src={misvis}  alt="" className=" w-64 h-[25rem] rounded-3xl"
+            whileInView={{scale:1,opacity:1}}
+            transition={{duration:1,ease:"easeInOut"}}
+            initial={{scale:0,opacity:0}}
+            />
+            <m.img src={misvis} alt="" className="w-64 h-[25rem] rounded-3xl"
+            whileInView={{scale:1,opacity:1}}
+            transition={{duration:1,ease:"easeInOut"}}
+            initial={{scale:0,opacity:0}} />
+
+          </div>
+
+        
+
+
+      </m.div>
+      {/* vision  */}
+      <m.div 
+      className="flex h-[50vh] mb-16 w-full overflow-hidden items-center  gap-24 px-20 justify-center">
+        <div className="">
+            <m.img src={misvis} alt="" className=" w-[34rem] h-[25rem] rounded-3xl object-cover"
+            whileInView={{scale:1,opacity:1}}
+            transition={{duration:1,ease:"easeInOut"}}
+            initial={{scale:0,opacity:0}}/>
+          </div>
+        
+          <div className="flex flex-col gap-12 mt-2">
+            <div className="text-6xl font-[Yeseva-One] font-extrabold">Our Vision.</div>
+            <div className="w-[31rem] font-Poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis reprehenderit asperiores nisi aliquam laudantium porro et, amet ratione quis sapiente dolorem adipisci unde ex laboriosam odit officia iusto aspernatur.</div>
+            <div><button className="py-5 px-8 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold">Read More</button></div>
+
+
+          </div>
+          
+
+        
+
+
       </m.div>
 
       <Footer />
