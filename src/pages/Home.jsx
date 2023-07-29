@@ -113,17 +113,17 @@ const Home = () => {
   // carousel function
   const renderSlides = () =>
     carImgs.map((image) => (
-      <m.div className="text-center relative left-0 ">
-        <img
+      <m.div className="text-center relative left-0 bg-black ">
+        <div className=" opacity-50"><img
           src={image.img}
           alt=""
-          className="h-[80vh] w-[100vw] object-cover "
-        />
-        <div className="absolute flex flex-col items-center gap-4 text-black transform -translate-x-2/4 -translate-y-2/4 top-[60vh] left-1/2">
-          <div className="text-3xl text-white font-semibold drop-shadow-2xl shadow-black">
+          className="h-[80vh] w-[100vw] object-cover bg-black z-10 on hover:scale-110 duration-[5s]"
+        /></div>
+        <div className="absolute flex flex-col items-center gap-12 w-[50vw]   transform -translate-x-2/4 -translate-y-2/4 top-[45vh] left-1/2">
+          <div className="text-5xl text-white font-semibold drop-shadow-2xl shadow-black">
             {image.tagline}
           </div>
-          <button className=" font-semibold border-2 py-2 px-4 rounded-lg ring-1 ring-amber-700 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in text-xl">
+          <button className=" font-semibold border-2 py-3 px-4 rounded-full ring-1 ring-amber-700 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in text-xl">
             {image.button}
           </button>
         </div>
@@ -283,22 +283,15 @@ const Home = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="py-8 "
+        className="py-16 "
       >
         <div className="flex flex-col items-center">
-          <p className="md:text-4xl font-semibold md:py-6 font-Libre">Current Campaigns</p>
-          <div className="flex gap-2 justify-center px-12">
-            <div className="w-[20vw]   h-[53vh]   shadow-lg rounded-lg ">
-              <img src={misvis} alt="" className="rounded-lg h-[25vh] " />
-              <div className="flex flex-col px-4 gap-4 py-4">
-                <div className="text-xl font-semibold">
-                  Lorem ipsum dolor sit amet consectetur.
-                </div>
-                <div className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                  cum.
-                </div>
-                <div className="w-full bg-gray-200 rounded-full  dark:bg-gray-700 ">
+          <p className="md:text-6xl font-extrabold md:py-6 font-[Yeseva-One]">Current Campaigns</p>
+          <div className="flex gap-8 justify-center px-12">
+            <div className="w-[22vw]   h-[72vh] hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
+              <img src={misvis} alt="" className=" w-full h-[25vh] " />
+              <div className="pt-12 px-4 bg-slate-200 h-32">
+              <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
                   <div
                     className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
                     
@@ -307,23 +300,30 @@ const Home = () => {
                     50%
                   </div>
                 </div>
-                <div className="flex justify-between px-1 pt-3 text-xs">
-                  <div className="text-orange-500">Raised: Rs 1000 </div>
+                <div className="flex justify-between px-1 pt-3 ">
+                  <div className="text-orange-500 ">Raised: Rs 1000 </div>
                   <div className="text-[#09b6cb]">Goal: Rs 2000</div>
                 </div>
+                </div>
+              <div className="flex flex-col px-4 gap-4 py-4">
+                <div className="text-xl font-semibold hover:text-orange-500">
+                  Lorem ipsum dolor sit amet consectetur.
+                </div>
+                <div className="text-md ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  cum.
+                </div>
+                <button className="border-2 rounded-full p-3 mt-2 w-32 hover:text-white hover:bg-orange-500 transition">
+                  Read More
+                </button>
+               
+                
               </div>
             </div>
-            <div className="w-[20vw]   h-[53vh]   shadow-lg rounded-lg ">
-              <img src={misvis} alt="" className="rounded-lg h-[25vh] " />
-              <div className="flex flex-col px-4 gap-4 py-4">
-                <div className="text-xl font-semibold">
-                  Lorem ipsum dolor sit amet consectetur.
-                </div>
-                <div className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                  cum.
-                </div>
-                <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700 ">
+            <div className="w-[22vw] hover:shadow-2xl border-2 h-[72vh]    rounded-3xl  overflow-hidden">
+              <img src={misvis} alt="" className=" h-[25vh] w-full " />
+              <div className="pt-12 px-4 bg-slate-200 h-32">
+              <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
                   <div
                     className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
                     
@@ -332,23 +332,30 @@ const Home = () => {
                     50%
                   </div>
                 </div>
-                <div className="flex justify-between px-1 pt-3 text-xs">
-                  <div className="text-orange-500">Raised: Rs 1000 </div>
+                <div className="flex justify-between px-1 pt-3 ">
+                  <div className="text-orange-500 ">Raised: Rs 1000 </div>
                   <div className="text-[#09b6cb]">Goal: Rs 2000</div>
                 </div>
+                </div>
+              <div className="flex flex-col px-4 gap-4 py-4">
+                <div className="text-xl font-semibold hover:text-orange-500">
+                  Lorem ipsum dolor sit amet consectetur.
+                </div>
+                <div className="text-md">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  cum.
+                </div>
+                <button className="border-2 rounded-full p-3 mt-2 w-32 hover:text-white hover:bg-orange-500 transition">
+                  Read More
+                </button>
+               
+                
               </div>
             </div>
-            <div className="w-[20vw]   h-[53vh]   shadow-lg rounded-lg ">
-              <img src={misvis} alt="" className="rounded-lg h-[25vh] " />
-              <div className="flex flex-col px-4 gap-4 py-4">
-                <div className="text-xl font-semibold">
-                  Lorem ipsum dolor sit amet consectetur.
-                </div>
-                <div className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                  cum.
-                </div>
-                <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700 ">
+            <div className="w-[22vw]   h-[72vh] hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
+              <img src={misvis} alt="" className=" w-full h-[25vh] " />
+              <div className="pt-12 px-4 bg-slate-200 h-32">
+              <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
                   <div
                     className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
                     
@@ -357,10 +364,24 @@ const Home = () => {
                     50%
                   </div>
                 </div>
-                <div className="flex justify-between px-1 pt-3 text-xs">
-                  <div className="text-orange-500">Raised: Rs 1000 </div>
+                <div className="flex justify-between px-1 pt-3 ">
+                  <div className="text-orange-500 ">Raised: Rs 1000 </div>
                   <div className="text-[#09b6cb]">Goal: Rs 2000</div>
                 </div>
+                </div>
+              <div className="flex flex-col px-4 gap-4 py-4">
+                <div className="text-xl font-semibold hover:text-orange-500">
+                  Lorem ipsum dolor sit amet consectetur.
+                </div>
+                <div className="text-md">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  cum.
+                </div>
+                <button className="border-2 rounded-full p-3 mt-2 w-32 hover:text-white hover:bg-orange-500 transition">
+                  Read More
+                </button>
+               
+                
               </div>
             </div>
           </div>
