@@ -177,7 +177,7 @@ const Home = () => {
           autoplay={true}
           slidesToShow={1}
           slidesToScroll={1}
-          autoplaySpeed={2000}
+          autoplaySpeed={4000}
           infinite={true}
           arrows={false}
         >

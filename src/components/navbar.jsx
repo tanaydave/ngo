@@ -26,20 +26,20 @@ const Navbar = ({ className = "" }) => {
         ></img></Link>
         <div className=" pr-12 font-Titillium font-medium justify-evenly ml-6 text-black  ">
           <ul className="md:flex hidden list-none text-xl">
-            <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/')? "change":""} to="/">Home</Link>
             </li>
-            <li className="pr-6 pl-3  hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/About')? "change":""} to="/About">About</Link>
             </li>
             <li
-              className="pr-6 pl-3 transition-all ease-in "
+              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
               // onMouseEnter={() => setOpen((prev) => !prev)}
               // onMouseLeave={() => setOpen((prev) => !prev)}
             >
               <Link
                 to="/Causes"
-                className=" flex justify-center items-center hover:text-orange-500 hover:transition-all ease-in-out cursor-pointer"
+                className=" relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 flex justify-center items-center  hover:transition-all ease-in-out cursor-pointer"
               >
                 <p className={(path=== '/Causes')? "change":""}>Causes</p>
                 {/* { !open?
@@ -56,20 +56,20 @@ const Navbar = ({ className = "" }) => {
             </ul>
           </div>} */}
             </li>
-            <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Events')? "change":""} to="/Events">Events</Link>
             </li>
-            <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Contact')? "change":""} to="/Contact">Contact</Link>
             </li>
-            <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/NewsRoom')? "change":""} to="/NewsRoom">NewsRoom</Link>
               
             </li>
-            <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Gallery')? "change":""} to="/Gallery">Gallery</Link>
             </li>
-            <li className="pr-6 pl-3 hover:text-orange-500 transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Blogs')? "change":""} to="/Blogs">Blogs</Link>
             </li>
           </ul>
