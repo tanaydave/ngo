@@ -22,6 +22,8 @@ import { Link } from "react-router-dom";
 
 import Slider from "react-slick";
 import Campaigns from "../components/Campaigns";
+import Volunteer from "../components/Volunteer";
+import HomeEvents from "../components/HomeEvents";
 
 const slides = [
   "https://i.ibb.co/ncrXc2V/1.png",
@@ -66,7 +68,7 @@ const Home = () => {
                   }
                   return prevCount + 1;
                 });
-              }, 100);
+              }, 200);
             }
           });
         },
@@ -225,47 +227,7 @@ const Home = () => {
 
       {/* events started */}
 
-      {/* <m.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{  duration: 0.5, ease: "easeInOut" }}
-        className="flex flex-col items-center pb-12   w-full"
-      >
-        <div className="flex flex-col  pb-8 font-Poppins w-full     bg-stone-900">
-          <div className=" pt-12 text-2xl md:text-3xl text-orange-500 font-semibold py-6 border-b-4 w-[90vw] border-b-orange-500 pb-1 ml-6 md:ml-16">
-            {" "}
-            Upcoming Events{" "}
-          </div>
-          <div className="md:grid md:grid-cols-3 w-full px-2 flex flex-col  gap-y-4 md:gap-x-24 pt-16 md:px-16 md:mr-8  ">
-            {nums.map(() => (
-              <div className=" h-52 w-full md:h-[65vh]  md:w-[25vw] border-2 hover:border-0 rounded-lg overflow-hidden flex md:flex-col hover:scale-110 transition   md:mx-8 ease-in-out duration-500 delay-100 text-white hover:bg-[#09b6cb] ">
-                <div className="relative top-0 md:top-[13rem] h-16 w-16 bg-orange-500  text-center pl-1 text-white font-medium z-20">
-                  <p>18</p> JUL
-                </div>
-                <img
-                  src={misvis}
-                  className=" md:h-64 md:w-full w-40 mr-2 rounded-2xl h-40  pt-4 relative md:bottom-[5rem] "
-                ></img>{" "}
-                <div>
-                <p className=" pl-4   ">Mumbai,Maharashtra</p>
-                <p className="pt-4 pl-4 text-lg ">headline</p>
-                <p className=" h-[5rem] md:h-[7rem] pt-4 pl-4 overflow-hidden  ">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusantium consequuntur mollitia ea! Iure, aspernatur eius.
-                  Rem dolorum officia, iusto minima, unde explicabo enim sunt
-                  ullam assumenda eaque voluptatibus sint? Rem ipsam tempora
-                  corrupti provident sed, nesciunt quisquam natus. Enim, vitae.
-                </p>
-                <span className="pl-2">....</span>
-                <div className="flex pt-3 pl-2">
-                  read more <BiChevronRight size={30}></BiChevronRight>
-                </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </m.div> */}
+      
       {/* events finished */}
 
       {/* campaign started  */}
@@ -383,55 +345,7 @@ const Home = () => {
       <Campaigns/>
       {/* campaign finished  */}
 
-      {/* counters started */}
-      <m.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="bg-black text-white h-[50vh]"
-      >
-        <div className="text-center text-3xl md:text-6xl py-12">Our Impact</div>
-        <div
-          ref={counterRef}
-          className="flex justify-around pb-12 text:lg md:text-2xl"
-        >
-          <div className="flex flex-col items-center gap-4">
-            <div>
-              <RiEmotionHappyLine size={60} />
-            </div>
-            <div className="pl-2 text-center">Happy Donators</div>
-            <div onClick={counting(5000)}>
-              <Counter value={count} limit={3000} />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4 items-center">
-            <div>
-              <PiTargetLight size={60} />
-            </div>
-            <div className="pl-2 text-center">Successful Missions</div>
-            <div>
-              <Counter value={count} limit={100} />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4 items-center">
-            <div>
-              <BsPeople size={60} />
-            </div>
-            <div className="pl-2 text-center">Volunteers</div>
-            <div>
-              <Counter value={count} limit={1500} />
-            </div>
-          </div>
-          <div className="flex flex-col gap-4 items-center ">
-            <div></div>
-            <div className="pl-2 text-center">States Reached</div>
-            <div>
-              <Counter value={count} limit={20} />
-            </div>
-          </div>
-        </div>
-      </m.div>
-      {/* counters finished */}
+      
 
       {/* blog started  */}
       {/* <m.div
@@ -608,17 +522,17 @@ const Home = () => {
           <div className="flex flex-col gap-12">
             <div className="text-6xl font-[Yeseva-One] font-extrabold">Our Mission.</div>
             <div className="w-[31rem] font-Poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis reprehenderit asperiores nisi aliquam laudantium porro et, amet ratione quis sapiente dolorem adipisci unde ex laboriosam odit officia iusto aspernatur.</div>
-            <div><button className="py-5 px-8 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold">Read More</button></div>
+            <div><button className="py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold">Read More</button></div>
 
 
           </div>
           <div className="flex gap-2">
-            <m.img src={misvis}  alt="" className=" w-64 h-[25rem] rounded-3xl"
+            <m.img src={misvis}  alt="" className=" w-[17rem] h-[25rem] rounded-3xl"
             whileInView={{scale:1,opacity:1}}
             transition={{duration:1,ease:"easeInOut"}}
             initial={{scale:0,opacity:0}}
             />
-            <m.img src={misvis} alt="" className="w-64 h-[25rem] rounded-3xl"
+            <m.img src={misvis} alt="" className="w-[17rem] h-[25rem] rounded-3xl"
             whileInView={{scale:1,opacity:1}}
             transition={{duration:1,ease:"easeInOut"}}
             initial={{scale:0,opacity:0}} />
@@ -642,7 +556,7 @@ const Home = () => {
           <div className="flex flex-col gap-12 mt-2">
             <div className="text-6xl font-[Yeseva-One] font-extrabold">Our Vision.</div>
             <div className="w-[31rem] font-Poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis reprehenderit asperiores nisi aliquam laudantium porro et, amet ratione quis sapiente dolorem adipisci unde ex laboriosam odit officia iusto aspernatur.</div>
-            <div><button className="py-5 px-8 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold">Read More</button></div>
+            <div><button className="py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">Read More</button></div>
 
 
           </div>
@@ -652,6 +566,142 @@ const Home = () => {
 
 
       </m.div>
+
+
+      <m.div className="h-[60vh] text-white my-32  bg-sky-950 flex flex-col gap-8  items-center justify-center">
+        <div className="text-6xl font-[Yeseva-One] font-bold">How Can You Help ?</div>
+        <div className="w-[25rem] text-center"> Your donation will help us save and improve lives with research, education and emergency care.</div>
+        <div className="flex gap-4 mt-4">
+          <button className="bg-orange-500 py-5 px-8 rounded-full">Donate Now</button>
+          <button className="bg-[#09b6cb] py-5 px-8 rounded-full">Join Us Now</button>
+        </div>
+
+
+
+      </m.div>
+
+
+      <Volunteer/>
+      
+      <HomeEvents/>
+      {/* counters started */}
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className=" bg-sky-950 text-white h-[40vh] mt-16 mb-32 font-[Yeseva-One]"
+      >
+        <div
+          ref={counterRef}
+          className="flex justify-center gap-16 py-24 text:lg md:text-2xl"
+        >
+          <div className="flex flex-col items-center gap-4">
+            {/* <div>
+              <RiEmotionHappyLine size={60} />
+            </div> */}
+            <div className="border-r-2 pr-16">
+             <div className="text-8xl text-amber-500 font-semibold"> <Counter value={count} limit={300} /></div>
+              
+            </div>
+            <div className="pr-10 text-center text-gray-300 text-lg ">Happy Donators</div>
+            
+          </div>
+          <div className="flex flex-col gap-4 items-center">
+            {/* <div>
+              <PiTargetLight size={60} />
+            </div> */}
+            <div className="border-r-2 pr-16">
+             <div className="text-8xl text-sky-400 font-semibold"> <Counter value={count} limit={50} /></div>
+            </div>
+            <div className="pr-10 text-center text-gray-300 text-lg">Successful Missions</div>
+            
+          </div>
+          <div className="flex flex-col gap-4 items-center">
+            {/* <div>
+              <BsPeople size={60} />
+            </div> */}
+            <div className="border-r-2 pr-16" >
+             <div className="text-8xl text-yellow-300 font-semibold"> <Counter value={count} limit={200} /></div>
+              
+            </div>
+            <div className="pr-10 text-gray-300 text-center text-lg ">Volunteers</div>
+            
+          </div>
+          <div className="flex flex-col gap-4 items-center ">
+            <div>
+             <div className="text-8xl text-violet-600 font-semibold"> <Counter value={count} limit={10} /></div>
+              
+            </div>
+            <div className="pl-2 text-center text-gray-300 text-lg">Awards Won</div>
+            
+          </div>
+        </div>
+      </m.div>
+      {/* counters finished */}
+
+
+      <m.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{  duration: 0.5, ease: "easeInOut" }}
+        className=""
+      >
+        <div className="flex flex-col  pb-8 font-Poppins w-full px-40 ">
+          <div className="flex justify-between">
+            <div className="text-6xl font-bold font-[Yeseva-One]">Latest Articles</div>
+            <button className="py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">All Articles</button>
+          </div>
+          <div className="flex gap-8 w-full py-16 px-8">
+            <div className="p-12 border-2 rounded-3xl hover:shadow-2xl w-[35rem]">
+            <div className="overflow-hidden w-full  h-[70vh] flex flex-col rounded-3xl">
+              <img src={misvis} alt="" className="h-72 w-full rounded-3xl" />
+             
+              <div className=" px-8 pt-16 text-2xl font font-medium">Lorem ipsum dolor sit amet consect adiping.</div>
+              <div className="px-8 pt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, vitae!</div>
+            <div className="px-8 pt-6"><button className="  py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">Read More</button></div>
+              
+              
+              <div className="flex justify-between">
+                
+
+              </div>
+
+            </div>
+            </div>
+            <div className="w-[35rem] bg-slate-100 flex flex-col justify-around rounded-3xl">
+              <div className="p-10 flex justify-center items-start gap-6 border-b-2 mx-4">
+                <div><img src={misvis} alt="" className="w-64 rounded-3xl"/></div>
+                <div className="pt-4">
+                  <div>July 31 , 2023</div>
+                  <div className="pt-4"> Lorem ipsum dolor sit amet lorem lorem</div>
+                </div>
+
+              </div>
+              <div className="p-10 flex justify-center items-start gap-6 border-b-2 mx-4">
+                <div><img src={misvis} alt="" className="w-64 rounded-3xl"/></div>
+                <div className="pt-4">
+                  <div>July 31 , 2023</div>
+                  <div className="pt-4"> Lorem ipsum dolor sit amet lorem lorem</div>
+                </div>
+
+              </div>
+              <div className="p-10 flex justify-center items-start gap-6 mx-4 ">
+                <div><img src={misvis} alt="" className="w-64 rounded-3xl"/></div>
+                <div className="pt-4">
+                  <div>July 31 , 2023</div>
+                  <div className="pt-4"> Lorem ipsum dolor sit amet lorem lorem</div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          
+          
+        </div>
+      </m.div>
+
+      
 
       <Footer />
     </m.div>
