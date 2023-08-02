@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import misvis from "../assets/misvis.jpg";
+import offwhite from '../assets/offwhite.jpeg'
+
 
 
 const HomeEvents = () => {
@@ -33,7 +35,7 @@ const HomeEvents = () => {
       ];
     const renderSlides = () =>
     carImgs.map((image) => (
-      <m.div className=" border-2 rounded-3xl overflow-hidden   ">
+      <m.div className=" border-2 rounded-3xl overflow-hidden bg-white   ">
         <div className='flex'>
         <img src={misvis} alt="" className='h-[50vh] w-[50%]' />
 
@@ -52,7 +54,7 @@ const HomeEvents = () => {
         
       </m.div>));
   return (
-    <m.div className="pt-32 pb-20 flex flex-col gap-8 items-center   z-0" >
+    <m.div style={{backgroundImage: `url(${offwhite})`}} className="pt-32 pb-20  flex flex-col gap-8 items-center bg-cover object-cover bg-center   z-0"  >
     <div className="text-[#09b6cb] text-lg italic"> Upcoming Events</div>
     <div className="text-6xl font-[Yeseva-One] font-bold">  Our Events</div>
 

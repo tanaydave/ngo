@@ -7,71 +7,183 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 import {motion as m} from "framer-motion"
 import ngo from "../assets/ngo.png"
 import {AiOutlineMenu} from "react-icons/ai"
+import{IoMdMail} from "react-icons/io"
+import { BsFillTelephoneFill } from "react-icons/bs";
+import {BsFillCartFill} from "react-icons/bs"
 const navs= ['Home','About','Causes','Events','Contact','NewsRoom','Gallery','Blogs']
 
 
 
 const Navbar = ({ className = "" }) => {
   const [open, setOpen] = useState(false);
+  const [openDrop, setOpenDrop] = useState(false);
+  const [openDrop1, setOpenDrop1] = useState(false);
+  const [openDrop2, setOpenDrop2] = useState(false);
+  const [openDrop3, setOpenDrop3] = useState(false);
+
   const pathname = useLocation();
   const path = pathname.pathname
   console.log(path)
   
   return (
     <div  className=" bg-white border-b-[#09b6cb] border-b-4 ">
-      <div className="flex  justify-around items-center pt-6 text-lg  ">
+      <div className="h-12 bg-sky-950 text-gray-300 flex justify-end px-20 gap-12 py-3">
+        <div className="flex justify-center items-center gap-2"> <IoMdMail  className="text-xl text-orange-500"></IoMdMail> <div>gmail@gmail.com</div></div>
+            
+        <div className="flex justify-center items-center gap-2"> <BsFillTelephoneFill className="text-xl text-orange-500"></BsFillTelephoneFill> <div>9999999999</div></div>
+
+      </div>
+      <div className="flex  justify-around items-center py-4 text-lg  ">
         <Link  to="/"><img
           src={ngo}
-          className=" h-16 w-40 md:h-24 md:w-60 bg-contain object-cover bg-center"
+          className=" h-16 w-40 md:h-24 md:w-[19rem]  bg-contain object-cover bg-center"
         ></img></Link>
-        <div className=" pr-12 font-Titillium font-medium justify-evenly ml-6 text-black  ">
-          <ul className="md:flex hidden list-none text-xl">
-            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+        <div className=" pr-12 font-Titillium font-semibold   justify-evenly ml-6 text-black  ">
+          <ul className="md:flex md:items-center hidden list-none text-sm">
+            <li className="relative after:content-[''] pb-2 after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/')? "change":""} to="/">Home</Link>
+            </li>
+            <li className="relative after:content-[''] pb-2 after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+              <Link className={(path=== '/Causes')? "change":""} to="/Causes">Causes</Link>
+            </li>
+            {/* <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+              <Link className={(path=== '/Causes')? "change":""} to="/Causes">Our Purpose</Link>
+            </li>
+            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+              <Link className={(path=== '/Causes')? "change":""} to="/Causes">Our Programs</Link>
             </li>
             <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/About')? "change":""} to="/About">About</Link>
+            </li> */}
+            <li
+              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
+              onMouseEnter={() => setOpenDrop1((prev) => !prev)}
+              onMouseLeave={() => setOpenDrop1((prev) => !prev)}
+            >
+              <Link
+                
+                className=" flex"
+              >
+                <p className={(path=== '/Events' || path==='/Blog' || path==='/NewsRoom')? "change":""}>Our Program</p>
+                { !openDrop1?
+            (<IoMdArrowDropdown className="pb-1 " size={28}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={28}></IoMdArrowDropup>)}
+              </Link>
+              { openDrop1 &&
+          <div className=" z-50   bg-white absolute   transition-all ease-in-out delay-500" >
+           <div className="flex flex-col w-40 justify-center relative bg-white  text-base">
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/'>Skill Development</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/'>Adult Education</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/'>Health Care</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/'>Environment Protection</Link></div>
+
+
+           </div>
+          </div>
+          }
             </li>
             <li
               className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
-              // onMouseEnter={() => setOpen((prev) => !prev)}
-              // onMouseLeave={() => setOpen((prev) => !prev)}
+              onMouseEnter={() => setOpenDrop2((prev) => !prev)}
+              onMouseLeave={() => setOpenDrop2((prev) => !prev)}
             >
               <Link
-                to="/Causes"
-                className=" relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 flex justify-center items-center  hover:transition-all ease-in-out cursor-pointer"
+                
+                className=" flex"
               >
-                <p className={(path=== '/Causes')? "change":""}>Causes</p>
-                {/* { !open?
-            (<IoMdArrowDropdown className="pb-1 " size={30}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={30}></IoMdArrowDropup>) */}
+                <p className={(path=== '/Events' || path==='/Blog' || path==='/NewsRoom')? "change":""}>Our Purpose</p>
+                { !openDrop2?
+            (<IoMdArrowDropdown className="pb-1 " size={28}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={28}></IoMdArrowDropup>)}
               </Link>
-              {/* { open &&
-          <div className=" z-50 bg-white absolute mx-2 transition-all ease-in-out delay-500" >
-            <ul className="">
-              <li className="hover:text-orange-500 transition-all ease-in-out pt-1 px-2"> <Link to="/ngo/services">service</Link></li>
-              <li className="hover:text-orange-500 transition-all ease-in-out  pt-1 px-2"><Link to="/ngo/services">service</Link></li>
-              <li className="hover:text-orange-500 transition-all ease-in-out pt-1 px-2"><Link to="/ngo/services">service</Link></li>
-              <li className="hover:text-orange-500 transition-all ease-in-out  pt-1 px-2"><Link to="/ngo/services">service</Link></li>
+              { openDrop2 &&
+          <div className=" z-50   bg-white absolute   transition-all ease-in-out delay-500" >
+           <div className="flex flex-col w-40 justify-center relative bg-white  text-base">
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/'>Educate the Future</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/'>Adult Education</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/'>Women & Child Welfare</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/'>Skill Development</Link></div>
 
-            </ul>
-          </div>} */}
+
+           </div>
+          </div>
+          }
             </li>
-            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+            <li
+              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
+              onMouseEnter={() => setOpenDrop3((prev) => !prev)}
+              onMouseLeave={() => setOpenDrop3((prev) => !prev)}
+            >
+              <Link
+                
+                className=" flex"
+              >
+                <p className={(path=== '/Events' || path==='/Blog' || path==='/NewsRoom')? "change":""}>About Us</p>
+                { !openDrop3?
+            (<IoMdArrowDropdown className="pb-1 " size={28}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={28}></IoMdArrowDropup>)}
+              </Link>
+              { openDrop3 &&
+          <div className=" z-50   bg-white absolute   transition-all ease-in-out delay-500" >
+           <div className="flex flex-col w-40 justify-center relative bg-white  text-base">
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/AboutOF'>About OF</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/NewsRoom'>Our Financials</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/BLogs'>Awards and Approvals</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/Events'>Annual Reports</Link></div>
+
+
+           </div>
+          </div>
+          }
+            </li>
+            <li
+              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
+              onMouseEnter={() => setOpenDrop((prev) => !prev)}
+              onMouseLeave={() => setOpenDrop((prev) => !prev)}
+            >
+              <Link
+                
+                className=" flex"
+              >
+                <p className={(path=== '/Events' || path==='/Blog' || path==='/NewsRoom')? "change":""}>Events & NewsLetter</p>
+                { !openDrop?
+            (<IoMdArrowDropdown className="pb-1 " size={28}></IoMdArrowDropdown>) :(<IoMdArrowDropup className="pb-1 " size={28}></IoMdArrowDropup>)}
+              </Link>
+              { openDrop &&
+          <div className=" z-50   bg-white absolute   transition-all ease-in-out delay-500" >
+           <div className="flex flex-col w-40 justify-center relative bg-white  text-base">
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/Events'>Our Events</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/NewsRoom'>News And Press Release</Link></div>
+            <div className="border-b-2 px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-500"><Link to='/BLogs'>Our Blogs</Link></div>
+
+
+           </div>
+          </div>
+          }
+            </li>
+            {/* <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Events')? "change":""} to="/Events">Events</Link>
-            </li>
-            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
-              <Link className={(path=== '/Contact')? "change":""} to="/Contact">Contact</Link>
-            </li>
-            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+            </li> */}
+            
+            {/* <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/NewsRoom')? "change":""} to="/NewsRoom">NewsRoom</Link>
               
-            </li>
-            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+            </li> */}
+            <li className="relative after:content-[''] after:block after:h-[4px] pb-2 after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Gallery')? "change":""} to="/Gallery">Gallery</Link>
             </li>
-            <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+            {/* <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Blogs')? "change":""} to="/Blogs">Blogs</Link>
+            </li> */}
+            <li className="relative after:content-[''] after:block after:h-[4px] pb-2 after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+              <Link className={(path=== '/Contact')? "change":""} to="/Contact">Contact</Link>
             </li>
+            <li className="mb-4">
+           <Link className="hover:text-orange-500 transition-all"> <BsFillCartFill size={20}/></Link>
+            </li>
+            <li>
+            <Link to='/Donations'><button className=" md:py-2 md:mb-4 md:ml-6 md:px-6  px-4 py-2 border-2 text-white rounded-2xl hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
+            Donate Now
+          </button></Link>
+            </li>
+            
           </ul>
           {/* <ul className="md:flex hidden list-none text-xl">
             {

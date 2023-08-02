@@ -5,11 +5,27 @@ import {  useEffect } from "react";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+const container = {
+  hidden: { opacity: 1, scale: 1 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration:1.5,
+      delayChildren: 0.8,
+      staggerChildren: 0.5
+    }
+  }
+};
 
-const Variants = {
-    visible: { opacity: 1, scale: 1,y:0, transition: { duration: 1 } },
-    hidden: { opacity: 0, scale: 0,y:"15%" }
-  };
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  },
+};
 const Campaigns = () => {
     
  const controls = useAnimation();
@@ -18,17 +34,17 @@ useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
-  }, [controls, inView]);
+  }, [controls, inView])
 
 
 
   return (
-    <m.div
+    <m.ul
     ref={ref}
-    whileInView="visible"
-    // animate={controls}
+    
+    variants={container}
     initial="hidden"
-    variants={Variants}
+    animate={controls}
       
        
         className="py-16 "
@@ -36,7 +52,7 @@ useEffect(() => {
         <div className="flex flex-col items-center">
           <p className="md:text-6xl font-extrabold md:py-6 font-[Yeseva-One]">Current Campaigns</p>
           <div className="flex gap-8 justify-center px-12 py-12">
-            <div className="w-[22vw]   h-[72vh] transition-all hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
+            <m.li variants={item} className="w-[22vw]   h-[72vh] transition-all hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" w-full h-[25vh] " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
               <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
@@ -67,8 +83,8 @@ useEffect(() => {
                
                 
               </div>
-            </div>
-            <div className="w-[22vw] hover:shadow-2xl border-2 h-[72vh] transition-all   rounded-3xl  overflow-hidden">
+            </m.li>
+            <m.li variants={item} className="w-[22vw] hover:shadow-2xl border-2 h-[72vh] transition-all   rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" h-[25vh] w-full " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
               <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
@@ -99,8 +115,8 @@ useEffect(() => {
                
                 
               </div>
-            </div>
-            <div className="w-[22vw] transition-all   h-[72vh] hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
+            </m.li>
+            <m.li variants={item} className="w-[22vw] transition-all   h-[72vh] hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" w-full h-[25vh] " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
               <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
@@ -131,10 +147,10 @@ useEffect(() => {
                
                 
               </div>
-            </div>
+            </m.li>
           </div>
         </div>
-      </m.div>
+      </m.ul>
   )
 }
 

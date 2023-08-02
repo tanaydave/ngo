@@ -16,7 +16,7 @@ const Events = () => {
       >
         <Navbar />
       </m.div>
-      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mt-4 text-8xl ">Events</div>
+      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mb-4 text-8xl ">Events</div>
       
       {nums.map(()=>{return(<m.div initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

@@ -9,10 +9,13 @@ const Contact = lazy(()=>import( './pages/Contact'))
 const Causes = lazy(()=>import( './pages/Causes'));
 const Events = lazy(()=>import( './pages/EventsOur'));
 const Blogs = lazy(()=>import( './pages/BlogsOur'));
-const About = lazy(()=>import( './pages/AboutUs'));
+// const About = lazy(()=>import( './pages/AboutUs'));
 const Donations = lazy(()=>import( './pages/Donations'));
 const News = lazy(()=>import( "./pages/News"));
 const Gallery = lazy(()=>import( "./pages/Gallery"));
+const AboutOF = lazy(()=>import( "./pages/AboutOF"));
+
+
 
 
 
@@ -32,10 +35,12 @@ function App() {
           <Route path="/Contact" element= {<Contact />} />
           <Route path="/Events" element= {<Events />} />
           <Route path="/Blogs" element= {<Blogs />} />
-          <Route path="/About" element= {<About />} />
+          {/* <Route path="/About" element= {<About />} /> */}
           <Route path="/Donations" element= {<Donations />} />
           <Route path="/NewsRoom" element= {<News />} />
           <Route path="/Gallery" element= {<Gallery />} />
+          <Route path="/AboutOF" element= {<AboutOF />} />
+
         </Routes>
         </Suspense>
 

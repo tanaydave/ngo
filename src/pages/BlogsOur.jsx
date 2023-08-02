@@ -50,6 +50,7 @@ const posts =[
       >
         <Navbar />
       </m.div>
+      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mb-4 text-8xl ">Blogs</div>
       <div className='md:hidden pt-8 text-center rounded-lg'><input type="text" placeholder='search...' className='p-3 w-80 rounded-lg' /></div>
 
       <m.div  className="md:grid md:grid-cols-3 pt-16 ">

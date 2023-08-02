@@ -28,7 +28,7 @@ const Causes = () => {
       <div className=" sticky top-0 transition-all ease-in z-50">
         <Navbar />
       </div>
-      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mt-4 text-8xl ">Causes</div>
+      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mb-4 text-8xl ">Causes</div>
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

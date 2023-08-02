@@ -19,11 +19,15 @@ import carousel1 from "../assets/carousel1.jpg";
 import volunteer from "../assets/volunteer.jpg";
 import partner from "../assets/partner.jpg";
 import { Link } from "react-router-dom";
+import offwhite from '../assets/offwhite.jpeg'
+import {lazy,Suspense} from "react"
+
 
 import Slider from "react-slick";
-import Campaigns from "../components/Campaigns";
+
 import Volunteer from "../components/Volunteer";
 import HomeEvents from "../components/HomeEvents";
+const Campaigns = lazy(()=>import( "../components/Campaigns"));
 
 const slides = [
   "https://i.ibb.co/ncrXc2V/1.png",
@@ -139,7 +143,8 @@ const Home = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className=" sticky top-0 transition-all ease-in z-50"
+        className="  transition-all ease-in z-50"
+        //removed sticky and top-0
       >
         <Navbar />
       </m.div>
@@ -342,7 +347,9 @@ const Home = () => {
           </div>
         </div>
       </m.div> */}
+      <Suspense>
       <Campaigns/>
+      </Suspense>
       {/* campaign finished  */}
 
       
@@ -652,7 +659,7 @@ const Home = () => {
             <button className="py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">All Articles</button>
           </div>
           <div className="flex gap-8 w-full py-16 px-8">
-            <div className="p-12 border-2 rounded-3xl hover:shadow-2xl w-[35rem]">
+            <div className="p-12 border-2 rounded-3xl transition-all hover:shadow-2xl w-[35rem]">
             <div className="overflow-hidden w-full  h-[70vh] flex flex-col rounded-3xl">
               <img src={misvis} alt="" className="h-72 w-full rounded-3xl" />
              

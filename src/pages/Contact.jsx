@@ -37,10 +37,12 @@ const Contact = () => {
       >
         <Navbar />
       </m.div>
+      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mb-12 text-8xl ">Contact</div>
       <div 
-      style={{
-          backgroundImage: `url(${contact})`
-        }} className=" bg-no-repeat  bg-contain bg-center object-contain h-72">
+      // style={{
+      //     backgroundImage: `url(${contact})`
+      //   }} className=" bg-no-repeat  bg-contain bg-center object-contain h-72"
+      >
        
         </div>
       <div className="flex md:flex-row flex-col justify-center gap-20 ">
