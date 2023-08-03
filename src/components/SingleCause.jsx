@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import misvis from "../assets/misvis.jpg";
@@ -13,17 +13,19 @@ const SingleCause = () => {
     last_name: "",
     email: "",
     phone: "",
-    donation_value: {value},
+    donation_value:"",
   };
 
-  const { values, errors, handleChange, touched, handleSubmit } = useFormik({
+  const { values,setFieldValue, errors, handleChange, touched, handleSubmit } = useFormik({
     initialValues: initialValues,
     validationSchema: DonationSchema,
+    // setFieldValue
     onSubmit: (values, action) => {
       console.log(values);
       action.resetForm();
     },
   });
+  useEffect(()=>{ setFieldValue('donation_value',value)},[value])
   return (
     <div>
       <div className=" sticky top-0 transition-all ease-in z-50">
@@ -52,13 +54,23 @@ const SingleCause = () => {
                 </div>
                 <div className=" col-span-2">Rs 10000 of Rs 2 lakh </div>
               </div>
-              <div className="py-8 border-b-2">
+              
+              <div className="py-12">
+                <form onSubmit={handleSubmit}>
+                <div className="py-8 border-b-2">
                 <div className=" shadow-slate-300 shadow-md rounded-full px-2 w-80">
                   <span>Rs</span>
                   <span>
                     <input
                       className=" focus:outline-none  p-2 text-lg font-bold"
-                      value={value}
+                      type="text"
+                      name="donation_value"
+                      id="donation_value"
+                      autoComplete="off"
+                      
+                      value={values.donation_value}
+                      // defaultValue={value}
+                      onChange={handleChange}
                     />
                   </span>
                 </div>
@@ -66,6 +78,8 @@ const SingleCause = () => {
                   <div
                     onClick={() => {
                       setValue(20);
+                      // setFieldValue('donation_value',value)
+
                     }}
                     className=" transition-all hover:text-orange-500 border-2 rounded-3xl p-1 px-4 cursor-pointer text-center"
                   >
@@ -73,7 +87,8 @@ const SingleCause = () => {
                   </div>
                   <div
                     onClick={() => {
-                      setValue(50);
+                      setValue(50)
+                      // setFieldValue('donation_value',value)
                     }}
                     className="transition-all hover:text-orange-500  border-2 rounded-3xl p-1 px-4 text-center cursor-pointer"
                   >
@@ -82,6 +97,8 @@ const SingleCause = () => {
                   <div
                     onClick={() => {
                       setValue(100);
+                      // setFieldValue('donation_value',value)
+
                     }}
                     className="transition-all hover:text-orange-500  border-2 rounded-3xl p-1 px-4 text-center cursor-pointer"
                   >
@@ -90,6 +107,8 @@ const SingleCause = () => {
                   <div
                     onClick={() => {
                       setValue(250);
+                      // setFieldValue('donation_value',value)
+
                     }}
                     className="transition-all hover:text-orange-500  border-2 rounded-3xl p-1 px-4 text-center cursor-pointer"
                   >
@@ -98,6 +117,8 @@ const SingleCause = () => {
                   <div
                     onClick={() => {
                       setValue(500);
+                      // setFieldValue('donation_value',value)
+
                     }}
                     className="transition-all hover:text-orange-500  border-2 rounded-3xl p-1 px-4 text-center cursor-pointer"
                   >
@@ -113,9 +134,8 @@ const SingleCause = () => {
                   </div>
                 </div>
               </div>
-              <div className="py-12">
-                <div>Personal Info</div>
-                <form onSubmit={handleSubmit}>
+              <div>Personal Info</div>
+
                   <div className="grid grid-cols-2 gap-6 p-4">
                     <div className="w-full ">
                       <input
