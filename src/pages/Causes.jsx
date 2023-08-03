@@ -4,6 +4,8 @@ import Footer from "../components/footer";
 import { useState } from "react";
 import { motion as m } from "framer-motion";
 import misvis from "../assets/misvis.jpg";
+import { useNavigate } from "react-router-dom";
+import { to } from "react-spring";
 
 const Causes = () => {
   // const [transparent,setTransparent]= useState('bg-transparent');
@@ -17,6 +19,7 @@ const Causes = () => {
   //    }
   //   }
   //   window.addEventListener('scroll',addBg)
+  const Navigate = useNavigate();
 
   return (
     <m.div
@@ -28,8 +31,10 @@ const Causes = () => {
       <div className=" sticky top-0 transition-all ease-in z-50">
         <Navbar />
       </div>
-      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mb-4 text-8xl ">Causes</div>
-      <m.div
+      <div className="flex items-center justify-center text-white bg-orange-400 h-52 mb-4 text-6xl ">
+        Causes For Fund Raise
+      </div>
+      {/* <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ ease: "easeIn", duration: 1 }}
@@ -132,7 +137,158 @@ const Causes = () => {
           </p>
           <img src={misvis} alt="" className="rounded-2xl w-[30rem]" />
         </div>
-      </m.div>
+      </m.div> */}
+      <div className="flex flex-col gap-12 px-32 py-12">
+        {/* causes  */}
+        <div className=" border-t-2 shadow-2xl  w-full overflow-hidden">
+          <div className="m-4 grid grid-cols-2 p-6 gap-8 items-center ">
+            <div className=" object-cover overflow-hidden ">
+              <img src={misvis} alt="" className="rounded-xl" />
+            </div>
+            <div className=" flex flex-col gap-6 px-4">
+              <div className="text-2xl font-semibold">
+                Lorem ipsum dolor sit. lorem lorem
+              </div>
+              <div>
+                nim incidunt uia similique minima porro molestias quae dolorem
+                vel explicabo, expedita molestiae voluptatum nobis minus, veniam
+                dolore! Facilis error adipisci odit ipsum exercitationem.
+              </div>
+
+                {/* progress bar     */}
+              <div className=" pt-4">
+                <div className=" bg-orange-200 relative h-[10px] w-full rounded-2xl">
+                  <div className=" bg-orange-500 absolute top-0 left-0 h-full w-[60%] rounded-2xl">
+                    <span className="bg-orange-500 absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white">
+                      <span className="bg-orange-500 absolute bottom-[-2px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm"></span>
+                      60%
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex text-sm justify-center gap-8 ">
+                <div className="flex flex-col pr-20  border-r-2">
+                  <div>Goal :</div>
+                  <div className="text-orange-500"> Rs 10000</div>
+                </div>
+                <div className="flex flex-col pr-20 justify-center pl-6  border-r-2">
+                  <div>Raised :</div>
+                  <div className="text-orange-500">Rs 10000</div>
+                </div>
+                <div className="flex flex-col pl-6 pr-16  ">
+                  <div>To Go :</div>
+                  <div className="text-orange-500">Rs 10000</div>
+                </div>
+              </div>
+              <div>
+                <button onClick={()=>{ Navigate('/Causes/SingleCause')}} className="bg-orange-500 text-white py-3 px-6 rounded-full text-sm">
+                  Donate Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=" border-t-2 shadow-2xl  w-full overflow-hidden">
+          <div className="m-4 grid grid-cols-2 p-6 gap-8 items-center ">
+            <div className=" object-cover overflow-hidden ">
+              <img src={misvis} alt="" className="rounded-xl" />
+            </div>
+            <div className=" flex flex-col gap-6 px-4">
+              <div className="text-2xl font-semibold">
+                Lorem ipsum dolor sit. lorem lorem
+              </div>
+              <div>
+                nim incidunt uia similique minima porro molestias quae dolorem
+                vel explicabo, expedita molestiae voluptatum nobis minus, veniam
+                dolore! Facilis error adipisci odit ipsum exercitationem.
+              </div>
+
+                {/* progress bar     */}
+              <div className=" pt-4">
+                <div className=" bg-orange-200 relative h-[10px] w-full rounded-2xl">
+                  <div className=" bg-orange-500 absolute top-0 left-0 h-full w-[60%] rounded-2xl">
+                    <span className="bg-orange-500 absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white">
+                      <span className="bg-orange-500 absolute bottom-[-2px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm"></span>
+                      60%
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex text-sm justify-center gap-8 ">
+                <div className="flex flex-col pr-20  border-r-2">
+                  <div>Goal :</div>
+                  <div className="text-orange-500"> Rs 10000</div>
+                </div>
+                <div className="flex flex-col pr-20 justify-center pl-6  border-r-2">
+                  <div>Raised :</div>
+                  <div className="text-orange-500">Rs 10000</div>
+                </div>
+                <div className="flex flex-col pl-6 pr-16  ">
+                  <div>To Go :</div>
+                  <div className="text-orange-500">Rs 10000</div>
+                </div>
+              </div>
+              <div>
+                <button onClick={()=>{ Navigate('/Causes/SingleCause')}} className="bg-orange-500 text-white py-3 px-6 rounded-full text-sm">
+                  Donate Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=" border-t-2 shadow-2xl  w-full overflow-hidden">
+          <div className="m-4 grid grid-cols-2 p-6 gap-8 items-center ">
+            <div className=" object-cover overflow-hidden ">
+              <img src={misvis} alt="" className="rounded-xl" />
+            </div>
+            <div className=" flex flex-col gap-6 px-4">
+              <div className="text-2xl font-semibold">
+                Lorem ipsum dolor sit. lorem lorem
+              </div>
+              <div>
+                nim incidunt uia similique minima porro molestias quae dolorem
+                vel explicabo, expedita molestiae voluptatum nobis minus, veniam
+                dolore! Facilis error adipisci odit ipsum exercitationem.
+              </div>
+
+                {/* progress bar     */}
+              <div className=" pt-4">
+                <div className=" bg-orange-200 relative h-[10px] w-full rounded-2xl">
+                  <div className=" bg-orange-500 absolute top-0 left-0 h-full w-[60%] rounded-2xl">
+                    <span className="bg-orange-500 absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white">
+                      <span className="bg-orange-500 absolute bottom-[-2px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm"></span>
+                      60%
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex text-sm justify-center gap-8 ">
+                <div className="flex flex-col pr-20  border-r-2">
+                  <div>Goal :</div>
+                  <div className="text-orange-500"> Rs 10000</div>
+                </div>
+                <div className="flex flex-col pr-20 justify-center pl-6  border-r-2">
+                  <div>Raised :</div>
+                  <div className="text-orange-500">Rs 10000</div>
+                </div>
+                <div className="flex flex-col pl-6 pr-16  ">
+                  <div>To Go :</div>
+                  <div className="text-orange-500">Rs 10000</div>
+                </div>
+              </div>
+              <div>
+                <button onClick={()=>{ Navigate('/Causes/SingleCause')}} className="bg-orange-500 text-white py-3 px-6 rounded-full text-sm">
+                  Donate Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="text-3xl text-center mx-14 py-20">
         Join us in our campaign to save lives, strengthen communities, help
         nature and transform millions of families and children's lives

@@ -23,7 +23,7 @@ const Navbar = ({ className = "" }) => {
 
   const pathname = useLocation();
   const path = pathname.pathname
-  console.log(path)
+  // console.log(path)
   
   return (
     <div  className=" bg-white border-b-[#09b6cb] border-b-4 ">

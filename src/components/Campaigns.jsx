@@ -55,13 +55,23 @@ useEffect(() => {
             <m.li variants={item} className="w-[22vw]   h-[72vh] transition-all hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" w-full h-[25vh] " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
-              <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
+              {/* <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
                   <div
                     className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
                     
                   >
                     {" "}
                     50%
+                  </div>
+                </div> */}
+                <div className="">
+                  <div className=" bg-orange-200 relative h-[10px] w-full rounded-2xl">
+                    <div className=" bg-orange-500 absolute top-0 left-0 h-full w-[50%] rounded-2xl">
+                      <span className="bg-orange-500 absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white">
+                        <span className="bg-orange-500 absolute bottom-[-2px] left-1/2  h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm"></span>
+                        50%
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div className="flex justify-between px-1 pt-3 ">
@@ -87,13 +97,23 @@ useEffect(() => {
             <m.li variants={item} className="w-[22vw] hover:shadow-2xl border-2 h-[72vh] transition-all   rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" h-[25vh] w-full " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
-              <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
+              {/* <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
                   <div
                     className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
                     
                   >
                     {" "}
                     50%
+                  </div>
+                </div> */}
+                <div className="">
+                  <div className=" bg-orange-200 relative h-[10px] w-full rounded-2xl">
+                    <div className=" bg-orange-500 absolute top-0 left-0 h-full w-[60%] rounded-2xl">
+                      <span className="bg-orange-500 absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white">
+                        <span className="bg-orange-500 absolute bottom-[-2px] left-1/2  h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm"></span>
+                        60%
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div className="flex justify-between px-1 pt-3 ">
@@ -119,13 +139,23 @@ useEffect(() => {
             <m.li variants={item} className="w-[22vw] transition-all   h-[72vh] hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" w-full h-[25vh] " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
-              <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
+              {/* <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
                   <div
                     className="bg-orange-500 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full w-[50%]"
                     
                   >
                     {" "}
                     50%
+                  </div>
+                </div> */}
+                <div className="">
+                  <div className=" bg-orange-200 relative h-[10px] w-full rounded-2xl">
+                    <div className=" bg-orange-500 absolute top-0 left-0 h-full w-[60%] rounded-2xl">
+                      <span className="bg-orange-500 absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white">
+                        <span className="bg-orange-500 absolute bottom-[-2px] left-1/2  h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm"> </span>
+                        60%
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div className="flex justify-between px-1 pt-3 ">

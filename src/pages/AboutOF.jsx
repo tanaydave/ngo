@@ -94,7 +94,7 @@ useEffect(() => {
         animate={{ x: 0 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
       >
-        <div className=" text-4xl pb-12 text-orange-500 md:text-black md:text-8xl font-bold md:after:absolute md:after:content-[''] md:after:items-center md:after:mb-8 md:after:w-80 md:after:h-2 md:after:bottom-[24.5rem] md:after:right-64 md:after:mr-2 md:pr-48 after:bg-orange-500 md:pb-[5.3rem]  md:pl-60">
+        <div className=" text-4xl pb-12 text-orange-500 md:text-black md:text-8xl font-bold md:after:absolute md:after:content-[''] md:after:items-center md:after:mb-8 md:after:w-80 md:after:h-2 md:after:bottom-[24rem] md:after:right-64 md:after:mr-2 md:pr-48 after:bg-orange-500 md:pb-[5.3rem]  md:pl-60">
           Our Vision
         </div>
         <div className="flex md:flex-row flex-col  md:items-center md:w-5/6 text-lg  md:text-xl md:pr-20 leading-7 md:leading-relaxed md:gap-32 ">
