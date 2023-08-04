@@ -16,9 +16,9 @@ const Volunteer = () => {
   return (
     <m.div className="pt-12 pb-20 flex flex-col gap-8 items-center">
       <div className="text-[#09b6cb] text-lg italic"> Meet Our Team</div>
-      <div className="text-6xl font-[Yeseva-One] font-bold"> Our Volunteer</div>
-      <div className="flex gap-6 mt-8">
-        <div className={content1?" shadow-2xl overflow-hidden w-[25rem]  h-[70vh]  rounded-3xl": " overflow-hidden w-[25rem]  h-[70vh]  rounded-3xl" } onMouseEnter={()=>{
+      <div className="text-6xl font-[Yeseva-One] font-bold"> Our Volunteers</div>
+      <div className="flex md:flex-row flex-col gap-6 mt-8">
+        <div className={content1?" shadow-2xl overflow-hidden md:w-[25rem]  h-[70vh]  rounded-3xl": " overflow-hidden w-[25rem]  h-[70vh]  rounded-3xl" } onMouseEnter={()=>{
             setContent1(!content1)
         }} onMouseLeave={()=>{
             setContent1(!content1)
@@ -41,7 +41,7 @@ const Volunteer = () => {
              </div>
           </div>
         </div>
-        <div className={content2?" shadow-2xl overflow-hidden w-[25rem]  h-[70vh]  rounded-3xl": " overflow-hidden w-[25rem]  h-[70vh] rounded-3xl" } onMouseEnter={()=>{
+        <div className={content2?" shadow-2xl overflow-hidden md:w-[25rem]  h-[70vh]  rounded-3xl": " overflow-hidden w-[25rem]  h-[70vh] rounded-3xl" } onMouseEnter={()=>{
             setContent2(!content2)
         }} onMouseLeave={()=>{
             setContent2(!content2)
@@ -64,7 +64,7 @@ const Volunteer = () => {
              </div>
           </div>
         </div>
-        <div className={content3?" shadow-2xl overflow-hidden w-[25rem]  h-[70vh]  rounded-3xl": " overflow-hidden w-[25rem]  h-[70vh]  rounded-3xl" } onMouseEnter={()=>{
+        <div className={content3?" shadow-2xl overflow-hidden md:w-[25rem]  h-[70vh]  rounded-3xl": " overflow-hidden w-[25rem]  h-[70vh]  rounded-3xl" } onMouseEnter={()=>{
             setContent3(!content3)
         }} onMouseLeave={()=>{
             setContent3(!content3)

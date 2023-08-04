@@ -36,14 +36,14 @@ const Navbar = ({ className = "" }) => {
       <div className="flex  justify-around items-center py-4 text-lg  ">
         <Link  to="/"><img
           src={ngo}
-          className=" h-16 w-40 md:h-24 md:w-[19rem]  bg-contain object-cover bg-center"
+          className=" h-16 w-40 lg:h-24 lg:w-[13rem] xl:w-[18rem]  2xl:h-24 2xl:w-[19rem]  bg-contain object-cover bg-center"
         ></img></Link>
         <div className=" pr-12 font-Titillium font-semibold   justify-evenly ml-6 text-black  ">
-          <ul className="md:flex md:items-center hidden list-none text-sm">
-            <li className="relative after:content-[''] pb-2 after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+          <ul className="md:flex lg:gap-x-3 xl:gap-4 2xl:gap-0 md:items-center  hidden list-none text-sm">
+            <li className="relative after:content-[''] pb-2 after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100  2xl:pr-6 2xl:pl-3 transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/')? "change":""} to="/">Home</Link>
             </li>
-            <li className="relative after:content-[''] pb-2 after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] pb-2 after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100  2xl:pr-6 2xl:pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Causes')? "change":""} to="/Causes">Causes</Link>
             </li>
             {/* <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
@@ -56,7 +56,7 @@ const Navbar = ({ className = "" }) => {
               <Link className={(path=== '/About')? "change":""} to="/About">About</Link>
             </li> */}
             <li
-              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
+              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100  2xl:pr-6 2xl:pl-3 transition-all ease-in "
               onMouseEnter={() => setOpenDrop1((prev) => !prev)}
               onMouseLeave={() => setOpenDrop1((prev) => !prev)}
             >
@@ -82,7 +82,7 @@ const Navbar = ({ className = "" }) => {
           }
             </li>
             <li
-              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
+              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100  2xl:pr-6 2xl:pl-3 transition-all ease-in "
               onMouseEnter={() => setOpenDrop2((prev) => !prev)}
               onMouseLeave={() => setOpenDrop2((prev) => !prev)}
             >
@@ -108,7 +108,7 @@ const Navbar = ({ className = "" }) => {
           }
             </li>
             <li
-              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
+              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100  2xl:pr-6 2xl:pl-3 transition-all ease-in "
               onMouseEnter={() => setOpenDrop3((prev) => !prev)}
               onMouseLeave={() => setOpenDrop3((prev) => !prev)}
             >
@@ -134,7 +134,7 @@ const Navbar = ({ className = "" }) => {
           }
             </li>
             <li
-              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3 transition-all ease-in "
+              className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100  2xl:pr-6 2xl:pl-3 transition-all ease-in "
               onMouseEnter={() => setOpenDrop((prev) => !prev)}
               onMouseLeave={() => setOpenDrop((prev) => !prev)}
             >
@@ -166,20 +166,20 @@ const Navbar = ({ className = "" }) => {
               <Link className={(path=== '/NewsRoom')? "change":""} to="/NewsRoom">NewsRoom</Link>
               
             </li> */}
-            <li className="relative after:content-[''] after:block after:h-[4px] pb-2 after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] pb-2 after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100  2xl:pr-6 2xl:pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Gallery')? "change":""} to="/Gallery">Gallery</Link>
             </li>
             {/* <li className="relative after:content-[''] after:block after:h-[4px] after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Blogs')? "change":""} to="/Blogs">Blogs</Link>
             </li> */}
-            <li className="relative after:content-[''] after:block after:h-[4px] pb-2 after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100 pr-6 pl-3  transition-all delay-100 ease-in cursor-pointer">
+            <li className="relative after:content-[''] after:block after:h-[4px] pb-2 after:w-[100%] after:bg-orange-400 after:scale-x-0 after:origin-left after:ease-in-out after:duration-300 after:hover:scale-x-100  2xl:pr-6 2xl:pl-3  transition-all delay-100 ease-in cursor-pointer">
               <Link className={(path=== '/Contact')? "change":""} to="/Contact">Contact</Link>
             </li>
             <li className="mb-4">
            <Link className="hover:text-orange-500 transition-all"> <BsFillCartFill size={20}/></Link>
             </li>
             <li>
-            <Link to='/Donations'><button className=" md:py-2 md:mb-4 md:ml-6 md:px-6  px-4 py-2 border-2 text-white rounded-2xl hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
+            <Link to='/Donations'><button className=" md:py-2 md:mb-4 2xl:ml-6 lg:px-1 2xl:px-6  px-4 py-2 border-2 text-white rounded-2xl hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
             Donate Now
           </button></Link>
             </li>

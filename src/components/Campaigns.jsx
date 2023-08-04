@@ -49,10 +49,10 @@ useEffect(() => {
        
         className="py-16 "
       >
-        <div className="flex flex-col items-center">
-          <p className="md:text-6xl font-extrabold md:py-6 font-[Yeseva-One]">Current Campaigns</p>
-          <div className="flex gap-8 justify-center px-12 py-12">
-            <m.li variants={item} className="w-[22vw]   h-[72vh] transition-all hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
+        <div className=":flex flex-col items-center">
+          <p className="md:text-6xl  text-center text-2xl font-extrabold md:py-6 font-[Yeseva-One]">Current Campaigns</p>
+          <div className="flex md:flex-row flex-col  gap-8 justify-center px-12 py-12">
+            <m.li variants={item} className="md:w-[22vw] w-full h-[65vh]   md:h-[72vh] transition-all hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" w-full h-[25vh] " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
               {/* <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
@@ -94,7 +94,7 @@ useEffect(() => {
                 
               </div>
             </m.li>
-            <m.li variants={item} className="w-[22vw] hover:shadow-2xl border-2 h-[72vh] transition-all   rounded-3xl  overflow-hidden">
+            <m.li variants={item} className="md:w-[22vw] w-full h-[65vh]   md:h-[72vh] hover:shadow-2xl border-2  transition-all   rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" h-[25vh] w-full " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
               {/* <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">
@@ -136,7 +136,7 @@ useEffect(() => {
                 
               </div>
             </m.li>
-            <m.li variants={item} className="w-[22vw] transition-all   h-[72vh] hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
+            <m.li variants={item} className="md:w-[22vw] w-full h-[65vh]   md:h-[72vh] transition-all    hover:shadow-2xl border-2 rounded-3xl  overflow-hidden">
               <img src={misvis} alt="" className=" w-full h-[25vh] " />
               <div className="pt-12 px-4 bg-slate-200 h-32">
               {/* <div className="w-full bg-gray-600 rounded-full  dark:bg-gray-900 ">

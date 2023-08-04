@@ -19,15 +19,14 @@ import carousel1 from "../assets/carousel1.jpg";
 import volunteer from "../assets/volunteer.jpg";
 import partner from "../assets/partner.jpg";
 import { Link } from "react-router-dom";
-import offwhite from '../assets/offwhite.jpeg'
-import {lazy,Suspense} from "react"
-
+import offwhite from "../assets/offwhite.jpeg";
+import { lazy, Suspense } from "react";
 
 import Slider from "react-slick";
 
 import Volunteer from "../components/Volunteer";
 import HomeEvents from "../components/HomeEvents";
-const Campaigns = lazy(()=>import( "../components/Campaigns"));
+const Campaigns = lazy(() => import("../components/Campaigns"));
 
 const slides = [
   "https://i.ibb.co/ncrXc2V/1.png",
@@ -121,13 +120,15 @@ const Home = () => {
   const renderSlides = () =>
     carImgs.map((image) => (
       <m.div className="text-center relative left-0 overflow-hidden bg-black ">
-        <div className=" opacity-50"><img
-          src={image.img}
-          alt=""
-          className="h-[80vh] w-[100vw] object-cover bg-black z-10 on hover:scale-110 duration-[5s]"
-        /></div>
+        <div className=" opacity-50">
+          <img
+            src={image.img}
+            alt=""
+            className="h-[80vh] w-[100vw] object-cover bg-black z-10 on hover:scale-110 duration-[5s]"
+          />
+        </div>
         <div className="absolute flex flex-col items-center gap-12 w-[50vw]   transform -translate-x-2/4 -translate-y-2/4 top-[45vh] left-1/2">
-          <div className="text-5xl text-white font-semibold drop-shadow-2xl shadow-black">
+          <div className="md:text-5xl text-3xl text-white font-semibold drop-shadow-2xl shadow-black">
             {image.tagline}
           </div>
           <button className=" font-semibold border-2 py-3 px-4 rounded-full ring-1 ring-amber-700 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in text-xl">
@@ -199,10 +200,12 @@ const Home = () => {
       {/* get involved finished   */}
 
       {/* who we are started  */}
-      <m.div className=" py-12 mt-10 bg-slate-200 "
-      whileInView={{scale:1,opacity:1}}
-      transition={{duration:1,ease:"easeInOut"}}
-      initial={{scale:0,opacity:0}}>
+      <m.div
+        className=" py-12 mt-10 bg-slate-200 "
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        initial={{ scale: 0, opacity: 0 }}
+      >
         {/* who we are started */}
         <m.div
           initial={{ opacity: 0 }}
@@ -223,7 +226,13 @@ const Home = () => {
               Who We Are
             </m.div> */}
             <div className=" md:leading-9 pt-2 sm:text-base sm:pl-6 md:text-xl md:mx-20">
-            Founded with an unwavering commitment to catalyzing positive change, Orinova Foundation is a non-profit, non-governmental organisation that stands as a beacon of hope and progress. Our inception in [Year of Establishment] marked the dawn of a transformative journey aimed at uplifting marginalized communities and nurturing a sense of shared responsibility for the planet we call home.
+              Founded with an unwavering commitment to catalyzing positive
+              change, Orinova Foundation is a non-profit, non-governmental
+              organisation that stands as a beacon of hope and progress. Our
+              inception in [Year of Establishment] marked the dawn of a
+              transformative journey aimed at uplifting marginalized communities
+              and nurturing a sense of shared responsibility for the planet we
+              call home.
             </div>
           </m.div>
         </m.div>
@@ -232,7 +241,6 @@ const Home = () => {
 
       {/* events started */}
 
-      
       {/* events finished */}
 
       {/* campaign started  */}
@@ -348,11 +356,9 @@ const Home = () => {
         </div>
       </m.div> */}
       <Suspense>
-      <Campaigns/>
+        <Campaigns />
       </Suspense>
       {/* campaign finished  */}
-
-      
 
       {/* blog started  */}
       {/* <m.div
@@ -460,8 +466,8 @@ const Home = () => {
         </div>
       </m.div> */}
       {/*  Galleryfinished */}
-     
-     {/* testimonials  */}
+
+      {/* testimonials  */}
       {/* <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -523,74 +529,105 @@ const Home = () => {
         </div>
       </m.div> */}
       {/* mission  */}
-      <m.div 
-      className="flex h-[65vh] items-center w-full overflow-hidden mt-8 gap-24 px-20 justify-center">
-        
-          <div className="flex flex-col gap-12">
-            <div className="text-6xl font-[Yeseva-One] font-extrabold">Our Mission.</div>
-            <div className="w-[31rem] font-Poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis reprehenderit asperiores nisi aliquam laudantium porro et, amet ratione quis sapiente dolorem adipisci unde ex laboriosam odit officia iusto aspernatur.</div>
-            <div><button className="py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold">Read More</button></div>
-
-
+      <m.div className="flex w-full  md:flex-row flex-col md:h-[65vh]  md:w-full overflow-hidden md:mt-8 gap-4 md:gap-24 md:px-20  md:justify-center">
+        <div className="flex flex-col gap-4 pl-20 md:gap-12">
+          <div className="md:text-6xl text-4xl font-[Yeseva-One] font-extrabold">
+            Our Mission.
           </div>
-          <div className="flex gap-2">
-            <m.img src={misvis}  alt="" className=" w-[17rem] h-[25rem] rounded-3xl"
-            whileInView={{scale:1,opacity:1}}
-            transition={{duration:1,ease:"easeInOut"}}
-            initial={{scale:0,opacity:0}}
-            />
-            <m.img src={misvis} alt="" className="w-[17rem] h-[25rem] rounded-3xl"
-            whileInView={{scale:1,opacity:1}}
-            transition={{duration:1,ease:"easeInOut"}}
-            initial={{scale:0,opacity:0}} />
-
+          <div className="md:w-[31rem] w-[60vw] font-Poppins">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            officiis reprehenderit asperiores nisi aliquam laudantium porro et,
+            amet ratione quis sapiente dolorem adipisci unde ex laboriosam odit
+            officia iusto aspernatur.
           </div>
-
-        
-
-
+          <div>
+            <button className="md:py-5 md:px-10 md:m-0 ml-10 p-4 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold">
+              Read More
+            </button>
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <m.img
+            src={misvis}
+            alt=""
+            className=" md:w-[17rem] h-32 md:h-[25rem] rounded-3xl"
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            initial={{ scale: 0, opacity: 0 }}
+          />
+          <m.img
+            src={misvis}
+            alt=""
+            className="md:w-[17rem] h-32 md:h-[25rem] rounded-3xl"
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            initial={{ scale: 0, opacity: 0 }}
+          />
+        </div>
       </m.div>
       {/* vision  */}
-      <m.div 
-      className="flex h-[50vh] mb-16 w-full overflow-hidden items-center  gap-24 px-20 justify-center">
-        <div className="">
-            <m.img src={misvis} alt="" className=" w-[34rem] h-[25rem] rounded-3xl object-cover"
-            whileInView={{scale:1,opacity:1}}
-            transition={{duration:1,ease:"easeInOut"}}
-            initial={{scale:0,opacity:0}}/>
-          </div>
-        
-          <div className="flex flex-col gap-12 mt-2">
-            <div className="text-6xl font-[Yeseva-One] font-extrabold">Our Vision.</div>
-            <div className="w-[31rem] font-Poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis reprehenderit asperiores nisi aliquam laudantium porro et, amet ratione quis sapiente dolorem adipisci unde ex laboriosam odit officia iusto aspernatur.</div>
-            <div><button className="py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">Read More</button></div>
-
-
-          </div>
-          
-
-        
-
-
-      </m.div>
-
-
-      <m.div className="h-[60vh] text-white my-32  bg-sky-950 flex flex-col gap-8  items-center justify-center">
-        <div className="text-6xl font-[Yeseva-One] font-bold">How Can You Help ?</div>
-        <div className="w-[25rem] text-center"> Your donation will help us save and improve lives with research, education and emergency care.</div>
-        <div className="flex gap-4 mt-4">
-          <button className="bg-orange-500 py-5 px-8 rounded-full">Donate Now</button>
-          <button className="bg-[#09b6cb] py-5 px-8 rounded-full">Join Us Now</button>
+      <m.div className="flex gap-4 items-center py-8 md:p-0 md:flex-row flex-col md:h-[50vh] md:mb-16 w-full overflow-hidden md:items-center  md:gap-24 md:px-20 md:justify-center">
+        <div className="hidden md:block">
+          <m.img
+            src={misvis}
+            alt=""
+            className=" w-[34rem] h-[25rem] rounded-3xl object-cover"
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            initial={{ scale: 0, opacity: 0 }}
+          />
         </div>
 
-
-
+        <div className="flex flex-col gap-12 mt-2">
+          <div className="md:text-6xl text-4xl font-[Yeseva-One] font-extrabold">
+            Our Vision.
+          </div>
+          <div className="md:w-[31rem] w-[60vw] font-Poppins">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            officiis reprehenderit asperiores nisi aliquam laudantium porro et,
+            amet ratione quis sapiente dolorem adipisci unde ex laboriosam odit
+            officia iusto aspernatur.
+          </div>
+          <div>
+            <button className="md:py-5 md:px-10 md:m-0 ml-10 p-4 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">
+              Read More
+            </button>
+          </div>
+        </div>
+        <div className=" md:hidden">
+          <m.img
+            src={misvis}
+            alt=""
+            className=" w-[34rem] h-[25rem] rounded-3xl object-cover"
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            initial={{ scale: 0, opacity: 0 }}
+          />
+        </div>
       </m.div>
 
+      <m.div className="h-[60vh] text-white my-32  bg-sky-950 flex flex-col gap-8  items-center justify-center">
+        <div className="md:text-6xl text-4xl font-[Yeseva-One] font-bold">
+          How Can You Help ?
+        </div>
+        <div className="w-[25rem] text-center">
+          {" "}
+          Your donation will help us save and improve lives with research,
+          education and emergency care.
+        </div>
+        <div className="flex gap-4 mt-4">
+          <button className="bg-orange-500 py-5 px-8 rounded-full">
+            Donate Now
+          </button>
+          <button className="bg-[#09b6cb] py-5 px-8 rounded-full">
+            Join Us Now
+          </button>
+        </div>
+      </m.div>
 
-      <Volunteer/>
-      
-      <HomeEvents/>
+      <Volunteer />
+
+      <HomeEvents />
       {/* counters started */}
       <m.div
         initial={{ opacity: 0 }}
@@ -600,115 +637,145 @@ const Home = () => {
       >
         <div
           ref={counterRef}
-          className="flex justify-center gap-16 py-24 text:lg md:text-2xl"
+          className="flex justify-evenly md:justify-center gap-3 md:gap-16 py-24  md:text-2xl"
         >
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col  items-center gap-4">
             {/* <div>
               <RiEmotionHappyLine size={60} />
             </div> */}
-            <div className="border-r-2 pr-16">
-             <div className="text-8xl text-amber-500 font-semibold"> <Counter value={count} limit={300} /></div>
-              
+            <div className="md:border-r-2 md:pr-16">
+              <div className="md:text-8xl text-4xl text-amber-500 font-semibold">
+                {" "}
+                <Counter value={count} limit={300} />
+              </div>
             </div>
-            <div className="pr-10 text-center text-gray-300 text-lg ">Happy Donators</div>
-            
+            <div className="md:pr-10 text-center text-gray-300  md:text-lg ">
+              Happy Donators
+            </div>
           </div>
           <div className="flex flex-col gap-4 items-center">
             {/* <div>
               <PiTargetLight size={60} />
             </div> */}
-            <div className="border-r-2 pr-16">
-             <div className="text-8xl text-sky-400 font-semibold"> <Counter value={count} limit={50} /></div>
+            <div className="md:border-r-2 md:pr-16">
+              <div className="md:text-8xl text-4xl text-sky-400 font-semibold">
+                {" "}
+                <Counter value={count} limit={50} />
+              </div>
             </div>
-            <div className="pr-10 text-center text-gray-300 text-lg">Successful Missions</div>
-            
+            <div className="md:pr-10 text-center text-gray-300  md:text-lg">
+              Successful Missions
+            </div>
           </div>
           <div className="flex flex-col gap-4 items-center">
             {/* <div>
               <BsPeople size={60} />
             </div> */}
-            <div className="border-r-2 pr-16" >
-             <div className="text-8xl text-yellow-300 font-semibold"> <Counter value={count} limit={200} /></div>
-              
+            <div className="md:border-r-2 md:pr-16">
+              <div className="md:text-8xl text-4xl text-yellow-300 font-semibold">
+                {" "}
+                <Counter value={count} limit={200} />
+              </div>
             </div>
-            <div className="pr-10 text-gray-300 text-center text-lg ">Volunteers</div>
-            
+            <div className="md:pr-10 text-gray-300 text-center  md:text-lg ">
+              Volunteers
+            </div>
           </div>
           <div className="flex flex-col gap-4 items-center ">
             <div>
-             <div className="text-8xl text-violet-600 font-semibold"> <Counter value={count} limit={10} /></div>
-              
+              <div className="md:text-8xl text-4xl text-violet-600 font-semibold">
+                {" "}
+                <Counter value={count} limit={10} />
+              </div>
             </div>
-            <div className="pl-2 text-center text-gray-300 text-lg">Awards Won</div>
-            
+            <div className="pl-2 text-center text-gray-300 md:text-lg">
+              Awards Won
+            </div>
           </div>
         </div>
       </m.div>
       {/* counters finished */}
 
-
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{  duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         className=""
       >
-        <div className="flex flex-col  pb-8 font-Poppins w-full px-40 ">
-          <div className="flex justify-between">
-            <div className="text-6xl font-bold font-[Yeseva-One]">Latest Articles</div>
-            <button className="py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">All Articles</button>
+        <div className="flex flex-col  pb-8 font-Poppins w-full px-4 md:px-40 ">
+          <div className="flex items-center justify-between">
+            <div className="md:text-6xl text-4xl font-bold font-[Yeseva-One]">
+              Latest Articles
+            </div>
+            <button className="md:py-5 md:px-10 p-4 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">
+              All Articles
+            </button>
           </div>
-          <div className="flex gap-8 w-full py-16 px-8">
-            <div className="p-12 border-2 rounded-3xl transition-all hover:shadow-2xl w-[35rem]">
-            <div className="overflow-hidden w-full  h-[70vh] flex flex-col rounded-3xl">
-              <img src={misvis} alt="" className="h-72 w-full rounded-3xl" />
-             
-              <div className=" px-8 pt-16 text-2xl font font-medium">Lorem ipsum dolor sit amet consect adiping.</div>
-              <div className="px-8 pt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, vitae!</div>
-            <div className="px-8 pt-6"><button className="  py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">Read More</button></div>
-              
-              
-              <div className="flex justify-between">
+          <div className="flex md:flex-row flex-col gap-8 w-full py-16 md:px-8">
+            <div className="p-12 border-2 rounded-3xl transition-all hover:shadow-2xl md:w-[35rem]">
+              <div className="overflow-hidden w-full  h-[70vh] flex flex-col rounded-3xl">
+                <img src={misvis} alt="" className="h-72 w-full rounded-3xl" />
+
+                <div className=" px-8 pt-16 text-2xl font font-medium">
+                  Lorem ipsum dolor sit amet consect adiping.
+                </div>
+                <div className="px-8 pt-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eligendi, vitae!
+                </div>
+                <div className="px-8 pt-6">
+                  <button className="  py-5 px-10 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">
+                    Read More
+                  </button>
+                </div>
+
+                {/* <div className="flex justify-between">
                 
 
+              </div> */}
               </div>
-
             </div>
-            </div>
-            <div className="w-[35rem] bg-slate-100 flex flex-col justify-around rounded-3xl">
+            <div className=" hidden  w-[35rem] bg-slate-100 md:flex flex-col justify-around rounded-3xl">
               <div className="p-10 flex justify-center items-start gap-6 border-b-2 mx-4">
-                <div><img src={misvis} alt="" className="w-64 rounded-3xl"/></div>
+                <div>
+                  <img src={misvis} alt="" className="w-64 rounded-3xl" />
+                </div>
                 <div className="pt-4">
                   <div>July 31 , 2023</div>
-                  <div className="pt-4"> Lorem ipsum dolor sit amet lorem lorem</div>
+                  <div className="pt-4">
+                    {" "}
+                    Lorem ipsum dolor sit amet lorem lorem
+                  </div>
                 </div>
-
               </div>
               <div className="p-10 flex justify-center items-start gap-6 border-b-2 mx-4">
-                <div><img src={misvis} alt="" className="w-64 rounded-3xl"/></div>
+                <div>
+                  <img src={misvis} alt="" className="w-64 rounded-3xl" />
+                </div>
                 <div className="pt-4">
                   <div>July 31 , 2023</div>
-                  <div className="pt-4"> Lorem ipsum dolor sit amet lorem lorem</div>
+                  <div className="pt-4">
+                    {" "}
+                    Lorem ipsum dolor sit amet lorem lorem
+                  </div>
                 </div>
-
               </div>
               <div className="p-10 flex justify-center items-start gap-6 mx-4 ">
-                <div><img src={misvis} alt="" className="w-64 rounded-3xl"/></div>
+                <div>
+                  <img src={misvis} alt="" className="w-64 rounded-3xl" />
+                </div>
                 <div className="pt-4">
                   <div>July 31 , 2023</div>
-                  <div className="pt-4"> Lorem ipsum dolor sit amet lorem lorem</div>
+                  <div className="pt-4">
+                    {" "}
+                    Lorem ipsum dolor sit amet lorem lorem
+                  </div>
                 </div>
-
               </div>
             </div>
-
           </div>
-          
-          
         </div>
       </m.div>
-
-      
 
       <Footer />
     </m.div>
