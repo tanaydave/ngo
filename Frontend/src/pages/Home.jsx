@@ -140,8 +140,8 @@ const Home = () => {
     ));
 
 const fetching = async()=>{
-  const data = await axios.get('/details')
-  console.log(data)
+  const res = await axios.get('/donation')
+  console.log(res.data[0])
 
 }
     useEffect(()=>{

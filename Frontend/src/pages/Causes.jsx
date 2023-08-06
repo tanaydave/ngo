@@ -21,6 +21,8 @@ const Causes = () => {
   //   window.addEventListener('scroll',addBg)
   const Navigate = useNavigate();
 
+  
+
   return (
     <m.div
       initial={{ opacity: 0 }}

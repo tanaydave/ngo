@@ -4,7 +4,7 @@ const donationController = require('../controllers/donation')
 
 router
  .post("/",donationController.createDonation)
-//  .get("/", donationController.getAllDonation)
+ .get("/", donationController.getAllDonation)
 //  .get("/:id", donationController.getDonation)
 //  .put("/:id", donationController.replaceDonation)
 //  .patch("/:id", donationController.updateDonation)

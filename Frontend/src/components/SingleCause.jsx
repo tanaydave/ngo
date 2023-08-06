@@ -4,6 +4,8 @@ import Footer from "./footer";
 import misvis from "../assets/misvis.jpg";
 import { useFormik } from "formik";
 import DonationSchema from "../schemas/donationSchema";
+import axios from "axios"
+
 
 const SingleCause = () => {
   const [value, setValue] = useState("20");
@@ -21,11 +23,24 @@ const SingleCause = () => {
     validationSchema: DonationSchema,
     // setFieldValue
     onSubmit: (values, action) => {
-      console.log(values);
+      // console.log(values);
       action.resetForm();
     },
   });
+
   useEffect(()=>{ setFieldValue('donation_value',value)},[value])
+
+
+  const posting = async () => {
+    try {
+        const res = await axios.post('/donation', values);
+        console.log(res.data);
+    } catch (err) {
+        // Handle Error Here
+        console.error(err);
+    }
+};
+
   return (
     <div>
       <div className=" sticky top-0 transition-all ease-in z-50">
@@ -203,6 +218,7 @@ const SingleCause = () => {
 
                   <div className=" text-center flex my-2 justify-between items-center ">
                     <input
+                    onClick={posting}
                       type="submit"
                       value={"donate now"}
                       className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-transparent border-2 hover:text-orange-500 hover:border-2 hover:border-orange-500"
