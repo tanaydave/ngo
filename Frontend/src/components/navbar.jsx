@@ -26,11 +26,13 @@ const Navbar = ({ className = "" }) => {
   // console.log(path)
   
   return (
-    <div  className=" bg-white border-b-[#09b6cb] border-b-4 ">
-      <div className="h-12 bg-sky-950 text-gray-300 flex justify-end px-20 gap-12 py-3">
-        <div className="flex justify-center items-center gap-2"> <IoMdMail  className="text-xl text-orange-500"></IoMdMail> <div>gmail@gmail.com</div></div>
+    <div  className=" bg-white border-b-[#09b6cb] border-b-4  ">
+      <div className="h-12 bg-sky-950 text-gray-300 flex justify-end gap-4 px-2 md:px-20 md:gap-12 py-3">
+        <div className=" md:text-base text-sm flex justify-center items-center gap-2"> <IoMdMail  className="text-xl text-orange-500"></IoMdMail> <div>gmail@gmail.com</div></div>
             
-        <div className="flex justify-center items-center gap-2"> <BsFillTelephoneFill className="text-xl text-orange-500"></BsFillTelephoneFill> <div>9999999999</div></div>
+        <div className="md:text-base  text-sm flex justify-center items-center gap-2"> <BsFillTelephoneFill className="text-xl text-orange-500"></BsFillTelephoneFill> <div>9152898940</div></div>
+        <div className="md:text-base text-sm flex justify-center items-center gap-2"> <BsFillTelephoneFill className="text-xl text-orange-500"></BsFillTelephoneFill> <div> 8210400672</div></div>
+
 
       </div>
       <div className="flex  justify-around items-center py-4 text-lg  ">
@@ -179,7 +181,7 @@ const Navbar = ({ className = "" }) => {
            <Link className="hover:text-orange-500 transition-all"> <BsFillCartFill size={20}/></Link>
             </li>
             <li>
-            <Link to='/Donations'><button className=" md:py-2 md:mb-4 2xl:ml-6 lg:px-1 2xl:px-6  px-4 py-2 border-2 text-white rounded-2xl hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
+            <Link to='/Causes/SingleCause'><button className=" md:py-2 md:mb-4 2xl:ml-6 lg:px-1 2xl:px-6  px-4 py-2 border-2 text-white rounded-2xl hover:text-orange-500  border-orange-500 font-medium bg-orange-500  hover:bg-transparent transition-all delay-100 ease-in-out ">
             Donate Now
           </button></Link>
             </li>

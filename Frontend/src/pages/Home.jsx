@@ -139,14 +139,14 @@ const Home = () => {
       </m.div>
     ));
 
-const fetching = async()=>{
-  const res = await axios.get('/donation')
-  console.log(res.data[0])
+// const fetching = async()=>{
+//   const res = await axios.get('/donation')
+//   console.log(res.data)
 
-}
-    useEffect(()=>{
-      fetching()
-    },[])
+// }
+//     useEffect(()=>{
+//       fetching()
+//     },[])
 
   return (
     <m.div className=" font-Titillium pb-12">

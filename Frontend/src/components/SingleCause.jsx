@@ -31,15 +31,15 @@ const SingleCause = () => {
   useEffect(()=>{ setFieldValue('donation_value',value)},[value])
 
 
-  const posting = async () => {
-    try {
-        const res = await axios.post('/donation', values);
-        console.log(res.data);
-    } catch (err) {
-        // Handle Error Here
-        console.error(err);
-    }
-};
+//   const posting = async () => {
+//     try {
+//         const res = await axios.post('/donation', values);
+//         console.log(res.data);
+//     } catch (err) {
+//         // Handle Error Here
+//         console.error(err);
+//     }
+// };
 
   return (
     <div>
@@ -47,7 +47,7 @@ const SingleCause = () => {
         <Navbar />
       </div>
       <div className=" grid grid-cols-4 px-40 py-32">
-        <div className=" col-span-3  border-2 p-2">
+        <div className=" col-span-3   p-2">
           <img src={misvis} alt="" className="h-[110vh] rounded-3xl" />
           <div className="relative bottom-16 bg-white mx-10 shadow-xl rounded-xl">
             <div className="p-12 flex flex-col">
@@ -218,7 +218,7 @@ const SingleCause = () => {
 
                   <div className=" text-center flex my-2 justify-between items-center ">
                     <input
-                    onClick={posting}
+                    // onClick={posting}
                       type="submit"
                       value={"donate now"}
                       className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-transparent border-2 hover:text-orange-500 hover:border-2 hover:border-orange-500"
@@ -230,7 +230,7 @@ const SingleCause = () => {
             </div>
           </div>
         </div>
-        <div className=" col-span-1  border-2"> side categories</div>
+        <div className=" col-span-1  "> side categories</div>
       </div>
 
       <Footer />

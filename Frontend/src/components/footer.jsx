@@ -26,10 +26,9 @@ const Footer = () => {
         <li>
           <div className="text-orange-500 text-2xl font-medium  ">About</div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            minus eius explicabo debitis sapiente! Aliquid eveniet aliquam
-            recusandae nostrum eligendi corrupti, quasi veritatis obcaecati esse
-            suscipit eum ad, fugit ullam.
+          Orinova Foundation, is an influential NGO that aims to build a just and
+            equitable society where everyone can live with dignity and in good
+            health
           </p>
           <div className="flex text-2xl gap-6 pt-6 md:pb-0 mb-8 ">
               <ImFacebook className="hover:text-[#09b6cb] transition ease-in-out delay-100"></ImFacebook>
@@ -42,11 +41,11 @@ const Footer = () => {
           <div className="list-disc md:pl-12">
             <div className="text-orange-500 text-2xl font-medium ">Quick Links</div>
             <ul>
-            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link> Mission and Vision</Link></li>
-            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link> Latest News</Link></li>
-            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link> Contact Us</Link></li>
-            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link>Blogs</Link> </li>
-            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link>Goals</Link> </li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link to='/AboutOF' > About Us</Link></li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link to='/NewsRoom' > Latest News</Link></li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link to='/Contact' > Contact Us</Link></li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link to='/Blogs' >Blogs</Link> </li>
+            <li className="pt-2 hover:text-[#09b6cb] transition ease-in-out delay-100"><Link to='/Causes' >Causes</Link> </li>
             </ul>
           </div>
         </li>
@@ -67,13 +66,15 @@ const Footer = () => {
         <li>
           <div className="text-orange-500 text-2xl font-medium">Contact Us</div>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, fuga
-            reiciendis? Optio perferendis totam omnis ullam molestiae adipisci
-            quis nam!
+          301 , Siddhi vinayak Apartment, Yarpur Khagul Road, Yarpur, Patna -800001
           </p>
-          <div className="flex pt-6">
-            <BsFillTelephoneFill className="text-xl"></BsFillTelephoneFill>
-            <div className="pl-2">+000000000</div>
+          <div className="flex gap-4 flex-col pt-6">
+            <div className="flex"><BsFillTelephoneFill className="text-xl"></BsFillTelephoneFill>
+            <div className="pl-2">9152898940</div>
+            </div>
+            <div className="flex"><BsFillTelephoneFill className="text-xl"></BsFillTelephoneFill>
+            <div className="pl-2"> 8210400672</div>
+            </div>
           </div>
           <div className="flex pt-6">
             <IoMdMail  className="text-xl"></IoMdMail>

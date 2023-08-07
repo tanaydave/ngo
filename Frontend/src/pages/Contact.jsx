@@ -55,12 +55,12 @@ const Contact = () => {
           </div>
           <div className="py-6">
            <p className="py-3 font-medium">Phone</p> 
-           <p>1111111111</p>
-           <p>1111111111</p>
+           <p>9152898940</p>
+           <p>8210400672</p>
           </div>
           <div className="flex flex-col md:items-start items-center">
             <p className="font-medium py-3">Address</p>
-            <p className="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p className="text-center">301 , Siddhi vinayak Apartment, Yarpur Khagul Road, Yarpur, Patna -800001</p>
           </div>
 
         </div>
