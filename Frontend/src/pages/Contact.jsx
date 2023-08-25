@@ -17,6 +17,17 @@ const initialValues = {
 };
 
 const Contact = () => {
+  const phone1 = "+91 9152898940";
+  const phone2 = "+91 8210400672";
+  const emailAddress1 = "info@orinovafoundation.org";
+  const emailAddress2 = "trust@orinovafoundation.org";
+
+
+  const phoneHref1 = `tel:${phone1}`;
+  const phoneHref2 = `tel:${phone2}`;
+  const mailtoHref1 = `mailto:${emailAddress1}?`;
+  const mailtoHref2 = `mailto:${emailAddress2}?`;
+
   const { values, errors, handleChange, touched, handleSubmit } = useFormik({
     initialValues: initialValues,
     validationSchema: ContactSchema,
@@ -37,7 +48,7 @@ const Contact = () => {
       >
         <Navbar />
       </m.div>
-      <div className="flex items-center justify-center text-white bg-orange-500 h-60 mb-12 text-8xl ">Contact</div>
+      <div className="flex items-center justify-center text-white bg-orange-400 h-60 mb-12 text-8xl ">Contact</div>
       <div 
       // style={{
       //     backgroundImage: `url(${contact})`
@@ -49,14 +60,27 @@ const Contact = () => {
         <div className="flex flex-col items-center md:items-start ">
           <div className="text-4xl font-semibold py-3">Our Information</div>
           <div>
-            <p className="py-3 font-medium">Email & Website</p>
-            <p>email@email.com</p>
-            <p>www.website.com</p>
+            <p className="py-3 font-medium">Email</p>
+
+            <p>
+          <a href={mailtoHref1}>{emailAddress1}</a>
+
+            </p>
+          
+            <p>
+          <a href={mailtoHref2}>{emailAddress2}</a>
+
+            </p>
+
           </div>
           <div className="py-6">
            <p className="py-3 font-medium">Phone</p> 
-           <p>9152898940</p>
-           <p>8210400672</p>
+           <p>
+           <a href={phoneHref1}>{phone1}</a>
+           </p>
+           <p>
+           <a href={phoneHref2}>{phone2}</a>
+           </p>
           </div>
           <div className="flex flex-col md:items-start items-center">
             <p className="font-medium py-3">Address</p>

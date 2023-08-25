@@ -15,6 +15,12 @@ const Donations = lazy(()=>import( './pages/Donations'));
 const News = lazy(()=>import( "./pages/News"));
 const Gallery = lazy(()=>import( "./pages/Gallery"));
 const AboutOF = lazy(()=>import( "./pages/AboutOF"));
+const Purpose = lazy(()=>import( "./pages/Purpose"));
+const BecomeAVounteer = lazy(()=>import( "./pages/BecomeAVolunteer"));
+const Approvals = lazy(()=>import( "./pages/Approvals"));
+
+
+
 
 
 
@@ -36,12 +42,16 @@ function App() {
           <Route path="/Contact" element= {<Contact />} />
           <Route path="/Events" element= {<Events />} />
           <Route path="/Blogs" element= {<Blogs />} />
-          {/* <Route path="/About" element= {<About />} /> */}
+          <Route path="/Purpose" element= {<Purpose />} />
           <Route path="/Donations" element= {<Donations />} />
           <Route path="/NewsRoom" element= {<News />} />
           <Route path="/Gallery" element= {<Gallery />} />
           <Route path="/AboutOF" element= {<AboutOF />} />
           <Route path="/Causes/SingleCause" element= {<SingleCause />} />
+          <Route path="/Volunteer" element= {<BecomeAVounteer />} />
+          <Route path="/Approvals" element= {<Approvals />} />
+
+
 
 
         </Routes>

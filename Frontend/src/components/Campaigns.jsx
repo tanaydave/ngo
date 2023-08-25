@@ -4,6 +4,8 @@ import misvis from '../assets/misvis.jpg'
 import {  useEffect } from "react";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link, useLocation } from "react-router-dom";
+
 
 const container = {
   hidden: { opacity: 1, scale: 1 },
@@ -88,7 +90,8 @@ useEffect(() => {
                   cum.
                 </div>
                 <button className="border-2 rounded-full p-3 mt-2 w-32 text-white bg-orange-500 transition">
-                  Read More
+                <Link to='/Causes/SingleCause'>Read More</Link>
+                  
                 </button>
                
                 
@@ -130,7 +133,7 @@ useEffect(() => {
                   cum.
                 </div>
                 <button className="border-2 rounded-full p-3 mt-2 w-32 text-white bg-orange-500 transition">
-                  Read More
+                  <Link to='/Causes/SingleCause'>Read More</Link>
                 </button>
                
                 
@@ -172,7 +175,8 @@ useEffect(() => {
                   cum.
                 </div>
                 <button className="border-2 rounded-full p-3 mt-2 w-32 text-white bg-orange-500 transition">
-                  Read More
+                <Link to='/Causes/SingleCause'>Read More</Link>
+                  
                 </button>
                
                 

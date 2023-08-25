@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import misvis from "../assets/misvis.jpg";
 import offwhite from '../assets/offwhite.jpeg'
+import {Link} from 'react-router-dom' 
 
 
 
@@ -43,7 +44,8 @@ const HomeEvents = () => {
                 <div className='md:text-3xl text-xl font-bold'>Headline: Lorem ipsum dolor sit amet.</div>
                 <div className='text-gray-500'> July 31 ,2023  @12pm onwards , Mumbai</div>
                 <div className='md:p-0 px-2'> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-            <div><button className=" p-3 md:py-5 mt-2 md:mt-5 md:px-10 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold">Read More</button></div>
+                  
+            <div><button className=" p-3 md:py-5 mt-2 md:mt-5 md:px-10 rounded-full bg-orange-500 transition-all transform origin-left hover:bg-blue-950 text-white font-semibold"><Link to='/Events'>Know More</Link></button></div>
                 
 
             </div>

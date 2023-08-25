@@ -3,11 +3,13 @@ const dotenv = require("dotenv").config();
 const donationRouter = require('./routes/donation')
 const messageRouter = require('./routes/message')
 const mongoose = require("mongoose")
+const cors = require("cors"); 
 
 
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 app.use('/donation',donationRouter.router)
 app.use('/message',messageRouter.router)
 

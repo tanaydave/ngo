@@ -99,6 +99,7 @@ const Home = () => {
       tagline:
         "It is not how much we give but how much love we put into giving",
       button: "Donate Now",
+      link:"/Causes/SingleCause",
       img: carousel1,
     },
     {
@@ -106,6 +107,7 @@ const Home = () => {
       tagline:
         "It is not how much we give but how much love we put into giving",
       button: "Become a Volunteer",
+      link:"/Volunteer",
       img: volunteer,
     },
     {
@@ -113,6 +115,7 @@ const Home = () => {
       tagline:
         "It is not how much we give but how much love we put into giving",
       button: "Become a Partner",
+      link:"/",
       img: partner,
     },
   ];
@@ -133,7 +136,7 @@ const Home = () => {
             {image.tagline}
           </div>
           <button className=" font-semibold border-2 py-3 px-4 rounded-full ring-1 ring-amber-700 border-orange-500 hover:bg-transparent text-white  hover:border-orange-500 hover:text-orange-500 bg-orange-500 transition delay-100 ease-in text-xl">
-            {image.button}
+           {<Link to= {image.link}>{image.button}</Link>} 
           </button>
         </div>
       </m.div>
@@ -718,7 +721,7 @@ const Home = () => {
               Latest Articles
             </div>
             <button className="md:py-5 md:px-10 p-4 rounded-full bg-orange-500 transition-all transform origin-left   hover:bg-blue-950 text-white font-semibold">
-              All Articles
+              <Link to='/Blogs'>All Articles</Link>
             </button>
           </div>
           <div className="flex md:flex-row flex-col gap-8 w-full py-16 md:px-8">

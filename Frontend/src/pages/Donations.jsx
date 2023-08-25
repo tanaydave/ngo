@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
+import {Elements} from '@stripe/react-stripe-js';
+
 
 const Donations = () => {
   return (
