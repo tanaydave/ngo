@@ -17,7 +17,7 @@ exports.createEvent =async(req,res)=>{
     const event = new Event(req.body)
     
     const uploadStream = cloudinary.uploader.upload_stream(
-        { public_id: `orinova/events` },
+        { public_id: `orinova/events/file` },
         (error, result) => {
           if (error) {
             console.error('Error uploading image:', error);
