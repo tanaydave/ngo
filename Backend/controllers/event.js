@@ -15,16 +15,38 @@ exports.createEvent =async(req,res)=>{
     const{heading,event_photo,date,month,day,time,address}=req.body
     const file = req.file.buffer
     const event = new Event(req.body)
-    console.log(event,file)
-    // event
-    //   .save()
-    //   .then((doc) => {
-    //     res.status(201).json(doc);
-    //   })
-    //   .catch((err) => {
-    //     res.status(401).json(err);
-    //   });
+    
+    const uploadStream = cloudinary.uploader.upload_stream(
+        { public_id: `orinova/events` },
+        (error, result) => {
+          if (error) {
+            console.error('Error uploading image:', error);
+          } else {
+            const event = new Event({
+                heading:heading,
+                event_photo:result.url,
+                date:date,
+                month:month,
+                day:day,
+                time:time,
+                address:address
 
+            })
+            event
+            .save()
+            .then((doc) => {
+             res.status(201).json(doc);
+                 })
+            .catch((err) => {
+             res.status(401).json(err);
+            });
+          }
+        }
+      );
+    
+    
+    
+uploadStream.end(file)
 }
 exports.getAllEvents =async(req,res)=>{
     console.log('hello2')
