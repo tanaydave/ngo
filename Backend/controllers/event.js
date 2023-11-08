@@ -13,9 +13,9 @@ cloudinary.config({
 
 exports.createEvent =async(req,res)=>{
     const{heading,event_photo,date,month,day,time,address}=req.body
-    
+    const file = req.file.buffer
     const event = new Event(req.body)
-    console.log(event)
+    console.log(event,file)
     // event
     //   .save()
     //   .then((doc) => {

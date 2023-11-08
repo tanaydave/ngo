@@ -9,6 +9,7 @@ function App() {
     day: '',
     time: '',
     address: '',
+    file:''
   });
   const [file, setFile] = useState(null);
 
@@ -18,8 +19,8 @@ function App() {
   };
 
   const handleFileChange = (e) => {
-    const selectedFile = e.target.files[0];
-    setFile(selectedFile);
+    
+    setFile(e.target.files[0]);
   };
   
   const handleSubmit = (e) => {
@@ -32,7 +33,7 @@ function App() {
     formDataToSend.append('time', formData.time);
     formDataToSend.append('address', formData.address);
     formDataToSend.append('file',file);
-    // console.log(formDataToSend)
+    console.log(formDataToSend.heading)
     e.preventDefault();
 
   
@@ -44,7 +45,7 @@ function App() {
         // headers: { 
         //   ...formDataToSend.getHeaders()
         // },
-        data : formData
+        data : formDataToSend
       };
       
       axios.request(config)

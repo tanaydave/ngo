@@ -10,7 +10,7 @@ const upload = multer({ storage: storage });
 router 
 .get('/',eventController.getAllEvents)
 .get('/:id',eventController.getEvent)
-.post('/',eventController.createEvent)
+.post('/',upload.single('file'),eventController.createEvent)
 
 
 exports.router= router
