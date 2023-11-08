@@ -84,14 +84,6 @@ exports.createDonation = async(req, res) => {
       }
     }, 30000);
 
-
-
-    
-
-    
-
-
-
     
   };
 

@@ -3,6 +3,7 @@ import './App.css'
 import {BrowserRouter as Router , Routes , Route , Link} from 'react-router-dom';
 import {lazy,Suspense} from "react"
 import Loading from './components/Loading';
+import Test from './pages/Test';
 const  SingleCause = lazy(()=> import('./components/SingleCause')) ;
 
 const Home = lazy(()=>import ('./pages/Home'))
@@ -50,6 +51,7 @@ function App() {
           <Route path="/Causes/SingleCause" element= {<SingleCause />} />
           <Route path="/Volunteer" element= {<BecomeAVounteer />} />
           <Route path="/Approvals" element= {<Approvals />} />
+          <Route path="/Test" element={<Test/>}/>
 
 
 
