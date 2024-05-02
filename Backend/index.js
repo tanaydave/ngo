@@ -28,12 +28,6 @@ app.use('/blog',blogRouter.router)
 app.use('/team',teamRouter.router)
 
 
-
-
-
-
-const port = process.env.Port || 5001
-
 //connecting to database
 main().catch(err => console.log(err));
 
@@ -46,8 +40,8 @@ async function main() {
 
 
 
-app.listen(port , ()=>{
-    console.log(`server running on  ${port}` )
+app.listen(5000 , ()=>{
+    console.log(`server running on 5000` )
 })
 
 
